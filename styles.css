@@ -251,9 +251,9 @@ h2 {
 }
 
 .flags img {
-  width: 100px; /* Increase the width of the flag images */
-  height: 100px; /* Increase the height of the flag images */
-  margin: 0 10px; /* Increase the horizontal margin between the flags */
+  width: 250px; /* Increase the width of the flag images */
+  height: 150px; /* Increase the height of the flag images */
+  margin: 0 15px; /* Increase the horizontal margin between the flags */
 }
 /* Projects, Skills, and Guilds */
 .project-list,
