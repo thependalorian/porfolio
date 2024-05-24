@@ -134,11 +134,11 @@ main {
 
 .badge-link {
   display: inline-block;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .badge-link:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Parallax */
@@ -190,8 +190,8 @@ main {
 
 .profile-image-container {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-right: 30px;
     border-radius: 50%;
     overflow: hidden;
