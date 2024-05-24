@@ -173,7 +173,7 @@ main {
     z-index: 1;
 }
 .profile-card {
-  max-width: 1200px; /* Increase the max-width further to provide more space */
+  max-width: 1000px; /* Increase the max-width further to provide more space */
   padding: 60px; /* Increase the padding for better spacing */
 }
 .profile-header {
@@ -187,12 +187,12 @@ main {
   width: 400px; /* Increase the width of the profile picture container */
   height: 400px; /* Increase the height of the profile picture container */
   margin-right: 0; /* Remove the right margin */
-  margin-bottom: 30px; /* Add bottom margin for spacing */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
 }
 .profile-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
   object-fit: cover;
   margin-bottom: 30px;
 }
@@ -246,13 +246,13 @@ h2 {
 .flags {
   max-width: 100%; /* Set the max-width to 100% */
   justify-content: center; /* Center the flags horizontally */
-  margin-top: 60px; /* Increase the top margin for spacing */
+  margin-top: 50px; /* Increase the top margin for spacing */
 }
 
 .flags img {
-  width: 60px; /* Increase the width of the flag images */
-  height: 60px; /* Increase the height of the flag images */
-  margin: 0 15px; /* Increase the horizontal margin between the flags */
+  width: 100px; /* Increase the width of the flag images */
+  height: 100px; /* Increase the height of the flag images */
+  margin: 0 10px; /* Increase the horizontal margin between the flags */
 }
 /* Projects, Skills, and Guilds */
 .project-list,
