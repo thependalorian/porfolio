@@ -173,17 +173,19 @@ main {
     z-index: 1;
 }
 .profile-card {
-  max-width: 1000px; /* Increase the max-width to provide more space */
+  max-width: 1200px; /* Increase the max-width further to provide more space */
+  padding: 60px; /* Increase the padding for better spacing */
 }
 .profile-header {
-display: flex;
-align-items: center;
-margin-bottom: 30px;
+  flex-direction: column; /* Change the flex direction to column */
+  align-items: center; /* Center the profile picture and "Hero" text */
+  text-align: center; /* Center the "Hero" text */
 }
 .profile-image-container {
-  width: 300px; /* Increase the width to make the profile picture bigger */
-  height: 300px; /* Increase the height to maintain the aspect ratio */
-  margin-right: 40px; /* Add more space between the profile picture and the "Hero" text */
+  width: 400px; /* Increase the width of the profile picture container */
+  height: 400px; /* Increase the height of the profile picture container */
+  margin-right: 0; /* Remove the right margin */
+  margin-bottom: 30px; /* Add bottom margin for spacing */
 }
 .profile-image {
 width: 100%;
@@ -191,12 +193,13 @@ height: 100%;
 object-fit: cover;
 }
 .level {
-  width: 100px; /* Increase the width of the level element */
-  height: 100px; /* Increase the height of the level element */
-  font-size: 48px; /* Increase the font size of the level number */
-  bottom: 20px; /* Adjust the bottom positioning */
-  right: 20px; /* Adjust the right positioning */
+  width: 120px; /* Increase the width of the level element */
+  height: 120px; /* Increase the height of the level element */
+  font-size: 30px; /* Increase the font size of the level number */
+  bottom: 30px; /* Adjust the bottom positioning */
+  right: 30px; /* Adjust the right positioning */
 }
+
 .progress-bars {
 width: 100%;
 margin-bottom: 30px;
@@ -222,18 +225,21 @@ transform: translateY(-50%);
 color: #fff;
 font-weight: bold;
 }
-h4 {
-margin-bottom: 10px;
+h2 {
+  font-size: 48px; /* Increase the font size of the "Hero" text */
+  margin-bottom: 40px; /* Add bottom margin for spacing */
 }
+
 .flags {
-  max-width: 100%; /* Increase the max-width to accommodate all flags in a single line */
-  flex-wrap: nowrap; /* Remove the flex-wrap property */
-  justify-content: flex-start; /* Align the flags to the start of the container */
-  margin-top: 40px; /* Add more space above the flags */
+  max-width: 100%; /* Set the max-width to 100% */
+  justify-content: center; /* Center the flags horizontally */
+  margin-top: 60px; /* Increase the top margin for spacing */
 }
 
 .flags img {
-  margin: 0 10px; /* Increase the horizontal margin between the flags */
+  width: 60px; /* Increase the width of the flag images */
+  height: 60px; /* Increase the height of the flag images */
+  margin: 0 15px; /* Increase the horizontal margin between the flags */
 }
 /* Projects, Skills, and Guilds */
 .project-list,
