@@ -197,7 +197,7 @@ main {
   margin-bottom: 30px;
 }
 .level {
-  position: absolute;
+  position: relative;
   bottom: 20px;
   right: 20px;
   width: 60px;
