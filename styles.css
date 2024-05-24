@@ -173,7 +173,7 @@ main {
     z-index: 1;
 }
 .profile-card {
-  max-width: 1000px; /* Increase the max-width further to provide more space */
+  max-width: 1200px; /* Increase the max-width further to provide more space */
   padding: 60px; /* Increase the padding for better spacing */
 }
 .profile-header {
@@ -190,9 +190,9 @@ main {
   margin-bottom: 20px; /* Add bottom margin for spacing */
 }
 .profile-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 10%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px;
 }
@@ -212,6 +212,7 @@ main {
   font-weight: bold;
   color: #4169E1;
 }
+
 
 .progress-bars {
 width: 100%;
