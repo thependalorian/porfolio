@@ -197,7 +197,7 @@ main {
   margin-bottom: 30px;
 }
 .level {
-  position: relative;
+  position: auto;
   bottom: 20px;
   right: 20px;
   width: 40px;
@@ -251,9 +251,9 @@ h2 {
 }
 
 .flags img {
-  width: 50px; /* Increase the width of the flag images */
+  width: 60px; /* Increase the width of the flag images */
   height: 20px; /* Increase the height of the flag images */
-  margin: 0 10px; /* Increase the horizontal margin between the flags */
+  margin: 0 15px; /* Increase the horizontal margin between the flags */
 }
 /* Projects, Skills, and Guilds */
 .project-list,
