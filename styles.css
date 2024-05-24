@@ -173,16 +173,7 @@ main {
     z-index: 1;
 }
 .profile-card {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 40px;
-background-color: #f3f3f3;
-color: #333;
-max-width: 800px;
-margin: 0 auto;
-border-radius: 10px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1000px; /* Increase the max-width to provide more space */
 }
 .profile-header {
 display: flex;
@@ -190,12 +181,9 @@ align-items: center;
 margin-bottom: 30px;
 }
 .profile-image-container {
-position: relative;
-width: 250px;
-height: 250px;
-margin-right: 20px;
-border-radius: 50%;
-overflow: hidden;
+  width: 300px; /* Increase the width to make the profile picture bigger */
+  height: 300px; /* Increase the height to maintain the aspect ratio */
+  margin-right: 40px; /* Add more space between the profile picture and the "Hero" text */
 }
 .profile-image {
 width: 100%;
@@ -203,20 +191,11 @@ height: 100%;
 object-fit: cover;
 }
 .level {
-position: absolute;
-bottom: 0;
-right: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 80px;
-height: 80px;
-background-color: #f1c40f;
-border-radius: 50%;
-font-size: 36px;
-font-weight: bold;
-color: #1c1c1c;
-z-index: 1;
+  width: 100px; /* Increase the width of the level element */
+  height: 100px; /* Increase the height of the level element */
+  font-size: 48px; /* Increase the font size of the level number */
+  bottom: 20px; /* Adjust the bottom positioning */
+  right: 20px; /* Adjust the right positioning */
 }
 .progress-bars {
 width: 100%;
@@ -247,17 +226,14 @@ h4 {
 margin-bottom: 10px;
 }
 .flags {
-display: flex;
-justify-content: center;
-margin-top: 20px;
-max-width: 100%;
+  max-width: 100%; /* Increase the max-width to accommodate all flags in a single line */
+  flex-wrap: nowrap; /* Remove the flex-wrap property */
+  justify-content: flex-start; /* Align the flags to the start of the container */
+  margin-top: 40px; /* Add more space above the flags */
 }
+
 .flags img {
-width: 40px;
-height: 40px;
-margin: 0 5px;
-border-radius: 50%;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 0 10px; /* Increase the horizontal margin between the flags */
 }
 /* Projects, Skills, and Guilds */
 .project-list,
