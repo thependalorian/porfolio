@@ -182,8 +182,8 @@ main {
   text-align: center; /* Center the "Hero" text */
 }
 .profile-image-container {
-  width: 400px; /* Increase the width of the profile picture container */
-  height: 400px; /* Increase the height of the profile picture container */
+  width: 600px; /* Increase the width of the profile picture container */
+  height: 600px; /* Increase the height of the profile picture container */
   margin-right: 0; /* Remove the right margin */
   margin-bottom: 30px; /* Add bottom margin for spacing */
 }
@@ -193,8 +193,8 @@ height: 100%;
 object-fit: cover;
 }
 .level {
-  width: 120px; /* Increase the width of the level element */
-  height: 120px; /* Increase the height of the level element */
+  width: 40px; /* Increase the width of the level element */
+  height: 40px; /* Increase the height of the level element */
   font-size: 30px; /* Increase the font size of the level number */
   bottom: 30px; /* Adjust the bottom positioning */
   right: 30px; /* Adjust the right positioning */
