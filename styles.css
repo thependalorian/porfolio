@@ -190,8 +190,8 @@ main {
 
 .profile-image-container {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin-right: 30px;
     border-radius: 50%;
     overflow: hidden;
