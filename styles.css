@@ -132,6 +132,15 @@ main {
     transform: translateX(0);
 }
 
+.badge-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.badge-link:hover {
+  transform: scale(1.1);
+}
+
 /* Parallax */
 .parallax {
     background-image: url('hero-background.jpg');
