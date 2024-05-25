@@ -1,12 +1,12 @@
 /* Reset and Base Styles */
 :root {
-    --primary-color: #4169E1; /* Royal Blue */
-    --secondary-color: #FFA500; /* Orange */
-    --background-color: #f3f3f3; /* Light Gray */
-    --text-color: #333; /* Dark Gray */
-    --font-family: 'Montserrat', sans-serif; /* Modern Sans-Serif Font */
-    --cyberpunk-gradient: linear-gradient(45deg, #00d8ff, #8a2be2); /* Neon Cyberpunk Gradient */
-    --glitch-color: #00ff7f; /* Bright Green */
+    --primary-color: #4169E1;
+    --secondary-color: #FFA500;
+    --background-color: #f3f3f3;
+    --text-color: #333;
+    --font-family: 'Montserrat', sans-serif;
+    --cyberpunk-gradient: linear-gradient(45deg, #00d8ff, #8a2be2);
+    --glitch-color: #00ff7f;
 }
 
 body {
@@ -172,10 +172,12 @@ main {
     position: relative;
     z-index: 1;
 }
+
 .profile-card {
-  max-width: 1200px; /* Increase the max-width further to provide more space */
-  padding: 60px; /* Increase the padding for better spacing */
+  max-width: 1200px;
+  padding: 60px;
 }
+
 .profile-header {
   position: relative;
   display: flex;
@@ -183,78 +185,87 @@ main {
   align-items: center;
   text-align: center;
 }
-.profile-image-container {
-  width: 600px; /* Increase the width of the profile picture container */
-  height: 600px; /* Increase the height of the profile picture container */
-  margin-right: 0; /* Remove the right margin */
-  margin-bottom: 20px; /* Add bottom margin for spacing */
-}
+
 .profile-image {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px;
 }
+
 .level {
-  position: auto;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #fff;
   border: 4px solid #4169E1;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: bold;
   color: #4169E1;
 }
 
-
 .progress-bars {
-width: 100%;
-margin-bottom: 30px;
+  width: 100%;
+  margin-bottom: 30px;
 }
+
 .progress-bar {
-position: relative;
-width: 100%;
-height: 30px;
-background-color: #ddd;
-border-radius: 15px;
-overflow: hidden;
-margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
+
 .progress {
-height: 100%;
-background-color: #4caf50;
+  height: 100%;
+  background-color: #4caf50;
 }
+
+.level-progress {
+  background-color: #FFDB58; /* Mustard color */
+}
+
+.level-progress-bar {
+  background-color: #FFDB58; /* Mustard color */
+  transition: width 0.5s ease-in-out; /* Add transition for smooth progress update */
+}
+
 .progress-label {
-position: absolute;
-top: 50%;
-right: 10px;
-transform: translateY(-50%);
-color: #fff;
-font-weight: bold;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-weight: bold;
 }
+
 h2 {
-  font-size: 48px; /* Increase the font size of the "Hero" text */
-  margin-bottom: 40px; /* Add bottom margin for spacing */
+  font-size: 48px;
+  margin-bottom: 40px;
 }
 
 .flags {
-  max-width: 100%; /* Set the max-width to 100% */
-  justify-content: center; /* Center the flags horizontally */
-  margin-top: 50px; /* Increase the top margin for spacing */
+  max-width: 100%;
+  justify-content: center;
+  margin-top: 60px;
 }
 
 .flags img {
-  width: 60px; /* Increase the width of the flag images */
-  height: 20px; /* Increase the height of the flag images */
-  margin: 0 15px; /* Increase the horizontal margin between the flags */
+  width: 60px;
+  height: 60px;
+  margin: 0 15px;
 }
+
 /* Projects, Skills, and Guilds */
 .project-list,
 .skill-list,
@@ -341,6 +352,49 @@ h2 {
 
 .flag-icons {
     font-size: 2.5em;
+}
+
+/* Inventory */
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.inventory-item {
+    cursor: pointer;
+}
+
+.inventory-item img {
+    width: 100%;
+    height: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* Story */
@@ -447,33 +501,38 @@ footer::before {
 /* Cyberpunk Neon Text */
 .neon-text {
     color: var(--primary-color);
-text-shadow: 0 0 10px var(--primary-color);
-animation: neon-flicker 2s infinite alternate;
+    text-shadow: 0 0 10px var(--primary-color);
+    animation: neon-flicker 2s infinite alternate;
 }
+
 @keyframes neon-flicker {
-0% {
-text-shadow: 0 0 5px var(--primary-color);
+    0% {
+        text-shadow: 0 0 5px var(--primary-color);
+    }
+    100% {
+        text-shadow: 0 0 20px var(--primary-color);
+    }
 }
-100% {
-text-shadow: 0 0 20px var(--primary-color);
-}
-}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-nav ul {
-flex-direction: column;
-align-items: center;
-}nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-}
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.parallax {
-    min-height: 300px;
-}
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 
-.project-list,
-.skill-list,
-.guild-list {
-    grid-template-columns: 1fr;
+    .parallax {
+        min-height: 300px;
+    }
+
+    .project-list,
+    .skill-list,
+    .guild-list {
+        grid-template-columns: 1fr;
+    }
 }
