@@ -192,6 +192,7 @@ main {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px;
+  border: 5px solid var(--primary-color); /* Add border */
 }
 
 .level {

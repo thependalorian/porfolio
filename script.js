@@ -2,41 +2,45 @@ window.addEventListener('DOMContentLoaded', function() {
   // George Nekwaya's birthdate
   const birthdate = new Date("1991-01-24");
 
- // Function to calculate the age and update the level and progress bar
-function updateAgeProgress() {
-  const currentDate = new Date();
-  const currentMonth = currentDate.getMonth();
-  const currentYear = currentDate.getFullYear();
+  // Function to calculate the age and update the level and progress bar
+  function updateAgeProgress() {
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth();
+    const currentYear = currentDate.getFullYear();
 
-  // Calculate the age in years and months
-  let ageYears = currentYear - birthdate.getFullYear();
-  let ageMonths = currentMonth - birthdate.getMonth();
+    // Calculate the age in years and months
+    let ageYears = currentYear - birthdate.getFullYear();
+    let ageMonths = currentMonth - birthdate.getMonth();
 
-  // Adjust the age if the current month is before the birth month
-  if (ageMonths < 0) {
-    ageYears--;
-    ageMonths += 12;
+    // Adjust the age if the current month is before the birth month
+    if (ageMonths < 0) {
+      ageYears--;
+      ageMonths += 12;
+    }
+
+    // Calculate the progress percentage based on age
+    const maxAge = 100; // Assuming a maximum age of 100
+    const monthsInYear = 12;
+    const totalMonths = ageYears * monthsInYear + ageMonths;
+    const progressPercentage = ((totalMonths % monthsInYear) / monthsInYear) * 100;
+
+    // Update the level number
+    const levelElement = document.getElementById("level");
+    levelElement.textContent = Math.floor(totalMonths / monthsInYear);
+
+    // Update the progress bar width
+    const progressElement = document.getElementById("ageProgress");
+    progressElement.style.width = `${progressPercentage}%`;
+
+    // Update the progress percentage text
+    const percentageElement = document.getElementById("agePercentage");
+    percentageElement.textContent = `${progressPercentage.toFixed(2)}%`;
   }
-
-  // Calculate the progress percentage based on age
-  const progressPercentage = (ageYears / 100) * 100; // Assuming a maximum age of 100
-
-  // Update the level number
-  const levelElement = document.getElementById("level");
-  levelElement.textContent = ageYears;
-
-  // Update the progress bar width
-  const progressElement = document.getElementById("ageProgress");
-  progressElement.style.width = `${progressPercentage}%`;
-
-  // Update the progress percentage text
-  const percentageElement = document.getElementById("agePercentage");
-  percentageElement.textContent = `${progressPercentage.toFixed(2)}%`;
-}
 
   // Call the updateAgeProgress function initially and every month
   updateAgeProgress();
   setInterval(updateAgeProgress, 30 * 24 * 60 * 60 * 1000); // 30 days in milliseconds
+
 
   // Get the modal and close button
   var modal = document.getElementById("inventoryModal");
