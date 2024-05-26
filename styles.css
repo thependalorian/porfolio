@@ -186,83 +186,100 @@ main {
   text-align: center;
 }
 
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
 .profile-image {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 30px;
-    border: 5px solid var(--primary-color);
-    box-shadow: 0 0 20px rgba(65, 105, 225, 0.4);
-    position: relative;
-}
-
-.profile-image::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    z-index: -1;
+    border: 10px solid var(--primary-color);
 }
 
 .level {
-  position: absolute;
-  bottom: -30px; /* Adjust this value to position it above the flags */
-  left: 30px; /* Adjust this value to align it with the left side of the profile picture */
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 4px solid #4169E1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 36px;
-  font-weight: bold;
-  color: #4169E1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-25%, 25%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 4px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-
 .progress-bars {
-  width: 100%;
-  margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .progress-bar {
-  position: relative;
-  width: 100%;
-  height: 30px;
-  background-color: #ddd;
-  border-radius: 15px;
-  overflow: hidden;
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.progress-bar h4 {
+    margin-bottom: 5px;
 }
 
 .progress {
-  height: 100%;
-  background-color: #4caf50;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-bar:nth-of-type(2) .progress,
+.progress-bar:nth-of-type(3) .progress {
+    background-color: #4caf50; /* Green color for education bars */
+}
+
+.progress-bar:nth-of-type(2) .progress::before,
+.progress-bar:nth-of-type(3) .progress::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4caf50; /* Green color for education bars */
 }
 
 .level-progress {
-  background-color: #FFDB58; /* Mustard color */
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .level-progress-bar {
-  background-color: #FFDB58; /* Mustard color */
-  transition: width 0.5s ease-in-out; /* Add transition for smooth progress update */
+    background-color: #FFDB58;
+    width: 33.33%;
+    height: 100%;
+    transition: width 0.5s ease-in-out;
 }
 
 .progress-label {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  color: #fff;
-  font-weight: bold;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -277,15 +294,11 @@ h2 {
 }
 
 .flags img {
-  width: 55px;
-  height: 20px;
-  margin: 0 10px;
+  width: 60px;
+  height: 60px;
+  margin: 0 15px;
 }
-.flags h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--primary-color);
-}
+
 /* Projects, Skills, and Guilds */
 .project-list,
 .skill-list,
@@ -382,7 +395,23 @@ h2 {
 }
 
 .inventory-item {
-    cursor: pointer;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.inventory-item:hover {
+  transform: scale(1.5);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(65, 105, 225, 0.5);
+  z-index: 1;
+}
+
+.inventory-item.active {
+  transform: scale(3);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+  z-index: 2;
 }
 
 .inventory-item img {
