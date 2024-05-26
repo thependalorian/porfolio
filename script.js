@@ -50,12 +50,22 @@ window.addEventListener('DOMContentLoaded', function() {
   // Get all inventory items
   var inventoryItems = document.getElementsByClassName("inventory-item");
 
-  // Add click event listener to each inventory item
+  // Add click and hover event listeners to each inventory item
   for (var i = 0; i < inventoryItems.length; i++) {
     inventoryItems[i].addEventListener("click", function() {
       var imgSrc = this.getElementsByTagName("img")[0].getAttribute("src");
       modalImage.setAttribute("src", imgSrc);
       modal.style.display = "block";
+    });
+
+    inventoryItems[i].addEventListener("mouseover", function() {
+      this.style.transform = "scale(3)";
+      this.style.zIndex = "1";
+    });
+
+    inventoryItems[i].addEventListener("mouseout", function() {
+      this.style.transform = "scale(1)";
+      this.style.zIndex = "0";
     });
   }
 
