@@ -18,7 +18,7 @@ function updateAgeProgress() {
   }
 
   // Calculate the progress percentage based on age
-  const maxAge = 100; // Assuming a maximum age of 100
+  const maxAge = 99; // Assuming a maximum age of 100
   const monthsInYear = 12;
   const totalMonths = ageYears * monthsInYear + ageMonths;
   const progressPercentage = ((totalMonths % monthsInYear) / monthsInYear) * 100;
@@ -64,7 +64,7 @@ for (var i = 0; i < inventoryItems.length; i++) {
   });
 
   inventoryItems[i].addEventListener("mouseover", function() {
-    this.style.transform = "scale(1.5)";
+    this.style.transform = "scale(2)";
     this.style.zIndex = "1";
   });
 
