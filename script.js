@@ -1,4 +1,4 @@
-// George Nekwaya's birthdate
+// George// George Nekwaya's birthdate
 const birthdate = new Date("1991-01-24");
 
 // Function to calculate the age and update the level and progress bar
@@ -40,7 +40,6 @@ function updateAgeProgress() {
 updateAgeProgress();
 setInterval(updateAgeProgress, 30 * 24 * 60 * 60 * 1000); // 30 days in milliseconds
 
-
 // Get the modal and close button
 var modal = document.getElementById("inventoryModal");
 var modalImage = document.getElementById("modalImage");
@@ -55,6 +54,12 @@ for (var i = 0; i < inventoryItems.length; i++) {
     var imgSrc = this.getElementsByTagName("img")[0].getAttribute("src");
     modalImage.setAttribute("src", imgSrc);
     modal.style.display = "block";
+
+    // Remove the 'active' class from all other inventory items
+    for (var j = 0; j < inventoryItems.length; j++) {
+      inventoryItems[j].classList.remove("active");
+    }
+
     this.classList.add("active");
   });
 
