@@ -1,7 +1,3 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 /* Custom Scrollbar styles for dark mode */
 .dark-mode-scrollbar {
     scrollbar-width: thin; /* For Firefox */
@@ -24,13 +20,14 @@
 
 /* Reset and Base Styles */
 :root {
-    --primary-color: #4169E1;
-    --secondary-color: #FFA500;
-    --background-color: #f3f3f3;
-    --text-color: #333;
-    --font-family: 'Montserrat', sans-serif;
-    --cyberpunk-gradient: linear-gradient(45deg, #00d8ff, #8a2be2);
-    --glitch-color: #00ff7f;
+    --primary-color: #4169E1; /* Blue */
+    --secondary-color: #FFA500; /* Orange */
+    --background-color: #121212; /* Dark Background */
+    --text-color: #f0f0f0; /* Light Text */
+    --font-family: 'Orbitron', sans-serif; /* Cyberpunk Font */
+    --cyberpunk-gradient: linear-gradient(45deg, #00d8ff, #8a2be2); /* Gradient for effects */
+    --glitch-color: #00ff7f; /* Green for glitch effect */
+    --shadow-color: rgba(0, 0, 0, 0.5); /* Shadow color */
 }
 
 body {
@@ -45,7 +42,7 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: #fff;
+    background-color: #1a1a1a; /* Darker background for header */
     padding: 1rem; /* 1rem = 16px */
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -87,6 +84,7 @@ nav ul li a {
     transition: color 0.3s ease;
     position: relative;
     padding-bottom: 0.3125rem; /* 0.3125rem = 5px */
+    font-weight: bold;
 }
 
 nav ul li a::after {
@@ -132,6 +130,7 @@ main {
     transition: background-color 0.3s ease;
     position: relative;
     overflow: hidden;
+    font-weight: bold;
 }
 
 .btn::before {
@@ -179,6 +178,7 @@ main {
     color: #fff;
     text-align: center;
     position: relative;
+    overflow: hidden; /* Hide overflow to contain the mist */
 }
 
 .parallax::before {
@@ -200,6 +200,10 @@ main {
 .profile-card {
     max-width: 75rem; /* 75rem = 1200px */
     padding: 3.75rem; /* 3.75rem = 60px */
+    background-color: #1a1a1a; /* Darker background for card */
+    border: 0.25rem solid var(--primary-color); /* 0.25rem = 4px */
+    border-radius: 1rem; /* 1rem = 16px */
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .profile-header {
@@ -394,218 +398,3 @@ h2 {
     width: 3.75rem; /* 3.75rem = 60px */
     height: auto;
     border-radius: 50%;
-    border: 0.125rem solid #fff; /* 0.125rem = 2px */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Achievements */
-.achievement-list {
-    margin-top: 2.5rem; /* 2.5rem = 40px */
-}
-
-.achievement-item {
-    margin-bottom: 1.25rem; /* 1.25rem = 20px */
-}
-
-.flag-icons {
-    font-size: 2.5em;
-}
-
-/* Inventory */
-.inventory-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.25rem; /* 1.25rem = 20px */
-}
-
-.inventory-item {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border: 0.125rem solid transparent; /* 0.125rem = 2px */
-}
-
-.inventory-item:hover {
-    transform: scale(1.5);
-    border: 0.125rem solid var(--primary-color); /* 0.125rem = 2px */
-    box-shadow: 0 0 10px rgba(65, 105, 225, 0.5);
-    z-index: 1;
-}
-
-.inventory-item.active {
-    transform: scale(3);
-    border: 0.125rem solid var(--secondary-color); /* 0.125rem = 2px */
-    box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
-    z-index: 2;
-}
-
-.inventory-item img {
-    width: 100%;
-    height: auto;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-    margin: 15% auto;
-    display: block;
-    width: 80%;
-    max-width: 43.75rem; /* 43.75rem = 700px */
-}
-
-.close {
-    color: #fff;
-    float: right;
-    font-size: 1.75rem; /* 1.75rem = 28px */
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Story */
-.chapter {
-    margin-bottom: 2.5rem; /* 2.5rem = 40px */
-    padding: 1.25rem; /* 1.25rem = 20px */
-    background-color: #fff;
-    border: 1px solid rgba(65, 105, 225, 0.1);
-    border-radius: 0.625rem; /* 0.625rem = 10px */
-    position: relative;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.chapter::before {
-    content: "";
-    position: absolute;
-    top: -0.3125rem; /* -0.3125rem = -5px */
-    left: -0.3125rem; /* -0.3125rem = -5px */
-    right: -0.3125rem; /* -0.3125rem = -5px */
-    bottom: -0.3125rem; /* -0.3125rem = -5px */
-    background: linear-gradient(to right, rgba(65, 105, 225, 0.1), rgba(65, 105, 225, 0.05));
-    border-radius: 0.9375rem; /* 0.9375rem = 15px */
-    pointer-events: none;
-    z-index: -1;
-}
-
-.chapter h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.625rem; /* 0.625rem = 10px */
-}
-
-.chapter p {
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-/* Footer */
-footer {
-    background-color: #fff;
-    color: #333;
-    padding: 1.25rem; /* 1.25rem = 20px */
-    text-align: center;
-    position: relative;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, rgba(65, 105, 225, 0.1), rgba(65, 105, 225, 0.05));
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* Cyberpunk Glitch Effect */
-.glitch {
-    position: relative;
-    animation: glitch 3s infinite;
-}
-
-@keyframes glitch {
-    0% {
-        text-shadow: 0 0 5px var(--glitch-color);
-    }
-    25% {
-        text-shadow: -2px 2px 5px var(--glitch-color), 2px -2px 5px var(--glitch-color);
-    }
-    50% {
-        text-shadow: 2px 2px 5px var(--glitch-color), -2px -2px 5px var(--glitch-color);
-    }
-    75% {
-        text-shadow: -2px -2px 5px var(--glitch-color), 2px 2px 5px var(--glitch-color);
-    }
-    100% {
-        text-shadow: 0 0 5px var(--glitch-color);
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(1.25rem); /* 1.25rem = 20px */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes progressAnimation {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 35.85%;
-    }
-}
-
-/* Cyberpunk Neon Text */
-.neon-text {
-    color: var(--primary-color);
-    text-shadow: 0 0 10px var(--primary-color);
-    animation: neon-flicker 2s infinite alternate;
-}
-
-@keyframes neon-flicker {
-    0% {
-        text-shadow: 0 0 5px var(--primary-color);
-    }
-    100% {
-        text-shadow: 0 0 20px var(--primary-color);
-    }
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 48rem) { /* 48rem = 768px */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 0.625rem; /* 0.625rem = 10px */
-    }
-
-    .parallax {
-        min-height: 18.75rem; /* 18.75rem = 300px */
-    }
-
-    .project-list,
-    .skill-list,
-    .guild-list {
-        grid-template-columns: 1fr;
-    }
-}
