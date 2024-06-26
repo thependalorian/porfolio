@@ -64,14 +64,16 @@ for (var i = 0; i < inventoryItems.length; i++) {
   });
 
   inventoryItems[i].addEventListener("mouseover", function() {
-    this.style.transform = "scale(2)";
+    this.style.transform = "scale(1.1)";
     this.style.zIndex = "1";
+    this.style.boxShadow = "0 0 10px rgba(65, 105, 225, 0.5)";
   });
 
   inventoryItems[i].addEventListener("mouseout", function() {
     if (!this.classList.contains("active")) {
       this.style.transform = "scale(1)";
       this.style.zIndex = "0";
+      this.style.boxShadow = "0 2px 4px var(--shadow-color)";
     }
   });
 }
@@ -84,6 +86,7 @@ closeButton.addEventListener("click", function() {
     activeItem.classList.remove("active");
     activeItem.style.transform = "scale(1)";
     activeItem.style.zIndex = "0";
+    activeItem.style.boxShadow = "0 2px 4px var(--shadow-color)";
   }
 });
 
@@ -96,6 +99,7 @@ window.addEventListener("click", function(event) {
       activeItem.classList.remove("active");
       activeItem.style.transform = "scale(1)";
       activeItem.style.zIndex = "0";
+      activeItem.style.boxShadow = "0 2px 4px var(--shadow-color)";
     }
   }
 });
