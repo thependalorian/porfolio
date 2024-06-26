@@ -398,3 +398,29 @@ h2 {
     width: 3.75rem; /* 3.75rem = 60px */
     height: auto;
     border-radius: 50%;
+    /* Inventory */
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem; /* 1.25rem = 20px */
+}
+
+.inventory-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 0.125rem solid var(--primary-color); /* 0.125rem = 2px */
+    border-radius: 0.625rem; /* 0.625rem = 10px */
+    overflow: hidden; /* Hide overflow to contain the image */
+    box-shadow: 0 2px 4px var(--shadow-color); /* Add a subtle shadow */
+}
+
+.inventory-item:hover {
+    transform: scale(1.1); /* Subtle magnification */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Increase shadow on hover */
+}
+
+.inventory-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensure image takes up full width */
+}
