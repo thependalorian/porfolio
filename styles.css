@@ -395,7 +395,6 @@ h2 {
     border: 0.125rem solid var(--primary-color); /* Frame */
     box-shadow: 0 0 10px rgba(65, 105, 225, 0.5); /* Shadow on hover */
     z-index: 1;
-    animation: bounce 0.3s; /* Bounce animation */
 }
 
 .inventory-item.active {
