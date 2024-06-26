@@ -1,4 +1,4 @@
-// George// George Nekwaya's birthdate
+// George Nekwaya's birthdate
 const birthdate = new Date("1991-01-24");
 
 // Function to calculate the age and update the level and progress bar
