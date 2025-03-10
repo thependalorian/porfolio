@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namibia | George Nekwaya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold text-primary">George Nekwaya</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-primary transition-colors">Home</a>
+                    <a href="experience.html" class="text-gray-900 hover:text-primary transition-colors">Experience</a>
+                    <a href="projects.html" class="text-gray-900 hover:text-primary transition-colors">Projects</a>
+                    <a href="startups.html" class="text-gray-900 hover:text-primary transition-colors">Startups</a>
+                    <a href="namibia.html" class="text-gray-900 hover:text-primary transition-colors font-medium">Namibia</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <section class="mb-16">
+            <h1 class="text-4xl font-bold mb-4">My Beautiful Country: Namibia</h1>
+            <h2 class="text-2xl text-gray-600 mb-8">A land of vast landscapes, rich cultures, and boundless potential</h2>
+            
+            <div class="prose max-w-none mb-12">
+                <p>
+                    Namibia, a country in southwestern Africa, boasts a rich tapestry of history, culture, and natural wonders.
+                    Here's an overview of its historical background, key geographical features, cultural heritage, tourism highlights,
+                    and recent developments in energy and finance.
+                </p>
+            </div>
+
+            <!-- Featured Video -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold mb-6">Experience Namibia</h2>
+                <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg">
+                    <iframe src="https://www.youtube.com/embed/ERImr_uJOhQ" 
+                            title="Namibia: A Land of Contrast – History, Geography, Culture and Economy"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            class="w-full h-full"></iframe>
+                </div>
+            </div>
+
+            <!-- History & Etymology -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold mb-6">History & Etymology</h2>
+                <div class="prose max-w-none">
+                    <p>
+                        The name "Namibia" is derived from the Namib Desert, with "Namib" meaning "vast place" in the Nama language.
+                        The region's history is marked by the presence of indigenous groups such as the San, Nama, and Ovambo peoples.
+                        In the late 19th century, Namibia became a German colony known as German South West Africa.
+                        Following World War I, it was administered by South Africa under a League of Nations mandate.
+                        After a prolonged struggle for independence, Namibia gained sovereignty on March 21, 1990.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Natural Wonders -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold mb-8">Natural Wonders</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Sossusvlei -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <div class="mb-4">
+                            <img src="namibia_soussosvlei.jpeg" 
+                                 alt="Sossusvlei sand dunes"
+                                 class="w-full h-auto rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Sossusvlei Sand Dunes</h3>
+                        <p class="text-gray-700">
+                            Towering red sand dunes in the heart of the Namib Desert, some reaching heights of over 300 meters.
+                            The striking contrast of the orange-red sand against the blue sky creates an otherworldly landscape.
+                        </p>
+                    </div>
+
+                    <!-- Namib Desert Adventures -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <div class="mb-4">
+                            <img src="namibia_desert.jpeg" 
+                                 alt="Quad biking in the Namib Desert"
+                                 class="w-full h-auto rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Namib Desert Adventures</h3>
+                        <p class="text-gray-700">
+                            One of the world's oldest deserts, offering thrilling activities like quad biking across the dunes,
+                            camel riding at sunset, and sandboarding down massive slopes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Skydiving -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <div class="mb-4">
+                            <img src="skydive_swakopmund.jpeg" 
+                                 alt="Skydiving in Swakopmund"
+                                 class="w-full h-auto rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Adventure in Swakopmund</h3>
+                        <p class="text-gray-700">
+                            Breathtaking skydiving experiences where the Namib Desert meets the Atlantic Ocean.
+                        </p>
+                    </div>
+
+                    <!-- Epupa Falls -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <div class="mb-4">
+                            <img src="namibia_epupafalls.jpeg" 
+                                 alt="Epupa Falls"
+                                 class="w-full h-auto rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Epupa Falls</h3>
+                        <p class="text-gray-700">
+                            A series of cascades on the Kunene River, creating a lush oasis with baobabs and makalani palms.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stargazing -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-semibold mb-6">Stargazing in Namibia</h3>
+                    <div class="mb-6">
+                        <img src="epepa_camping_milkyway.jpeg" 
+                             alt="Milky Way over Epupa camping site"
+                             class="w-full h-auto rounded-lg">
+                    </div>
+                    <p class="text-gray-700">
+                        Namibia offers some of the darkest skies in the world, providing perfect conditions for viewing
+                        the Milky Way in all its glory.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tourism Highlights -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold mb-8">Tourism Highlights</h2>
+                <div class="prose max-w-none mb-8">
+                    <p>
+                        Namibia offers diverse experiences from desert landscapes to wildlife reserves and colonial towns.
+                    </p>
+                </div>
+                
+                <div class="aspect-w-16 aspect-h-9 mb-12">
+                    <iframe src="https://www.youtube.com/embed/m_wGSJi3cbE" 
+                            title="Namibia Top 5 - MUST SEE Best Places To Visit"
+                            frameborder="0"
+                            allowfullscreen
+                            class="w-full h-full rounded-lg shadow-lg"></iframe>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2">Sossusvlei</h3>
+                        <p class="text-gray-700">
+                            Iconic red sand dunes and ancient camel thorn trees in one of Africa's most photographed landscapes.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2">Etosha National Park</h3>
+                        <p class="text-gray-700">
+                            Premier wildlife sanctuary with incredible viewing opportunities, especially during dry season.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2">Swakopmund</h3>
+                        <p class="text-gray-700">
+                            Coastal town with German architecture, adventure activities, and excellent seafood.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sustainable Development -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold mb-8">Sustainable Development Initiatives</h2>
+                <div class="prose max-w-none mb-8">
+                    <p>
+                        Namibia is pioneering sustainable development through renewable energy, conservation, and financial inclusion.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4">Green Hydrogen Project</h3>
+                        <p class="mb-4 text-gray-700">
+                            $10 billion initiative harnessing solar and wind resources to produce green hydrogen.
+                        </p>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.youtube.com/embed/sDvBO0siXKQ" 
+                                    title="Namibia's Ambitious $10 billion Green Hydrogen Project"
+                                    frameborder="0"
+                                    allowfullscreen
+                                    class="w-full h-full rounded-lg"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4">Financial Innovation</h3>
+                        <p class="mb-4 text-gray-700">
+                            Bank of Namibia's Instant Payment Project revolutionizing financial services.
+                        </p>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.youtube.com/embed/61WsDB3GxyU" 
+                                    title="Bank of Namibia Launches Instant Payment Project"
+                                    frameborder="0"
+                                    allowfullscreen
+                                    class="w-full h-full rounded-lg"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">George Nekwaya</h3>
+                    <p class="text-gray-300">Data & AI Strategist with a passion for sustainable innovation and financial inclusion.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="experience.html" class="text-gray-300 hover:text-white transition-colors">Experience</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="startups.html" class="text-gray-300 hover:text-white transition-colors">Startups</a></li>
+                        <li><a href="namibia.html" class="text-gray-300 hover:text-white transition-colors">Namibia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <!-- Social media links same as other pages -->
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 George Nekwaya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
