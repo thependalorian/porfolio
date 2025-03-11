@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffr | AI-Powered Financial Inclusion Platform</title>
+    <meta name="description" content="Buffr: Digital financial inclusion solutions for emerging markets">
+    <meta property="og:image" content="Buffr_Logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Custom styles for Buffr page -->
+    <style>
+        .buffr-hero {
+            background: linear-gradient(135deg, #0047AB 0%, #4169E1 100%);
+        }
+        .award-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: #FFD700;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: rotate(5deg);
+        }
+        .app-mockup {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .app-mockup:hover {
+            transform: translateY(-10px);
+        }
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0047AB;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-white text-gray-900">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">George Nekwaya</span>
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="namibia.html">Namibia</a></li>
+                    <li><a href="buffr.html" class="active">Buffr</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="flex-grow">
+        <!-- Hero Section -->
+        <section class="full-width-section buffr-hero text-white">
+            <div class="content py-20">
+                <div class="container">
+                    <div class="flex flex-col lg:flex-row items-center gap-12">
+                        <div class="lg:w-1/2">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-6">Revolutionizing Financial Inclusion in Africa</h1>
+                            <p class="text-xl mb-8">Empowering Millennials and Gen Z with AI-powered payment solutions that make financial services accessible, affordable, and enjoyable.</p>
+                            <p class="text-lg mb-8">Winner of the 2023 Asper Student Startup Prize in Apps, Software and Computer Science category.</p>
+                            <div class="flex gap-4">
+                                <a href="#about" class="btn-outline border-white text-white hover:bg-white hover:text-blue-700">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center relative">
+                            <div class="p-6 bg-white rounded-lg shadow-lg">
+                                <img 
+                                    src="Buffr_Logo.png" 
+                                    alt="Buffr Logo" 
+                                    class="w-64 h-64 object-contain"
+                                >
+                                <div class="award-badge">Award Winner</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recognition Section -->
+        <section class="py-12 bg-gray-50">
+            <div class="container">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <div class="phone-carousel">
+                            <div class="phone-mockup floating-app">
+                                <img src="buffr_app_mock.jpeg" alt="Buffr Settings Screen">
+                            </div>
+                            <div class="phone-mockup floating-app">
+                                <img src="buffr_app_mock2.png" alt="Buffr Card Screen">
+                            </div>
+                            <div class="phone-mockup floating-app">
+                                <img src="buffr_app_mock3.png" alt="Buffr Group Settings">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">Award-Winning Innovation</h2>
+                        <p class="text-lg mb-4">
+                            Buffr took home first place in the Apps, Software and Computer Science category at the first-ever 
+                            Asper Student Startup Prizes competition at Brandeis International Business School.
+                        </p>
+                        <p class="text-lg mb-4">
+                            Founded by George Nekwaya, MBA'24 and Evan Goddard, MSF'24, Buffr aims to transform 
+                            the financial landscape in Southern Africa, beginning with Namibia.
+                        </p>
+                        <p class="italic text-gray-600">
+                            "We will vertically integrate into a payment gateway and expand across south Africa and developing countries."
+                            — George Nekwaya, Founder & CEO
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section py-16">
+            <div class="container">
+                <div class="section-header text-center mb-12">
+                    <h2 class="section-title">About Buffr</h2>
+                    <p class="section-subtitle">Addressing Critical Financial Inclusion Challenges</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                        <p class="mb-6">
+                            Buffr is an innovative fintech startup addressing the critical challenge of financial exclusion 
+                            across Namibia and Southern Africa. Our mission is to empower Millennials and Gen Z by making 
+                            financial services accessible, affordable, and enjoyable through an AI-powered platform.
+                        </p>
+                        <p>
+                            What sets Buffr apart is our unique value proposition of compensating users for their data—making us 
+                            the first in Namibia to do so—while prioritizing financial inclusion for the unbanked and underbanked.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">The Challenge We're Solving</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="mr-4 text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <span>In Namibia, approximately 42% of the adult population remains unbanked</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="mr-4 text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <span>25% face barriers due to lack of access to affordable financial services</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="mr-4 text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <span>Traditional banking systems often fail to meet the needs of younger generations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="mr-4 text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <span>Financial exclusion perpetuates inequality and limits economic participation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Market Stats -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="stat-card">
+                        <div class="stat-number">$1.8B</div>
+                        <p>Total Addressable Market for payments to merchants</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">42%</div>
+                        <p>Namibian adults remain unbanked</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <p>Target countries across Southern Africa</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1st</div>
+                        <p>Company in Namibia to compensate users for their data</p>
+                    </div>
+                </div>
+
+                <!-- National Alignment -->
+                <div class="bg-blue-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Strategic Alignment with National Initiatives</h3>
+                    <p class="mb-4">
+                        Buffr is strategically positioned to complement the Bank of Namibia's Instant Payment Project, 
+                        which aims to modernize the country's payment infrastructure. As the central bank works to implement 
+                        real-time payment capabilities and interoperability standards, Buffr serves as a consumer-facing 
+                        interface that leverages this evolving infrastructure.
+                    </p>
+                    <p>
+                        Our platform is designed to integrate seamlessly with these national payment systems, enhancing 
+                        their reach and adoption among younger demographics while adding value through our AI-powered 
+                        financial management tools.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section py-16 bg-gray-50">
+            <div class="container">
+                <div class="section-header text-center mb-12">
+                    <h2 class="section-title">The Buffr Experience</h2>
+                    <p class="section-subtitle">Reimagining Financial Services</p>
+                </div>
+                
+                <!-- App Mockups -->
+                <div class="flex flex-col md:flex-row gap-8 items-center mb-12">
+                    <div class="md:w-1/2">
+                        <div class="buffr-card">
+                            <div class="buffr-card-logo">Buffr Card</div>
+                            <div class="buffr-card-number">4756 •••• •••• 9018</div>
+                            <div class="buffr-card-name">Elno Nashikoto</div>
+                            <div class="buffr-card-footer">
+                                <span>05/28</span>
+                                <span>CVV: •••</span>
+                            </div>
+                        </div>
+                        <div class="phone-mockup" style="margin-top: -80px; z-index: 1; transform: rotate(-5deg);">
+                            <img src="buffr_app_mock4.png" alt="Buffr Financial Tools">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4">Key Platform Features</h3>
+                        <div class="space-y-6">
+                            <div class="feature-highlight">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-title">Streamlined Payments</h4>
+                                <p>A safer alternative to cash with improved accessibility and affordability for underserved markets.</p>
+                            </div>
+                            
+                            <div class="feature-highlight">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-title">Personalized Financial Management</h4>
+                                <p>Insights and tools designed for the specific needs of users in emerging markets.</p>
+                            </div>
+                            
+                            <div class="feature-highlight">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-title">Data Compensation</h4>
+                                <p>A unique value proposition that rewards users for participation in the digital economy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="section py-16">
+            <div class="container">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl font-bold mb-6">Expansion Vision</h2>
+                        <p class="mb-4">
+                            With a Total Addressable Market of $1.8 billion for payments to merchants alone, 
+                            Buffr is positioned to capture a significant share of the growing digital payments 
+                            landscape in Southern Africa.
+                        </p>
+                        <p>
+                            Our initial focus on Namibia provides a strategic entry point, with a clear expansion 
+                            roadmap to Botswana, Tanzania, and eventually South Africa. By leveraging our AI-powered 
+                            platform and unique value proposition, we aim to create a seamless financial ecosystem 
+                            across the region.
+                        </p>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <img 
+                            src="buffr_app_mock.jpeg" 
+                            alt="Buffr App Dashboard" 
+                            class="app-mockup w-full rounded-lg shadow-lg"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Early Access Section -->
+        <section id="contact" class="section py-16 bg-blue-600 text-white">
+            <div class="container">
+                <div class="section-header text-center mb-12">
+                    <h2 class="section-title text-white">Connect With Us</h2>
+                    <p class="section-subtitle text-blue-100">For select investors and partners</p>
+                </div>
+                
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-gray-900">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Currently in Stealth Mode</h3>
+                        <p class="mb-6 text-center">
+                            Buffr is currently in stealth mode as we build our innovative financial platform.
+                            We're selectively connecting with strategic partners and investors.
+                        </p>
+                        
+                        <div class="text-center mb-8">
+                            <p class="text-lg mb-2">Connect with me directly:</p>
+                            <a href="mailto:george@buffr.ai" class="text-blue-600 text-xl font-semibold hover:underline">george@buffr.ai</a>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p class="text-gray-600 mb-4">
+                                More information will be available when we exit stealth mode.
+                            </p>
+                            <p class="text-gray-600">
+                                Follow our founder on <a href="https://www.linkedin.com/in/george-nekwaya" class="text-blue-600 hover:underline">LinkedIn</a> for updates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>George Nekwaya</span>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="namibia.html">Namibia</a></li>
+                        <li><a href="buffr.html">Buffr</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:george.n.p.nekwaya@gmail.com" class="footer-link">george.n.p.nekwaya@gmail.com</a>
+                    <span class="footer-separator">|</span>
+                    <a href="https://www.linkedin.com/in/george-nekwaya" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2025 George Nekwaya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js" defer></script>
+</body>
+</html> 

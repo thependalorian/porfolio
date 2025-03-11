@@ -72,6 +72,84 @@ document.addEventListener('DOMContentLoaded', function() {
     loadingElements.forEach(element => {
         element.innerHTML = '<div class="spider-loader"></div>';
     });
+
+    // Only run this code on the Buffr page
+    if (window.location.pathname.includes('buffr.html')) {
+        console.log('Buffr page initialized');
+        
+        // Form validation for Buffr contact form
+        const buffrContactForm = document.getElementById('buffr-contact-form');
+        if (buffrContactForm) {
+            buffrContactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const organization = document.getElementById('organization').value;
+                const message = document.getElementById('message').value;
+                
+                // Simple validation
+                if (!name || !email || !message) {
+                    alert('Please fill out all required fields (Name, Email, and Message).');
+                    return;
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                
+                // In a real implementation, you would send this data to a server
+                console.log('Form submitted:', { name, email, organization, message });
+                
+                // Show success message
+                alert('Thanks for your interest in Buffr! We will get back to you soon. You can also email george@buffr.ai directly.');
+                
+                // Clear form
+                buffrContactForm.reset();
+            });
+        }
+        
+        // Add scroll animations for stats
+        const statElements = document.querySelectorAll('.stat-number');
+        if (statElements.length > 0) {
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px'
+            };
+            
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animation class
+                        entry.target.classList.add('animate-number');
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            statElements.forEach(stat => {
+                statsObserver.observe(stat);
+            });
+        }
+        
+        // Add hover effect for app mockups
+        const appMockups = document.querySelectorAll('.app-mockup');
+        appMockups.forEach(mockup => {
+            mockup.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+            });
+            
+            mockup.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            });
+        });
+    }
 });
 
 // Break out functions for better organization

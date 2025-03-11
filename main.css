@@ -2376,3 +2376,364 @@ main {
     width: 140px;
     height: 50px;
 }
+
+/* === BUFFR PAGE SPECIFIC STYLES === */
+.buffr-hero {
+    background: linear-gradient(135deg, #0047AB 0%, #4169E1 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.buffr-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff" fill-opacity="0.05" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.buffr-hero .content {
+    position: relative;
+    z-index: 1;
+}
+
+.award-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #FFD700;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+.award-badge:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.app-mockup {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-mockup:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0047AB;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.buffr-submit-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.buffr-submit-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.buffr-submit-btn:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments for Buffr page */
+@media (max-width: 768px) {
+    .app-mockup {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+    
+    .buffr-hero {
+        padding: 4rem 0;
+    }
+}
+
+/* Enhanced Buffr Specific Styles */
+.buffr-hero {
+    background: linear-gradient(135deg, #0047AB 0%, #4169E1 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.buffr-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff" fill-opacity="0.05" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+/* Device mockup styling */
+.phone-mockup {
+    position: relative;
+    padding: 12px;
+    background: #111;
+    border-radius: 36px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 6px solid #333;
+    max-width: 280px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.phone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 24px;
+    background: #111;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 2;
+}
+
+.phone-mockup img {
+    border-radius: 24px;
+    width: 100%;
+    display: block;
+}
+
+/* Phone carousel effect */
+.phone-carousel {
+    display: flex;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    height: 520px;
+}
+
+.phone-carousel .phone-mockup {
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+.phone-carousel .phone-mockup:nth-child(1) {
+    transform: translateX(-50%) translateZ(-50px) scale(0.85);
+    left: 25%;
+    z-index: 1;
+}
+
+.phone-carousel .phone-mockup:nth-child(2) {
+    transform: translateX(-50%) translateZ(0) scale(1);
+    left: 50%;
+    z-index: 2;
+}
+
+.phone-carousel .phone-mockup:nth-child(3) {
+    transform: translateX(-50%) translateZ(-50px) scale(0.85);
+    left: 75%;
+    z-index: 1;
+}
+
+/* Buffr card styling */
+.buffr-card {
+    background: linear-gradient(135deg, #121212 0%, #242424 100%);
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+    max-width: 320px;
+}
+
+.buffr-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"%3E%3Cpath fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" d="M0,100 C100,30 200,180 300,100 C400,20 500,160 600,100 C700,40 800,120 900,100" /%3E%3Cpath fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" d="M0,200 C100,130 200,280 300,200 C400,120 500,260 600,200 C700,140 800,220 900,200" /%3E%3Cpath fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" d="M0,300 C100,230 200,380 300,300 C400,220 500,360 600,300 C700,240 800,320 900,300" /%3E%3C/svg%3E');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.buffr-card-logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.buffr-card-number {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.buffr-card-name {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.buffr-card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Feature highlights */
+.feature-highlight {
+    position: relative;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.feature-highlight:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.feature-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0047AB, #4169E1);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0047AB 0%, #4169E1 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.feature-icon svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+/* App showcase animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating-app {
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-app:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.floating-app:nth-child(3) {
+    animation-delay: 2s;
+}
+
+/* Namibia page glossy background for better text contrast */
+.gloss-bg {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gloss-bg .section-subtitle {
+    margin: 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
