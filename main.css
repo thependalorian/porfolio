@@ -1091,9 +1091,11 @@ a:hover {
 }
 
 .image-error::after {
-    content: '🖼️';
-    font-size: 2rem;
-    opacity: 0.5;
+    content: 'Image Failed';
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--spider-black);
+    opacity: 0.7;
 }
 
 /* Background Pattern Overlay */
@@ -2070,6 +2072,7 @@ a:hover {
     padding: 4px;
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease;
+    z-index: 2;
 }
 
 .badge-container:hover {
@@ -2194,9 +2197,11 @@ a:hover {
 }
 
 .image-error::after {
-    content: '��️';
-    font-size: 1.5rem;
-    opacity: 0.5;
+    content: 'Image Failed';
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--spider-black);
+    opacity: 0.7;
 }
 
 /* Comprehensive Image Handling System */
