@@ -2072,6 +2072,12 @@ a:hover {
     transform: rotate(15deg);
 }
 
+.badge-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* 6. Design Assets (SVG) */
 .pattern-svg {
     width: 100%;
@@ -2183,4 +2189,644 @@ a:hover {
     font-size: 0.875rem;
     padding: 1rem;
     text-align: center;
+}
+
+/* Comprehensive Image Handling System */
+
+/* ===== 1. CORE IMAGE CONTAINER SYSTEM ===== */
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--spider-lily-10);
+    transition: all 0.3s ease;
+}
+
+.img-container img {
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.img-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--spider-lily-10);
+    z-index: 1;
+}
+
+.img-container.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--spider-lily-20);
+    border-top-color: var(--spider-lily);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 2;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ===== 2. CORPORATE LOGOS ===== */
+
+/* Standard Logo Container */
+.logo-container {
+    position: relative;
+    background-color: var(--spider-white);
+    border: 1px solid var(--spider-lily-10);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Small Brand Logos (like Krish Naik Academy) */
+.logo-container.brand-sm {
+    width: 120px;
+    height: 60px;
+    padding: 8px;
+}
+
+/* Medium Brand Logos (standard company logos) */
+.logo-container.brand-md {
+    width: 180px;
+    height: 70px;
+    padding: 10px;
+}
+
+/* Large Brand Logos (for detailed logos) */
+.logo-container.brand-lg {
+    width: 240px;
+    height: 90px;
+    padding: 12px;
+}
+
+/* Square Logos (1:1 ratio) */
+.logo-container.square {
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+}
+
+/* Wide Logos (3:1 ratio like IBS) */
+.logo-container.wide {
+    width: 180px;
+    height: 60px;
+    padding: 8px 12px;
+}
+
+/* SVG Logo Special Handling */
+.logo-container.svg {
+    border: none;
+    background: transparent;
+    width: auto;
+    height: auto;
+    max-width: 200px;
+}
+
+.logo-container img,
+.logo-container svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    border-color: var(--spider-lily);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.logo-container:hover img,
+.logo-container:hover svg {
+    transform: scale(1.05);
+}
+
+/* Logo Fallback Text */
+.logo-text {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    color: var(--spider-lily);
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* ===== 3. DOCUMENTS & CERTIFICATES ===== */
+
+.document-container {
+    position: relative;
+    background: var(--spider-white);
+    border: 1px solid var(--spider-lily-10);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+/* Certificate Types */
+.document-container.aibootcamp {
+    /* Krish Naik Certificate - Square format based on the image */
+    aspect-ratio: 1/1;
+    max-width: 300px;
+    width: 100%;
+}
+
+.document-container.mba {
+    /* MBA Certificates - Standard US Letter ratio */
+    aspect-ratio: 0.773;
+    max-width: 400px;
+    width: 100%;
+}
+
+.document-container.professional {
+    /* Professional Certificates - Typically landscape orientation */
+    aspect-ratio: 1.414;
+    max-width: 500px;
+    width: 100%;
+}
+
+.document-container.academic {
+    /* Academic Degrees - Often portrait format */
+    aspect-ratio: 0.707;
+    max-width: 400px;
+    width: 100%;
+}
+
+.document-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.document-container:hover {
+    border-color: var(--spider-lily);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.document-container:hover img {
+    transform: scale(1.02);
+}
+
+/* ===== 4. COUNTRY FLAGS ===== */
+
+.flag-container {
+    position: relative;
+    width: 60px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.flag-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flag-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--spider-lily-20);
+}
+
+.flags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+/* ===== 5. LANDSCAPE & LOCATION PHOTOS ===== */
+
+/* Namibia Hero Photos (panoramic) */
+.landscape-container.hero {
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 600px;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Standard Landscape Photos (16:9) */
+.landscape-container.standard {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+}
+
+/* Nature Scene Photos (often wider) */
+.landscape-container.scenic {
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+}
+
+/* Night Sky Photos (like Milky Way) */
+.landscape-container.night-sky {
+    width: 100%;
+    aspect-ratio: 3/2;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+}
+
+.landscape-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.landscape-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Filters for specific photo types */
+.landscape-container.night-sky img {
+    filter: brightness(1.1) contrast(1.1);
+}
+
+.landscape-container.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+    pointer-events: none;
+}
+
+/* ===== 6. PROFILE & BADGE IMAGES ===== */
+
+/* Profile Photo Container */
+.profile-container {
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.profile-image-container {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--spider-white);
+    box-shadow: var(--card-shadow);
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Badge Overlay */
+.badge-container {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 80px;
+    height: 80px;
+    background: var(--spider-white);
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.badge-container:hover {
+    transform: rotate(15deg);
+}
+
+.badge-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ===== 7. DESIGN SVG ASSETS ===== */
+
+.pattern-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.05;
+}
+
+.pattern-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+.petal-animation {
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background-image: url('spider-lily-petal.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    animation: float 15s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* ===== 8. VIDEO CONTAINERS ===== */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background: var(--spider-lily-10);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.video-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--spider-lily-20);
+    border-top-color: var(--spider-lily);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+/* ===== 9. RESPONSIVE ADJUSTMENTS ===== */
+
+/* Laptop/Desktop (Default) */
+@media screen and (min-width: 1201px) {
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}
+
+/* Small Desktop/Large Tablet */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    .profile-image-container {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .badge-container {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .logo-container.brand-lg {
+        width: 200px;
+        height: 80px;
+    }
+    
+    .logo-container.wide {
+        width: 160px;
+        height: 50px;
+    }
+    
+    .landscape-container.hero {
+        height: 50vh;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .profile-image-container {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .badge-container {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo-container.brand-md {
+        width: 150px;
+        height: 60px;
+    }
+    
+    .logo-container.brand-lg {
+        width: 180px;
+        height: 70px;
+    }
+    
+    .document-container.aibootcamp,
+    .document-container.mba,
+    .document-container.professional,
+    .document-container.academic {
+        max-width: 100%;
+    }
+    
+    .flag-container {
+        width: 50px;
+        height: 33px;
+    }
+    
+    .landscape-container.hero {
+        height: 40vh;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .profile-image-container {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .badge-container {
+        width: 50px;
+        height: 50px;
+        bottom: -5px;
+        right: -5px;
+    }
+    
+    .logo-container.brand-sm {
+        width: 100px;
+        height: 50px;
+    }
+    
+    .logo-container.brand-md {
+        width: 130px;
+        height: 50px;
+    }
+    
+    .logo-container.brand-lg {
+        width: 160px;
+        height: 60px;
+    }
+    
+    .logo-container.square {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo-container.wide {
+        width: 140px;
+        height: 45px;
+    }
+    
+    .flag-container {
+        width: 40px;
+        height: 27px;
+    }
+    
+    .flags-grid {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        gap: 0.75rem;
+    }
+    
+    .landscape-container.hero {
+        height: 30vh;
+        min-height: 250px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .profile-image-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .badge-container {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo-container.brand-sm,
+    .logo-container.brand-md {
+        width: 100px;
+        height: 40px;
+        padding: 6px;
+    }
+    
+    .logo-container.brand-lg {
+        width: 140px;
+        height: 50px;
+    }
+    
+    .logo-container.square {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .landscape-container.hero {
+        height: 25vh;
+        min-height: 200px;
+    }
+}
+
+/* ===== 10. ERROR STATES ===== */
+
+.image-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--spider-lily-10);
+    color: var(--spider-black);
+    font-size: 0.875rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.image-error::before {
+    content: '🖼️';
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* ===== 11. FOCUS STATES FOR ACCESSIBILITY ===== */
+
+.img-container:focus-within,
+.logo-container:focus-within,
+.document-container:focus-within,
+.flag-container:focus-within,
+.landscape-container:focus-within,
+.profile-image-container:focus-within,
+.badge-container:focus-within,
+.video-container:focus-within {
+    outline: 2px solid var(--spider-lily);
+    outline-offset: 2px;
 }
