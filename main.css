@@ -1311,586 +1311,127 @@ a[target="_blank"]:not([class*="no-arrow"]):after {
     flex-grow: 1;
 }
 
-/* Company Logo Styles */
-.company-logo-container {
+/* Company Logo Styling */
+.experience-card .w-20 {
     width: 5rem;
     height: 5rem;
-    flex-shrink: 0;
+    background: transparent;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius-md);
     overflow: hidden;
-    background: var(--color-gray-50);
-    border: 1px solid var(--color-gray-100);
 }
 
-.company-logo {
+.experience-card .w-20 img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 0.5rem;
+    background: transparent;
     transition: transform var(--transition-normal);
 }
 
-.company-logo:hover {
+.experience-card .w-20 img:hover {
     transform: scale(1.05);
+}
+
+/* Company Logo Text Fallback */
+.company-logo-container {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
 }
 
 .company-logo-text {
     font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-gray-600);
-    transition: transform var(--transition-normal);
-}
-
-.company-logo-text:hover {
-    transform: scale(1.05);
-}
-
-/* Certificate Layout Styles */
-.aspect-\[16\/9\] {
-    aspect-ratio: 16/9;
-}
-
-.aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
-}
-
-.aspect-\[3\/4\] {
-    aspect-ratio: 3/4;
-}
-
-@media (min-width: 768px) {
-    .md\:w-1\/3 {
-        width: 33.333333%;
-    }
-    
-    .md\:w-2\/3 {
-        width: 66.666667%;
-    }
-}
-
-@media (min-width: 1024px) {
-    .lg\:w-2\/5 {
-        width: 40%;
-    }
-    
-    .lg\:w-3\/5 {
-        width: 60%;
-    }
-}
-
-/* Education & Professional Development Timeline */
-.space-y-12 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 3rem;
-}
-
-/* Certificate Image Containers */
-.aspect-\[16\/9\] {
-    aspect-ratio: 16/9;
-}
-
-.aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
-}
-
-.aspect-\[3\/4\] {
-    aspect-ratio: 3/4;
-}
-
-/* Certificate Card Styles */
-.bg-gray-50 {
-    background-color: var(--color-gray-50);
-}
-
-.rounded-md {
-    border-radius: var(--radius-md);
-}
-
-.border-gray-100 {
-    border-color: var(--color-gray-100);
-}
-
-/* Image Hover Effects */
-.hover\:scale-105:hover {
-    transform: scale(1.05);
-}
-
-.transition-transform {
-    transition: transform var(--transition-normal);
-}
-
-/* Link Styles */
-.text-blue-600 {
-    color: var(--color-blue-600);
-}
-
-.hover\:underline:hover {
-    text-decoration: underline;
-}
-
-/* Text Styles */
-.text-gray-600 {
-    color: var(--color-gray-600);
-}
-
-.text-gray-700 {
-    color: var(--color-gray-700);
-}
-
-.font-medium {
-    font-weight: 500;
-}
-
-.font-semibold {
     font-weight: 600;
-}
-
-/* Layout Utilities */
-.gap-6 {
-    gap: 1.5rem;
-}
-
-.mb-2 {
-    margin-bottom: 0.5rem;
-}
-
-.mb-6 {
-    margin-bottom: 1.5rem;
-}
-
-.mb-16 {
-    margin-bottom: 4rem;
-}
-
-.logo-bg {
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
-    padding: 0.5rem;
-    border-radius: var(--radius-md);
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-contact {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .certificate-card {
-        padding: 1rem;
-    }
-
-    .footer-links ul {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.global-footprint, .who-i-am, .interests-focus {
-    margin-bottom: 2rem;
-}
-
-.flags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.flags img {
-    width: 50px;
-    height: auto;
-    border-radius: 0.25rem;
-    box-shadow: var(--shadow-sm);
-}
-
-.footprint-note {
-    margin-top: 1rem;
-    font-style: italic;
-    color: var(--color-gray-600);
-}
-
-.who-i-am ul, .interests-focus ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-top: 1rem;
-}
-
-.who-i-am li, .interests-focus li {
-    margin-bottom: 0.5rem;
-}
-
-/* ACT Brand Styles */
-.act-card {
-    background: var(--color-white);
-    border: 1px solid var(--act-spring-green-30);
-    border-radius: var(--radius-md);
-    padding: 1.5rem;
-    transition: all var(--transition-normal);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.act-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--act-spring-green);
-}
-
-.act-card h3 {
     color: var(--act-moss-green);
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: -0.02em; /* ACT typography guidance */
 }
 
-.act-card p {
-    color: var(--act-midnight-forest);
-    line-height: 1.6;
-    margin: 0;
-    flex-grow: 1;
-    letter-spacing: -0.02em; /* ACT typography guidance */
-}
-
-/* ACT Logo Container Styles */
-.act-logo-container {
-    width: 5rem;
-    height: 5rem;
-    flex-shrink: 0;
+/* Certificate Image Handling */
+.bg-gray-50.rounded-md {
+    background: transparent;
+    border: none;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    background: var(--color-white);
-    border: 1px solid var(--act-sand-gray);
+    margin: 0;
+    padding: 0;
 }
 
-.act-logo {
+.bg-gray-50.rounded-md img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 100%;
+    background: transparent;
+    transition: transform var(--transition-normal);
+}
+
+/* Certificate Container Responsive Sizing */
+.md\:w-1\/3.lg\:w-2\/5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Aspect Ratio Container for Certificates */
+.aspect-\[16\/9\],
+.aspect-\[3\/4\] {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    border: none;
+}
+
+.aspect-\[16\/9\]::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.aspect-\[3\/4\]::before {
+    content: "";
+    display: block;
+    padding-top: 133.33%; /* 3:4 aspect ratio */
+}
+
+.aspect-\[16\/9\] img,
+.aspect-\[3\/4\] img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 0.5rem;
-    transition: transform var(--transition-normal);
-}
-
-.act-logo:hover {
-    transform: scale(1.05);
-}
-
-/* ACT Frame and Graphical Elements */
-.act-frame {
-    border: 3px solid var(--act-spring-green);
-    padding: 1.5rem;
-    position: relative;
-    margin-bottom: 1.5rem;
-    max-width: 66.666%; /* Frame should not exceed 2/3 of the page */
-}
-
-.act-bracket-left {
-    position: relative;
-    padding-left: 1rem;
-}
-
-.act-bracket-left::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: var(--act-spring-green);
-}
-
-.act-bracket-right {
-    position: relative;
-    padding-right: 1rem;
-}
-
-.act-bracket-right::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: var(--act-spring-green);
-}
-
-/* ACT Member Badge Styles */
-.act-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--act-moss-green);
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.act-badge-silver {
-    border-color: #C0C0C0;
-    color: var(--color-gray-700);
-}
-
-.act-badge-gold {
-    border-color: #FFD700;
-    color: var(--color-gray-800);
-}
-
-.act-badge-platinum {
-    border-color: #E5E4E2;
-    color: var(--color-gray-900);
-    background-color: rgba(229, 228, 226, 0.1);
-}
-
-/* ACT Blur Effect */
-.act-blur-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-}
-
-.act-blur-content {
-    position: relative;
-    z-index: 2;
-    padding: 1.5rem;
-    color: var(--color-white);
-}
-
-.act-blur-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background-color: rgba(0, 24, 24, 0.6); /* Midnight Forest with opacity */
-    backdrop-filter: blur(8px);
-}
-
-/* ACT Typography Utilities */
-.act-title {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    letter-spacing: -0.02em; /* ACT typography guidance */
-    line-height: 1.15;
-    color: var(--act-midnight-forest);
-}
-
-.act-body {
-    font-family: var(--font-sans);
-    letter-spacing: -0.02em; /* ACT typography guidance */
-    line-height: 1.5;
-    color: var(--act-midnight-forest);
-}
-
-.act-highlight {
-    color: var(--act-spring-green);
-}
-
-.act-text-seafoam {
-    color: var(--act-seafoam-blue);
-}
-
-.act-text-sand {
-    color: var(--act-sand-gray);
-}
-
-/* ACT Layout Components */
-.navbar .logo-text {
-    color: var(--act-spring-green);
-}
-
-.navbar .nav-links .active {
-    color: var(--act-spring-green);
-}
-
-.navbar .nav-links a {
-    color: var(--act-seafoam-blue);
-    transition: color var(--transition-normal);
-}
-
-.navbar .nav-links a:hover {
-    color: var(--act-spring-green);
-}
-
-/* Hero Section */
-.hero-section {
-    background-color: var(--act-sand-gray);
-    padding: 3rem 0;
-}
-
-.hero-section .grid-layout {
-    border-left: 3px solid var(--act-spring-green);
-    padding-left: 1.5rem;
-}
-
-.profile-image-bg {
-    background: linear-gradient(135deg, var(--act-spring-green), var(--act-moss-green));
-    opacity: 0.2;
-}
-
-/* Section Headers */
-.section-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.section-title {
-    color: var(--act-moss-green);
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-}
-
-.section-subtitle {
-    color: var(--act-midnight-forest);
-    font-size: 1.1rem;
-}
-
-/* Content Grids */
-.content-grid {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.content-grid.cols-3 {
-    grid-template-columns: repeat(1, 1fr);
-}
-
-@media (min-width: 768px) {
-    .content-grid.cols-3 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .content-grid.cols-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Characteristic Grid */
-.characteristics-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(1, 1fr);
-}
-
-@media (min-width: 768px) {
-    .characteristics-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .characteristics-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* ACT Link Styles */
-.learn-more-link {
-    color: var(--act-moss-green);
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 1rem;
-    transition: color var(--transition-normal);
-}
-
-.learn-more-link:hover {
-    color: var(--act-spring-green);
-}
-
-.learn-more-link::after {
-    content: "→";
-    margin-left: 0.25rem;
-    transition: transform var(--transition-normal);
-}
-
-.learn-more-link:hover::after {
-    transform: translateX(4px);
-}
-
-/* Footer Styles */
-.site-footer {
-    background-color: var(--act-midnight-forest);
-    color: var(--act-sand-gray);
-    padding: 3rem 0 1.5rem;
-}
-
-.site-footer .footer-logo span {
-    color: var(--act-spring-green);
-    font-weight: 600;
-}
-
-.site-footer .footer-links a {
-    color: var(--act-seafoam-blue);
-    transition: color var(--transition-normal);
-}
-
-.site-footer .footer-links a:hover {
-    color: var(--act-spring-green);
-}
-
-.site-footer .footer-contact a {
-    color: var(--act-seafoam-blue);
-    transition: color var(--transition-normal);
-}
-
-.site-footer .footer-contact a:hover {
-    color: var(--act-spring-green);
-}
-
-/* Interests & Focus Container */
-.act-blur-container {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: var(--radius-md);
-}
-
-/* Center Alignment Utilities */
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* List Styling for Interests */
-.list-none {
-    list-style: none;
-}
-
-.flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.gap-6 {
-    gap: 1.5rem;
-}
-
-.p-0 {
+    background: transparent;
     padding: 0;
+}
+
+/* Remove Border and Background from All Logo/Certificate Containers */
+.border.border-gray-100,
+.bg-gray-50,
+.border-gray-100 {
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Enhance Image Quality */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Smooth Hover Effects */
+.hover\:scale-105:hover,
+.hover\:scale-110:hover,
+.hover\:scale-115:hover {
+    transform: scale(1.05);
+    transition: transform var(--transition-normal);
 }
