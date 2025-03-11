@@ -47,19 +47,37 @@
         <section class="hero-section py-12 bg-gradient-to-br from-white to-gray-50">
             <div class="container">
                 <div class="grid-layout">
-                    <div class="profile-image-container reveal-item">
-                        <div class="relative aspect-square max-w-320">
-                            <div class="profile-image-bg"></div>
-                            <img 
-                                src="pendo-avatar.png" 
-                                alt="George Nekwaya" 
-                                class="rounded-full object-cover w-full h-full"
-                                width="300" 
-                                height="300"
-                                loading="eager"
-                            >
+                    <!-- Left Column: Profile Image and Flags -->
+                    <div class="left-column space-y-8">
+                        <!-- Profile Image -->
+                        <div class="profile-image-container reveal-item">
+                            <div class="relative aspect-square max-w-320">
+                                <div class="profile-image-bg"></div>
+                                <img 
+                                    src="pendo-avatar.png" 
+                                    alt="George Nekwaya" 
+                                    class="rounded-full object-cover w-full h-full"
+                                    width="300" 
+                                    height="300"
+                                    loading="eager"
+                                >
+                            </div>
+                        </div>
+                        
+                        <!-- Global Footprint -->
+                        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+                            <h3 class="text-xl font-bold mb-3">Global Footprint</h3>
+                            <p class="mb-4 text-gray-700">Countries I've lived in, worked in, or visited during my professional journey.</p>
+                            
+                            <div class="flag-display mb-4">
+                                <!-- Flags will be populated by JavaScript -->
+                            </div>
+                            
+                            <p class="text-sm text-gray-600 italic">My international experience has shaped my perspective on sustainable development and cross-cultural collaboration.</p>
                         </div>
                     </div>
+
+                    <!-- Right Column: Title and Description -->
                     <div class="profile-content">
                         <h1 class="text-3xl md:text-4xl font-bold mb-4">Data & AI Strategist</h1>
                         <p class="text-xl text-gray-700 mb-6">Bridging technical and business domains with a unique background in engineering, fintech, and AI innovation.</p>
@@ -237,51 +255,51 @@
                 <div class="h-1 flex-grow bg-gradient-to-r from-primary via-primary to-transparent"></div>
             </h2>
             
-            <div class="content-grid cols-2">
+            <div class="characteristics-grid">
                 <!-- Strategic Focus -->
-                <div class="card p-6">
-                    <h3 class="font-semibold text-lg mb-3">Strategic Focus</h3>
-                    <p class="text-gray-700">
+                <div class="characteristic-card">
+                    <h3>Strategic Focus</h3>
+                    <p>
                         Highly driven and goal-oriented, with a strong ability to identify and pursue desired outcomes through dedicated effort and strategic planning. Excels at setting the stage for success by aligning resources and actions towards a clear vision.
                     </p>
                 </div>
                 
                 <!-- Predictive Insight -->
-                <div class="card p-6">
-                    <h3 class="font-semibold text-lg mb-3">Predictive Insight</h3>
-                    <p class="text-gray-700">
+                <div class="characteristic-card">
+                    <h3>Predictive Insight</h3>
+                    <p>
                         Possesses a keen intuition and analytical mindset, enabling the ability to anticipate future trends and outcomes by recognizing patterns and connections. Adept at considering multiple perspectives and scenarios simultaneously to inform decision-making.
                     </p>
                 </div>
                 
                 <!-- Immersive Learning -->
-                <div class="card p-6">
-                    <h3 class="font-semibold text-lg mb-3">Immersive Learning</h3>
-                    <p class="text-gray-700">
+                <div class="characteristic-card">
+                    <h3>Immersive Learning</h3>
+                    <p>
                         Deeply passionate about acquiring knowledge and skills, often diving headfirst into new subjects with intense focus and dedication. Balances periods of intense learning with moments of reflection and recharge to maintain a healthy equilibrium.
                     </p>
                 </div>
                 
                 <!-- Resilience -->
-                <div class="card p-6">
-                    <h3 class="font-semibold text-lg mb-3">Resilience</h3>
-                    <p class="text-gray-700">
+                <div class="characteristic-card">
+                    <h3>Resilience</h3>
+                    <p>
                         Demonstrates remarkable courage and tenacity in the face of challenges, consistently rising to the occasion with a spirit of determination and adaptability. Embraces adversity as an opportunity for growth and transformation.
                     </p>
                 </div>
                 
                 <!-- Empathetic Leadership -->
-                <div class="card p-6">
-                    <h3 class="font-semibold text-lg mb-3">Empathetic Leadership</h3>
-                    <p class="text-gray-700">
+                <div class="characteristic-card">
+                    <h3>Empathetic Leadership</h3>
+                    <p>
                         Draws upon a deep well of compassion and understanding to foster meaningful connections and inspire others towards a shared vision of positive change. Leads with authenticity, vulnerability, and a genuine desire to uplift and empower those around them.
                     </p>
                 </div>
                 
                 <!-- Innovative Problem-Solving -->
-                <div class="card p-6">
-                    <h3 class="font-semibold text-lg mb-3">Innovative Problem-Solving</h3>
-                    <p class="text-gray-700">
+                <div class="characteristic-card">
+                    <h3>Innovative Problem-Solving</h3>
+                    <p>
                         Combines a vivid imagination with a practical approach to tackling complex challenges, consistently seeking novel and unconventional solutions. Unafraid to question the status quo and explore uncharted territories in the pursuit of breakthrough ideas and transformative outcomes.
                     </p>
                 </div>
