@@ -2865,3 +2865,39 @@ main {
     /* Ensure photo displays at proper aspect ratio without cropping */
     max-height: none;
 }
+
+/* Program logo styling */
+.program-logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.program-logo img {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Light glossy background variant for larger title text */
+.gloss-bg-light {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(2px);
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gloss-bg-light .section-title {
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
