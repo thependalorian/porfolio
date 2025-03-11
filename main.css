@@ -1432,8 +1432,8 @@ a[target="_blank"]:not([class*="no-arrow"]):after {
 
 /* Company Logo Styling */
 .experience-card .w-20 {
-    width: 7rem;
-    height: 7rem;
+    width: auto;
+    height: auto;
     background: transparent;
     border: none;
     display: flex;
