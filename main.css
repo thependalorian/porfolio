@@ -1126,11 +1126,14 @@ ul, ol {
 }
 
 .certificate-card {
+    display: flex;
+    flex-direction: column;
     background: var(--color-white);
     border: 1px solid var(--color-gray-100);
     border-radius: var(--radius-md);
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-    height: 100%;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal);
 }
 
 .certificate-card:hover {
@@ -1138,31 +1141,32 @@ ul, ol {
     box-shadow: var(--shadow-md);
 }
 
-.aspect-ratio-square {
-    position: relative;
-    padding-bottom: 100%;
-}
-
-.aspect-ratio-4-3 {
-    position: relative;
-    padding-bottom: 75%;
-}
-
-.aspect-ratio-16-9 {
-    position: relative;
-    padding-bottom: 56.25%;
-}
-
-.certificate-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.certificate-image-container {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 1rem;
-    background: var(--color-gray-50);
-    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+}
+
+.certificate-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.certificate-image:hover {
+    transform: scale(1.05);
+}
+
+.certificate-details {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .certificate-details {
+        text-align: left;
+    }
 }
 
 /* External link styles */
@@ -1431,4 +1435,10 @@ a[target="_blank"]:not([class*="no-arrow"]):after {
 
 .mb-16 {
     margin-bottom: 4rem;
+}
+
+.logo-bg {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
 }
