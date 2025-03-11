@@ -2766,6 +2766,18 @@ main {
     max-width: 100%;
 }
 
+.app-screenshot-container.portrait-mockup {
+    max-width: 320px;
+    box-shadow: var(--card-shadow);
+}
+
+@media (min-width: 768px) {
+    .app-screenshot-container.portrait-mockup {
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
 .app-screenshot {
     width: 100%;
     height: auto;
@@ -2828,4 +2840,28 @@ main {
 .award-image-container:hover {
     transform: translateY(-5px);
     box-shadow: var(--card-hover-shadow);
+}
+
+/* Award photo specific handling */
+.award-photo-container {
+    max-width: 500px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-photo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.award-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* Ensure photo displays at proper aspect ratio without cropping */
+    max-height: none;
 }
