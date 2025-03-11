@@ -57,6 +57,10 @@ body {
     font-family: var(--font-body);
     line-height: var(--body-leading);
     letter-spacing: normal;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2181,14 +2185,18 @@ a:hover {
 
 /* Error States */
 .image-error {
+    position: relative;
+    background: var(--spider-lily-10);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--spider-lily-10);
-    color: var(--spider-black);
-    font-size: 0.875rem;
-    padding: 1rem;
-    text-align: center;
+    min-height: 200px;
+}
+
+.image-error::after {
+    content: '��️';
+    font-size: 1.5rem;
+    opacity: 0.5;
 }
 
 /* Comprehensive Image Handling System */
@@ -2618,215 +2626,102 @@ a:hover {
 
 /* ===== 9. RESPONSIVE ADJUSTMENTS ===== */
 
-/* Laptop/Desktop (Default) */
-@media screen and (min-width: 1201px) {
+/* Screen Size Boundary System */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Fixed laptop width boundary */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Medium-sized screens */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
     .container {
-        max-width: 1140px;
-        margin: 0 auto;
+        max-width: 1200px; /* Maintain fixed laptop width */
+    }
+    
+    /* Add subtle visual boundary markers */
+    body::before,
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: calc((100vw - 1200px) / 2);
+        background-color: var(--spider-sand);
+        z-index: -1;
+    }
+    
+    body::before {
+        left: 0;
+    }
+    
+    body::after {
+        right: 0;
     }
 }
 
-/* Small Desktop/Large Tablet */
-@media screen and (max-width: 1200px) {
+/* Large screens (greater than 1600px) */
+@media screen and (min-width: 1601px) {
     .container {
-        max-width: 960px;
-        margin: 0 auto;
+        max-width: 1200px; /* Keep fixed laptop width even on large screens */
     }
     
-    .profile-image-container {
-        width: 240px;
-        height: 240px;
+    /* More pronounced visual boundary markers for larger screens */
+    body::before,
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: calc((100vw - 1200px) / 2);
+        background-color: var(--spider-sand);
+        z-index: -1;
+        border-right: 1px solid var(--spider-lily-10);
+        border-left: 1px solid var(--spider-lily-10);
     }
     
-    .badge-container {
-        width: 70px;
-        height: 70px;
+    body::before {
+        left: 0;
     }
     
-    .logo-container.brand-lg {
-        width: 200px;
-        height: 80px;
+    body::after {
+        right: 0;
     }
     
-    .logo-container.wide {
-        width: 160px;
-        height: 50px;
-    }
-    
-    .landscape-container.hero {
-        height: 50vh;
+    /* Add subtle pattern to the boundary areas */
+    body::before,
+    body::after {
+        background-image: url('spider-lily-pattern.svg');
+        background-repeat: repeat;
+        background-size: 150px;
+        background-position: center;
+        opacity: 0.05;
     }
 }
 
-/* Tablet */
-@media screen and (max-width: 992px) {
-    .container {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-    
-    .profile-image-container {
-        width: 220px;
-        height: 220px;
-    }
-    
-    .badge-container {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .logo-container.brand-md {
-        width: 150px;
-        height: 60px;
-    }
-    
-    .logo-container.brand-lg {
-        width: 180px;
-        height: 70px;
-    }
-    
-    .document-container.aibootcamp,
-    .document-container.mba,
-    .document-container.professional,
-    .document-container.academic {
-        max-width: 100%;
-    }
-    
-    .flag-container {
-        width: 50px;
-        height: 33px;
-    }
-    
-    .landscape-container.hero {
-        height: 40vh;
-    }
+/* Ensure proper main content area */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Mobile */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 1rem;
-    }
-    
-    .profile-image-container {
-        width: 180px;
-        height: 180px;
-    }
-    
-    .badge-container {
-        width: 50px;
-        height: 50px;
-        bottom: -5px;
-        right: -5px;
-    }
-    
-    .logo-container.brand-sm {
-        width: 100px;
-        height: 50px;
-    }
-    
-    .logo-container.brand-md {
-        width: 130px;
-        height: 50px;
-    }
-    
-    .logo-container.brand-lg {
-        width: 160px;
-        height: 60px;
-    }
-    
-    .logo-container.square {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .logo-container.wide {
-        width: 140px;
-        height: 45px;
-    }
-    
-    .flag-container {
-        width: 40px;
-        height: 27px;
-    }
-    
-    .flags-grid {
-        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-        gap: 0.75rem;
-    }
-    
-    .landscape-container.hero {
-        height: 30vh;
-        min-height: 250px;
-    }
+/* Widescreen content areas like hero sections */
+.full-width-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
 }
 
-/* Small Mobile */
-@media screen and (max-width: 480px) {
-    .profile-image-container {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .badge-container {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .logo-container.brand-sm,
-    .logo-container.brand-md {
-        width: 100px;
-        height: 40px;
-        padding: 6px;
-    }
-    
-    .logo-container.brand-lg {
-        width: 140px;
-        height: 50px;
-    }
-    
-    .logo-container.square {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .landscape-container.hero {
-        height: 25vh;
-        min-height: 200px;
-    }
-}
-
-/* ===== 10. ERROR STATES ===== */
-
-.image-error {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--spider-lily-10);
-    color: var(--spider-black);
-    font-size: 0.875rem;
-    padding: 1rem;
-    text-align: center;
-}
-
-.image-error::before {
-    content: '🖼️';
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-}
-
-/* ===== 11. FOCUS STATES FOR ACCESSIBILITY ===== */
-
-.img-container:focus-within,
-.logo-container:focus-within,
-.document-container:focus-within,
-.flag-container:focus-within,
-.landscape-container:focus-within,
-.profile-image-container:focus-within,
-.badge-container:focus-within,
-.video-container:focus-within {
-    outline: 2px solid var(--spider-lily);
-    outline-offset: 2px;
+.full-width-section .content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
