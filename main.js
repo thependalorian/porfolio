@@ -54,18 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Video Container Loading States
-    const videoContainers = document.querySelectorAll('.video-container');
-    videoContainers.forEach(container => {
-        const iframe = container.querySelector('iframe');
-        if (iframe) {
-            container.classList.add('loading');
-            iframe.addEventListener('load', () => {
-                container.classList.remove('loading');
-            });
-        }
-    });
-    
     // Add Spider Lily petals animation to hero section
     const heroSection = document.querySelector('.hero-section');
     if (heroSection) {
