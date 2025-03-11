@@ -1881,3 +1881,306 @@ a:hover {
 .footer-link:hover {
     color: var(--spider-lily);
 }
+
+/* Image System - Comprehensive Accommodations */
+
+/* 1. Company & Institution Logos */
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--spider-white);
+    border: 1px solid var(--spider-lily-10);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Standard Logo */
+.logo-container.standard {
+    width: 160px;
+    height: 60px;
+    padding: 0.75rem;
+}
+
+/* Square Logo */
+.logo-container.square {
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+}
+
+/* Wide Logo */
+.logo-container.wide {
+    width: 200px;
+    height: 50px;
+    padding: 0.5rem 1rem;
+}
+
+/* SVG Logo Special Handling */
+.logo-container.svg-logo {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.logo-container img,
+.logo-container svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    border-color: var(--spider-lily);
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* 2. Certificates & Documents */
+.document-container {
+    position: relative;
+    background: var(--spider-white);
+    border: 1px solid var(--spider-lily-10);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* A4 Portrait Certificate */
+.document-container.a4-portrait {
+    aspect-ratio: 0.707; /* A4 ratio */
+    width: 100%;
+    max-width: 600px;
+}
+
+/* US Letter Certificate */
+.document-container.us-letter {
+    aspect-ratio: 0.773; /* US Letter ratio */
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Landscape Certificate */
+.document-container.landscape {
+    aspect-ratio: 1.414; /* A4 landscape ratio */
+    width: 100%;
+    max-width: 800px;
+}
+
+.document-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    background: var(--spider-white);
+    transition: transform 0.3s ease;
+}
+
+/* 3. Country Flags */
+.flag-container {
+    position: relative;
+    width: 60px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px var(--spider-lily-10);
+    transition: all 0.3s ease;
+}
+
+.flag-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flag-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--spider-lily-20);
+}
+
+/* Flag Grid Layout */
+.flags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    padding: 1rem;
+}
+
+/* 4. Landscape & Location Photos */
+.landscape-container {
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+/* Standard Landscape */
+.landscape-container.standard {
+    aspect-ratio: 16/9;
+}
+
+/* Panoramic Landscape */
+.landscape-container.panoramic {
+    aspect-ratio: 2/1;
+}
+
+/* Square Landscape */
+.landscape-container.square {
+    aspect-ratio: 1/1;
+}
+
+.landscape-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.landscape-container:hover img {
+    transform: scale(1.05);
+}
+
+/* 5. Profile & Badge Images */
+.profile-image-container {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--spider-white);
+    box-shadow: var(--card-shadow);
+}
+
+.badge-container {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 80px;
+    height: 80px;
+    background: var(--spider-white);
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.badge-container:hover {
+    transform: rotate(15deg);
+}
+
+/* 6. Design Assets (SVG) */
+.pattern-svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.petal-svg {
+    width: 40px;
+    height: 80px;
+    opacity: 0.2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-container.standard {
+        width: 120px;
+        height: 45px;
+    }
+
+    .logo-container.wide {
+        width: 160px;
+        height: 40px;
+    }
+
+    .document-container {
+        max-width: 100%;
+    }
+
+    .flag-container {
+        width: 50px;
+        height: 33px;
+    }
+
+    .profile-image-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .badge-container {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container.standard {
+        width: 100px;
+        height: 38px;
+    }
+
+    .logo-container.wide {
+        width: 140px;
+        height: 35px;
+    }
+
+    .flag-container {
+        width: 40px;
+        height: 27px;
+    }
+
+    .profile-image-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .badge-container {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Loading States */
+.image-loading {
+    position: relative;
+    background: var(--spider-lily-10);
+    overflow: hidden;
+}
+
+.image-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--spider-lily-20),
+        transparent
+    );
+    animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+    100% {
+        left: 150%;
+    }
+}
+
+/* Error States */
+.image-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--spider-lily-10);
+    color: var(--spider-black);
+    font-size: 0.875rem;
+    padding: 1rem;
+    text-align: center;
+}

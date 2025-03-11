@@ -44,11 +44,9 @@
 
     <main id="main-content" class="flex-grow">
         <section class="namibia-hero">
-            <img 
-                src="namibia_soussosvlei.jpeg" 
-                alt="Sossusvlei Sand Dunes" 
-                class="namibia-hero-image"
-            >
+            <div class="landscape-container panoramic">
+                <img src="namibia_soussosvlei.jpeg" alt="Sossusvlei Sand Dunes">
+            </div>
             <div class="namibia-hero-content">
                 <h1 class="section-title">My Beautiful Country: Namibia</h1>
                 <p class="section-subtitle">A land of vast landscapes, rich cultures, and boundless potential</p>
@@ -68,7 +66,7 @@
                 <!-- Featured Video -->
                 <div class="mb-12">
                     <h2 class="text-2xl font-bold mb-6">Experience Namibia</h2>
-                    <div class="video-container max-w-4xl mx-auto shadow-lg">
+                    <div class="video-container standard">
                         <iframe 
                             src="https://www.youtube.com/embed/ERImr_uJOhQ" 
                             title="Namibia: A Land of Contrast – History, Geography, Culture and Economy" 
@@ -117,12 +115,13 @@
                         
                         <div class="card">
                             <div class="mb-4">
-                                <img 
-                                    src="namibia_desert.jpeg" 
-                                    alt="Quad biking in the Namib Desert" 
-                                    class="w-full h-auto rounded"
-                                    loading="lazy"
-                                >
+                                <div class="landscape-container standard">
+                                    <img 
+                                        src="namibia_desert.jpeg" 
+                                        alt="Namibian Desert" 
+                                        class="location-image"
+                                    >
+                                </div>
                             </div>
                             <h3 class="text-xl font-semibold mb-2">Namib Desert Adventures</h3>
                             <p>
@@ -194,7 +193,7 @@
                                         </p>
                                     </div>
                                     
-                                    <div class="video-container mb-8">
+                                    <div class="video-container standard">
                                         <iframe 
                                             src="https://www.youtube.com/embed/m_wGSJi3cbE" 
                                             title="Namibia Top 5 - MUST SEE Best Places To Visit" 

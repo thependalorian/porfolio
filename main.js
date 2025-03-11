@@ -30,6 +30,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // ACT Specific Enhancements
     initializeACTElements();
     
+    // Image Loading Handler
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+        // Add loading state
+        img.parentElement.classList.add('image-loading');
+        
+        img.addEventListener('load', () => {
+            // Remove loading state when image loads
+            img.parentElement.classList.remove('image-loading');
+            img.classList.add('loaded');
+        });
+        
+        img.addEventListener('error', () => {
+            // Handle failed image loads
+            img.parentElement.classList.remove('image-loading');
+            img.parentElement.classList.add('image-error');
+            img.parentElement.innerHTML = `
+                <div class="image-error">
+                    <span>Image failed to load</span>
+                </div>
+            `;
+        });
+    });
+    
+    // Video Container Loading States
+    const videoContainers = document.querySelectorAll('.video-container');
+    videoContainers.forEach(container => {
+        const iframe = container.querySelector('iframe');
+        if (iframe) {
+            container.classList.add('loading');
+            iframe.addEventListener('load', () => {
+                container.classList.remove('loading');
+            });
+        }
+    });
+    
     // Add Spider Lily petals animation to hero section
     const heroSection = document.querySelector('.hero-section');
     if (heroSection) {
