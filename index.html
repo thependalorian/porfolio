@@ -21,38 +21,39 @@
 <body class="min-h-screen flex flex-col bg-white text-gray-900">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header class="navbar">
+    <!-- Header with ACT colors -->
+    <header class="navbar" style="background-color: var(--act-midnight-forest);">
         <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-text">George Nekwaya</span>
+                <span class="logo-text" style="color: var(--act-spring-green);">George Nekwaya</span>
             </a>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span style="background-color: var(--act-spring-green);"></span>
+                <span style="background-color: var(--act-spring-green);"></span>
+                <span style="background-color: var(--act-spring-green);"></span>
             </button>
             <nav class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="namibia.html">Namibia</a></li>
+                    <li><a href="index.html" class="active" style="color: var(--act-spring-green);">Home</a></li>
+                    <li><a href="experience.html" style="color: var(--act-seafoam-blue);">Experience</a></li>
+                    <li><a href="projects.html" style="color: var(--act-seafoam-blue);">Projects</a></li>
+                    <li><a href="namibia.html" style="color: var(--act-seafoam-blue);">Namibia</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main-content" class="flex-grow">
-        <!-- Hero Section -->
-        <section class="hero-section py-12 bg-gradient-to-br from-white to-gray-50">
+        <!-- Hero Section with centered layout -->
+        <section class="hero-section py-12" style="background-color: var(--act-sand-gray);">
             <div class="container">
-                <div class="grid-layout">
-                    <!-- Left Column: Profile Image and Flags -->
-                    <div class="left-column space-y-8">
+                <div class="grid-layout" style="border-left: 3px solid var(--act-spring-green);">
+                    <!-- Profile Image and Flags Section -->
+                    <aside class="left-column space-y-8">
                         <!-- Profile Image -->
                         <div class="profile-image-container reveal-item">
                             <div class="relative aspect-square max-w-320">
-                                <div class="profile-image-bg"></div>
+                                <div class="profile-image-bg" style="background: linear-gradient(135deg, var(--act-spring-green), var(--act-moss-green)); opacity: 0.2;"></div>
                                 <img 
                                     src="pendo-avatar.png" 
                                     alt="George Nekwaya" 
@@ -64,87 +65,70 @@
                             </div>
                         </div>
                         
-                        <!-- Global Footprint -->
-                        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-                            <h3 class="text-xl font-bold mb-3">Global Footprint</h3>
-                            <p class="mb-4 text-gray-700">Countries I've lived in, worked in, or visited during my professional journey.</p>
-                            
-                            <div class="flag-display mb-4">
-                                <!-- Flags will be populated by JavaScript -->
-                            </div>
-                            
-                            <p class="text-sm text-gray-600 italic">My international experience has shaped my perspective on sustainable development and cross-cultural collaboration.</p>
+                        <!-- Global Footprint with ACT styling -->
+                        <div class="container">
+                            <section class="global-footprint">
+                                <h3 class="act-title text-xl">Global Footprint</h3>
+                                <p class="act-body">Countries I've lived in, worked in, or visited during my professional journey.</p>
+                                <div class="flags">
+                                    <img src="namibia-flag.png" alt="Namibia flag">
+                                    <img src="tanzania-flag.png" alt="Tanzania flag">
+                                    <img src="zambia-flag.png" alt="Zambia flag">
+                                    <img src="dubai-flag.png" alt="Dubai flag">
+                                    <img src="israel-flag.png" alt="Israel flag">
+                                    <img src="india-flag.png" alt="India flag">
+                                    <img src="south-africa-flag.png" alt="South Africa flag">
+                                    <img src="germany-flag.png" alt="Germany flag">
+                                    <img src="indonesia-flag.png" alt="Indonesia flag">
+                                    <img src="malaysia-flag.png" alt="Malaysia flag">
+                                    <img src="usa-flag.png" alt="USA flag">
+                                </div>
+                                <p class="footprint-note">My international experience has shaped my perspective on sustainable development and cross-cultural collaboration.</p>
+                            </section>
                         </div>
-                    </div>
+                    </aside>
 
-                    <!-- Right Column: Title and Description -->
+                    <!-- Title and Description Section -->
                     <div class="profile-content">
-                        <h1 class="text-3xl md:text-4xl font-bold mb-4">AI Product Manager & Business Strategist</h1>
-                        <p class="text-xl text-gray-700 mb-6">Bridging technical and business domains with a unique background in engineering, fintech, and AI innovation.</p>
+                        <h1 class="act-title text-3xl md:text-4xl mb-4">AI Product Manager & Business Strategist</h1>
+                        <p class="act-body text-xl mb-6">Bridging technical and business domains with a unique background in engineering, fintech, and AI innovation.</p>
+                        
                         <div class="flex flex-wrap gap-3 mb-6">
-                            <a href="#journey" class="btn btn-primary">My Journey</a>
-                            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                            <a href="#journey" class="btn btn-primary" style="background-color: var(--act-spring-green); color: var(--act-midnight-forest);">My Journey</a>
+                            <a href="#contact" class="btn btn-outline" style="border-color: var(--act-spring-green); color: var(--act-moss-green);">Get in Touch</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Professional Journey Section -->
+        <!-- Professional Journey Section - centered -->
         <section id="journey" class="section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Professional Journey</h2>
-                    <p class="section-subtitle">From engineering foundations to data-driven innovation</p>
+                <div class="section-header text-center">
+                    <h2 class="act-title section-title">Professional Journey</h2>
+                    <p class="act-body section-subtitle">From engineering foundations to data-driven innovation</p>
                 </div>
                 
                 <div class="grid-layout">
-                    <!-- Left Column -->
-                    <div class="left-column space-y-8">
-                        <!-- Profile Image (already in hero, can be removed) -->
-                        
-
-                    <!-- Right Column -->
-                    <div class="md-col-8 lg-col-9">
+                    <!-- Content centered -->
+                    <div class="md-col-10 mx-auto">
                         <div class="prose max-w-none">
                             <section class="mb-8 reveal-item">
-                                <h2 class="rpg-section-header">
+                                <h2 class="act-title rpg-section-header text-center">
                                     <span class="pr-4">Who I Am</span>
-                                    <div class="h-1 flex-grow bg-gradient-to-r from-primary via-primary to-transparent"></div>
                                 </h2>
                                 
-                                <div class="space-y-4">
-                                    <div class="space-y-3">
-                                        <p class="text-gray-700">
-                                            I bridge technical and business domains with a unique background spanning engineering,
-                                            fintech, and AI innovation. My journey has equipped me with:
-                                        </p>
-                                        
-                                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                <div class="container">
+                                    <section class="who-i-am">
+                                        <p class="act-body">I bridge technical and business domains with a unique background spanning engineering, fintech, and AI innovation. My journey has equipped me with:</p>
+                                        <ul class="act-body">
                                             <li>Analytical thinking honed through my engineering background and MBA from Brandeis International Business School</li>
                                             <li>Global perspective from experiences across Africa, the US, Israel, and India</li>
                                             <li>Entrepreneurial drive demonstrated through founding Buffr to improve financial inclusion</li>
                                             <li>Leadership experience managing infrastructure projects and business operations</li>
                                         </ul>
-                                    </div>
-                                    
-                                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100 reveal-item">
-                                        <h3 class="font-semibold text-lg text-primary mb-3">Interests & Focus</h3>
-                                        <div class="grid grid-cols-2 gap-3">
-                                            <div class="bg-white p-3 rounded border border-gray-100">
-                                                <span class="font-medium">Generative AI Applications</span>
-                                            </div>
-                                            <div class="bg-white p-3 rounded border border-gray-100">
-                                                <span class="font-medium">Task Automation</span>
-                                            </div>
-                                            <div class="bg-white p-3 rounded border border-gray-100">
-                                                <span class="font-medium">Fintech Innovation</span>
-                                            </div>
-                                            <div class="bg-white p-3 rounded border border-gray-100">
-                                                <span class="font-medium">Business Strategy</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </section>
                                 </div>
                             </section>
                         </div>
@@ -153,25 +137,44 @@
             </div>
         </section>
 
+        <!-- Interests & Focus with centered layout -->
+        <div class="container">
+            <div class="act-blur-container mx-auto" style="max-width: 800px;">
+                <div class="act-blur-bg"></div>
+                <div class="act-blur-content">
+                    <section class="interests-focus text-center">
+                        <h3 class="act-title text-white">Interests & Focus</h3>
+                        <ul class="text-white list-none flex flex-wrap justify-center gap-6 p-0">
+                            <li>Generative AI Applications</li>
+                            <li>Task Automation</li>
+                            <li>Fintech Innovation</li>
+                            <li>Business Strategy</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+
         <!-- Startup Accelerator Programs -->
         <section class="section mt-4">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Startup Accelerator Programs</h2>
+                <div class="section-header text-center">
+                    <h2 class="act-title section-title">Startup Accelerator Programs</h2>
                 </div>
                 
                 <div class="content-grid cols-3">
-                    <div class="card">
-                        <div class="h-16 mb-4 relative logo-container">
+                    <!-- ACT card styling for accelerator programs -->
+                    <div class="act-card">
+                        <div class="h-16 mb-4 relative act-logo-container">
                             <img 
                                 src="brandeis-spark-logo.png" 
                                 alt="Brandeis Spark Logo" 
-                                class="object-contain object-left"
+                                class="act-logo"
                                 loading="lazy"
                             >
                         </div>
-                        <h3 class="font-semibold text-lg mb-2">Brandeis Spark</h3>
-                        <p class="text-gray-700 mb-4">
+                        <h3>Brandeis Spark</h3>
+                        <p>
                             Participated in the Brandeis Spark Startup Cohort, receiving guidance and support to develop
                             and launch my startup within the Brandeis University ecosystem.
                         </p>
@@ -180,54 +183,57 @@
                             class="learn-more-link text-primary-600 font-medium hover:text-primary-800 transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
+                            style="color: var(--act-moss-green);"
                         >
                             Learn More
                         </a>
                     </div>
                     
-                    <div class="card">
-                        <div class="h-16 mb-4 relative logo-container">
+                    <div class="act-card">
+                        <div class="h-16 mb-4 relative act-logo-container">
                             <img 
                                 src="masschallenge-logo.png" 
                                 alt="MassChallenge Logo" 
-                                class="object-contain object-left"
+                                class="act-logo"
                                 loading="lazy"
                             >
                         </div>
-                        <h3 class="font-semibold text-lg mb-2">MassChallenge</h3>
-                        <p class="text-gray-700 mb-4">
+                        <h3>MassChallenge</h3>
+                        <p>
                             As part of the MassChallenge Early Stage Foundations Cohort, accessed mentorship, resources,
                             and a network to refine entrepreneurial skills and grow ventures.
                         </p>
                         <a
                             href="https://www.masschallenge.org/"
-                            class="text-primary-600 font-medium hover:text-primary-800 transition-colors"
+                            class="learn-more-link text-primary-600 font-medium hover:text-primary-800 transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
+                            style="color: var(--act-moss-green);"
                         >
                             Learn More 
                         </a>
                     </div>
                     
-                    <div class="card">
-                        <div class="h-16 mb-4 relative logo-container">
+                    <div class="act-card">
+                        <div class="h-16 mb-4 relative act-logo-container">
                             <img 
                                 src="global-venture-labs-logo.png" 
                                 alt="Global Venture Labs Logo" 
-                                class="object-contain object-left"
+                                class="act-logo"
                                 loading="lazy"
                             >
                         </div>
-                        <h3 class="font-semibold text-lg mb-2">Global Venture Labs</h3>
-                        <p class="text-gray-700 mb-4">
+                        <h3>Global Venture Labs</h3>
+                        <p>
                             Participated in the Global Venture Labs Accelerator Cohort, gaining valuable insights into
                             entrepreneurship, business strategy, and scaling startups.
                         </p>
                         <a
                             href="https://www.globalventurelabs.org/"
-                            class="text-primary-600 font-medium hover:text-primary-800 transition-colors"
+                            class="learn-more-link text-primary-600 font-medium hover:text-primary-800 transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
+                            style="color: var(--act-moss-green);"
                         >
                             Learn More 
                         </a>
@@ -236,16 +242,13 @@
             </div>
         </section>
 
-        <!-- Professional Characteristics -->
+        <!-- Professional Characteristics with centered styling -->
         <section class="mb-16">
-            <h2 class="rpg-section-header mb-8">
-                <span class="pr-4">Professional Characteristics</span>
-                <div class="h-1 flex-grow bg-gradient-to-r from-primary via-primary to-transparent"></div>
-            </h2>
+            <h2 class="act-title section-title text-center mb-8">Professional Characteristics</h2>
             
             <div class="characteristics-grid">
                 <!-- Strategic Focus -->
-                <div class="characteristic-card">
+                <div class="act-card">
                     <h3>Strategic Focus</h3>
                     <p>
                         Highly driven and goal-oriented, with a strong ability to identify and pursue desired outcomes through dedicated effort and strategic planning. Excels at setting the stage for success by aligning resources and actions towards a clear vision.
@@ -253,7 +256,7 @@
                 </div>
                 
                 <!-- Predictive Insight -->
-                <div class="characteristic-card">
+                <div class="act-card">
                     <h3>Predictive Insight</h3>
                     <p>
                         Possesses a keen intuition and analytical mindset, enabling the ability to anticipate future trends and outcomes by recognizing patterns and connections. Adept at considering multiple perspectives and scenarios simultaneously to inform decision-making.
@@ -261,7 +264,7 @@
                 </div>
                 
                 <!-- Immersive Learning -->
-                <div class="characteristic-card">
+                <div class="act-card">
                     <h3>Immersive Learning</h3>
                     <p>
                         Deeply passionate about acquiring knowledge and skills, often diving headfirst into new subjects with intense focus and dedication. Balances periods of intense learning with moments of reflection and recharge to maintain a healthy equilibrium.
@@ -269,7 +272,7 @@
                 </div>
                 
                 <!-- Resilience -->
-                <div class="characteristic-card">
+                <div class="act-card">
                     <h3>Resilience</h3>
                     <p>
                         Demonstrates remarkable courage and tenacity in the face of challenges, consistently rising to the occasion with a spirit of determination and adaptability. Embraces adversity as an opportunity for growth and transformation.
@@ -277,7 +280,7 @@
                 </div>
                 
                 <!-- Empathetic Leadership -->
-                <div class="characteristic-card">
+                <div class="act-card">
                     <h3>Empathetic Leadership</h3>
                     <p>
                         Draws upon a deep well of compassion and understanding to foster meaningful connections and inspire others towards a shared vision of positive change. Leads with authenticity, vulnerability, and a genuine desire to uplift and empower those around them.
@@ -285,7 +288,7 @@
                 </div>
                 
                 <!-- Innovative Problem-Solving -->
-                <div class="characteristic-card">
+                <div class="act-card">
                     <h3>Innovative Problem-Solving</h3>
                     <p>
                         Combines a vivid imagination with a practical approach to tackling complex challenges, consistently seeking novel and unconventional solutions. Unafraid to question the status quo and explore uncharted territories in the pursuit of breakthrough ideas and transformative outcomes.
@@ -295,27 +298,28 @@
         </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- Footer with ACT colors -->
+    <footer class="site-footer" style="background-color: var(--act-midnight-forest); color: var(--act-sand-gray);">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span>George Nekwaya</span>
+                    <span style="color: var(--act-spring-green);">George Nekwaya</span>
                 </div>
                 <div class="footer-links">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="experience.html">Experience</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="namibia.html">Namibia</a></li>
+                        <li><a href="index.html" style="color: var(--act-seafoam-blue);">Home</a></li>
+                        <li><a href="experience.html" style="color: var(--act-seafoam-blue);">Experience</a></li>
+                        <li><a href="projects.html" style="color: var(--act-seafoam-blue);">Projects</a></li>
+                        <li><a href="namibia.html" style="color: var(--act-seafoam-blue);">Namibia</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <a href="mailto:george.n.p.nekwaya@gmail.com" class="footer-link">george.n.p.nekwaya@gmail.com</a>
+                    <a href="mailto:george.n.p.nekwaya@gmail.com" class="footer-link" style="color: var(--act-seafoam-blue);">george.n.p.nekwaya@gmail.com</a>
                     <span class="footer-separator">|</span>
                     <a href="https://www.linkedin.com/in/george-nekwaya" 
                        target="_blank" 
                        rel="noopener noreferrer" 
-                       class="footer-link">LinkedIn</a>
+                       class="footer-link" style="color: var(--act-seafoam-blue);">LinkedIn</a>
                 </div>
             </div>
             <div class="footer-bottom">

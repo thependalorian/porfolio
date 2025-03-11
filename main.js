@@ -2,6 +2,7 @@
  * Main JavaScript file for George Nekwaya's Portfolio
  * Author: UI/UX-Focused Full-Stack Web Developer
  * Version: 1.0.0
+ * Updated with ACT Brand Guidelines
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -25,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Accessibility
     initializeAccessibility();
+    
+    // ACT Specific Enhancements
+    initializeACTElements();
 });
 
 // Break out functions for better organization
@@ -56,10 +60,12 @@ function initializeScrollReveal() {
     };
     
     revealOnScroll(); // Initial check
-    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('scroll', () => {
+        requestAnimationFrame(revealOnScroll);
+    });
 }
 
-// Fix video lazy loading implementation
+// Enhanced video lazy loading implementation
 function initializeVideoLazyLoad() {
     const videoContainers = document.querySelectorAll('.video-container');
     
@@ -92,8 +98,6 @@ function initializeVideoLazyLoad() {
         }
     });
 }
-
-// Other functions remain the same but with consistent spacing and organization
 
 function initializeFlagDisplay() {
     const flagDisplay = document.querySelector('.flag-display');
@@ -162,13 +166,14 @@ function initializeExternalLinks() {
             link.setAttribute('rel', `${rel} noopener noreferrer`.trim());
         }
         
-        // Add visual indicator for external links (optional)
+        // Add visual indicator for external links with ACT styling
         if (!link.querySelector('.external-link-icon')) {
             const icon = document.createElement('span');
             icon.className = 'external-link-icon';
             icon.innerHTML = ' ↗';
             icon.style.fontSize = '0.75em';
             icon.style.verticalAlign = 'super';
+            icon.style.color = 'var(--act-spring-green)';
             link.appendChild(icon);
         }
     });
@@ -188,5 +193,68 @@ function initializeAccessibility() {
     // Remove focus styles when using mouse
     document.addEventListener('mousedown', function() {
         document.body.classList.remove('user-is-tabbing');
+    });
+}
+
+// New function for ACT specific elements
+function initializeACTElements() {
+    // Enhanced hover effects for ACT cards
+    const actCards = document.querySelectorAll('.act-card');
+    actCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+            this.style.boxShadow = 'var(--shadow-lg)';
+            this.style.borderColor = 'var(--act-spring-green)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+            this.style.borderColor = '';
+        });
+    });
+    
+    // Add subtle parallax effect to hero section
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition < 800) { // Only apply effect near the top
+                heroSection.style.backgroundPosition = `center ${scrollPosition * 0.1}px`;
+            }
+        });
+    }
+    
+    // Enhance section titles with subtle animation
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles.forEach(title => {
+        // Add bottom border that animates on scroll into view
+        const borderElement = document.createElement('span');
+        borderElement.className = 'title-border';
+        borderElement.style.display = 'block';
+        borderElement.style.width = '0';
+        borderElement.style.height = '3px';
+        borderElement.style.backgroundColor = 'var(--act-spring-green)';
+        borderElement.style.marginTop = '0.5rem';
+        borderElement.style.transition = 'width 0.8s ease';
+        title.appendChild(borderElement);
+        
+        // Observe when title comes into view
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const border = entry.target.querySelector('.title-border');
+                        if (border) {
+                            border.style.width = '60px';
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+        
+        observer.observe(title);
     });
 }
