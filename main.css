@@ -2799,3 +2799,33 @@ main {
 .feature-icon-wrapper svg {
     color: var(--spider-lily);
 }
+
+/* Feature icon styles... */
+
+/* Recognition cards for Buffr page */
+.recognition-card {
+    background-color: var(--spider-white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.recognition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* Award image container */
+.award-image-container {
+    max-width: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}

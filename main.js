@@ -280,15 +280,21 @@ function initializeSmoothScroll() {
 
 function initializeExternalLinks() {
     // Handle external links
-    document.querySelectorAll('a[target="_blank"]').forEach(link => {
-        // Add rel="noopener noreferrer" for security if not already present
+    const externalLinks = document.querySelectorAll('a[href^="http"]');
+    externalLinks.forEach(link => {
+        // Ensure links open in new tabs with security attributes
+        if (!link.getAttribute('target')) {
+            link.setAttribute('target', '_blank');
+        }
+        
+        // Add security rel attributes
         if (!link.getAttribute('rel') || !link.getAttribute('rel').includes('noopener')) {
             const rel = link.getAttribute('rel') || '';
             link.setAttribute('rel', `${rel} noopener noreferrer`.trim());
         }
         
         // Add visual indicator for external links with ACT styling
-        if (!link.querySelector('.external-link-icon')) {
+        if (!link.querySelector('.external-link-icon') && !link.closest('.footer-content')) {
             const icon = document.createElement('span');
             icon.className = 'external-link-icon';
             icon.innerHTML = ' ↗';
