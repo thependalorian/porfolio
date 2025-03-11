@@ -10,6 +10,7 @@
   <script src="script.js" defer></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="min-h-screen flex flex-col bg-white text-gray-900">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -200,11 +201,16 @@
   <!-- Include footer -->
   <div id="footer-container"></div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    // Load components
-    $('#navbar-container').load('navbar.html');
-    $('#footer-container').load('footer.html');
+    $(document).ready(function () {
+      $("#navbar-container").load("navbar.html", function () {
+        console.log("Navbar loaded.");
+      });
+      
+      $("#footer-container").load("footer.html", function () {
+        console.log("Footer loaded.");
+      });
+    });
   </script>
 </body>
 </html> 
