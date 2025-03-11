@@ -29,6 +29,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ACT Specific Enhancements
     initializeACTElements();
+    
+    // Add Spider Lily petals animation to hero section
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        for (let i = 0; i < 8; i++) {
+            const petal = document.createElement('div');
+            petal.className = 'spider-petal-animation';
+            petal.style.top = `${Math.random() * 100}%`;
+            petal.style.left = `${Math.random() * 100}%`;
+            petal.style.animationDelay = `${Math.random() * 5}s`;
+            heroSection.appendChild(petal);
+        }
+    }
+    
+    // Add Spider Lily loader for async operations
+    const loadingElements = document.querySelectorAll('.loading');
+    loadingElements.forEach(element => {
+        element.innerHTML = '<div class="spider-loader"></div>';
+    });
 });
 
 // Break out functions for better organization

@@ -1,0 +1,13 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Create a pattern of 8 petals in a circular arrangement -->
+  <g transform="translate(150,150)">
+    <path d="M0 -50C0 -50 -20 0 -50 0C-80 0 -80 -80 -50 -50C-20 -20 0 -50 0 -50Z" fill="#FF5733" fill-opacity="0.1" transform="rotate(0)"/>
+    <path d="M0 -50C0 -50 -20 0 -50 0C-80 0 -80 -80 -50 -50C-20 -20 0 -50 0 -50Z" fill="#FF5733" fill-opacity="0.1" transform="rotate(45)"/>
+    <path d="M0 -50C0 -50 -20 0 -50 0C-80 0 -80 -80 -50 -50C-20 -20 0 -50 0 -50Z" fill="#FF5733" fill-opacity="0.1" transform="rotate(90)"/>
+    <path d="M0 -50C0 -50 -20 0 -50 0C-80 0 -80 -80 -50 -50C-20 -20 0 -50 0 -50Z" fill="#FF5733" fill-opacity="0.1" transform="rotate(135)"/>
+    <path d="M0 -50C0 -50 -20 0 -50 0C-80 0 -80 -80 -50 -50C-20 -20 0 -50 0 -50Z" fill="#FF5733" fill-opacity="0.1" transform="rotate(180)"/>
+    <path d="M0 -50C0 -50 -20 0 -50 0C-80 0 -80 -80 -50 -50C-20 -20 0 -50 0 -50Z" fill="#FF5733" fill-opacity="0.1" transform="rotate(225)"/>
+    <path d="M0 -50C0 -50 -20 0 -50 0C-80 0 -80 -80 -50 -50C-20 -20 0 -50 0 -50Z" fill="#FF5733" fill-opacity="0.1" transform="rotate(270)"/>
+    <path d="M0 -50C0 -50 -20 0 -50 0C-80 0 -80 -80 -50 -50C-20 -20 0 -50 0 -50Z" fill="#FF5733" fill-opacity="0.1" transform="rotate(315)"/>
+  </g>
+</svg> 
