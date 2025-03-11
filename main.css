@@ -994,7 +994,7 @@ a:hover {
 /* Caption Styling */
 .image-caption {
     font-size: 0.875rem;
-    color: var(--spider-black-60);
+    color: var(--spider-black-600);
     text-align: center;
     margin-top: 0.5rem;
 }
@@ -1225,7 +1225,7 @@ a:hover {
 }
 
 .project-description {
-    color: var(--spider-black-60);
+    color: var(--spider-black-600);
     font-size: 0.875rem;
     margin-bottom: 1rem;
 }
@@ -1380,7 +1380,7 @@ a:hover {
 }
 
 .experience-meta {
-    color: var(--spider-black-60);
+    color: var(--spider-black-600);
     font-size: 0.875rem;
 }
 
@@ -1560,7 +1560,7 @@ a:hover {
 }
 
 .location-description {
-    color: var(--spider-black-60);
+    color: var(--spider-black-600);
     font-size: 0.875rem;
     line-height: 1.5;
 }
@@ -2434,24 +2434,25 @@ main {
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
+/* Stat card styling for Buffr page */
 .stat-card {
     background: white;
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .stat-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: var(--card-hover-shadow);
 }
 
 .stat-number {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #0047AB;
+    color: var(--spider-lily);
     line-height: 1;
     margin-bottom: 0.5rem;
 }
@@ -2736,4 +2737,65 @@ main {
     margin: 0;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Buffr page styling */
+.buffr-logo-large {
+    width: 280px;
+    height: 280px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: var(--card-shadow);
+}
+
+.app-screenshot-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-screenshot-container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.app-screenshot-container.large {
+    max-width: 100%;
+}
+
+.app-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.buffr-feature-card {
+    background-color: var(--spider-white);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--spider-lily);
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.feature-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--spider-lily-10);
+    margin-bottom: 1rem;
+}
+
+.feature-icon-wrapper svg {
+    color: var(--spider-lily);
 }

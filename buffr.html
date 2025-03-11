@@ -17,48 +17,6 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <!-- Custom styles for Buffr page -->
-    <style>
-        .buffr-hero {
-            background: linear-gradient(135deg, #0047AB 0%, #4169E1 100%);
-        }
-        .award-badge {
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            background: #FFD700;
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transform: rotate(5deg);
-        }
-        .app-mockup {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-radius: 24px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .app-mockup:hover {
-            transform: translateY(-10px);
-        }
-        .stat-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #0047AB;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-    </style>
 </head>
 <body class="min-h-screen flex flex-col bg-white text-gray-900">
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -100,11 +58,11 @@
                             </div>
                         </div>
                         <div class="lg:w-1/2 flex justify-center relative">
-                            <div class="p-6 bg-white rounded-lg shadow-lg">
+                            <div class="logo-container buffr-logo-large">
                                 <img 
                                     src="Buffr_Logo.png" 
                                     alt="Buffr Logo" 
-                                    class="w-64 h-64 object-contain"
+                                    class="w-full h-full object-contain"
                                 >
                                 <div class="award-badge">Award Winner</div>
                             </div>
@@ -118,17 +76,15 @@
         <section class="py-12 bg-gray-50">
             <div class="container">
                 <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="md:w-1/2">
-                        <div class="phone-carousel">
-                            <div class="phone-mockup floating-app">
-                                <img src="buffr_app_mock.jpeg" alt="Buffr Settings Screen">
-                            </div>
-                            <div class="phone-mockup floating-app">
-                                <img src="buffr_app_mock2.png" alt="Buffr Card Screen">
-                            </div>
-                            <div class="phone-mockup floating-app">
-                                <img src="buffr_app_mock3.png" alt="Buffr Group Settings">
-                            </div>
+                    <div class="md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="app-screenshot-container">
+                            <img src="buffr_app_mock.jpeg" alt="Buffr Settings Screen" class="app-screenshot">
+                        </div>
+                        <div class="app-screenshot-container">
+                            <img src="buffr_app_mock2.png" alt="Buffr Card Screen" class="app-screenshot">
+                        </div>
+                        <div class="app-screenshot-container md:col-span-2">
+                            <img src="buffr_app_mock3.png" alt="Buffr Group Settings" class="app-screenshot">
                         </div>
                     </div>
                     <div class="md:w-1/2">
@@ -260,49 +216,44 @@
                 <!-- App Mockups -->
                 <div class="flex flex-col md:flex-row gap-8 items-center mb-12">
                     <div class="md:w-1/2">
-                        <div class="buffr-card">
-                            <div class="buffr-card-logo">Buffr Card</div>
-                            <div class="buffr-card-number">4756 •••• •••• 9018</div>
-                            <div class="buffr-card-name">Elno Nashikoto</div>
-                            <div class="buffr-card-footer">
-                                <span>05/28</span>
-                                <span>CVV: •••</span>
-                            </div>
+                        <div class="card buffr-feature-card p-6 mb-6">
+                            <h3 class="text-xl font-semibold mb-3">Buffr Digital Card</h3>
+                            <p class="mb-4">Secure, convenient digital payment cards that work seamlessly with your existing banking infrastructure.</p>
                         </div>
-                        <div class="phone-mockup" style="margin-top: -80px; z-index: 1; transform: rotate(-5deg);">
-                            <img src="buffr_app_mock4.png" alt="Buffr Financial Tools">
+                        <div class="app-screenshot-container large">
+                            <img src="buffr_app_mock4.png" alt="Buffr Financial Tools" class="app-screenshot">
                         </div>
                     </div>
                     <div class="md:w-1/2">
                         <h3 class="text-2xl font-bold mb-4">Key Platform Features</h3>
                         <div class="space-y-6">
-                            <div class="feature-highlight">
-                                <div class="feature-icon">
+                            <div class="card feature-card">
+                                <div class="feature-icon-wrapper">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </div>
-                                <h4 class="feature-title">Streamlined Payments</h4>
+                                <h4 class="text-xl font-semibold mb-2">Streamlined Payments</h4>
                                 <p>A safer alternative to cash with improved accessibility and affordability for underserved markets.</p>
                             </div>
                             
-                            <div class="feature-highlight">
-                                <div class="feature-icon">
+                            <div class="card feature-card">
+                                <div class="feature-icon-wrapper">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                     </svg>
                                 </div>
-                                <h4 class="feature-title">Personalized Financial Management</h4>
+                                <h4 class="text-xl font-semibold mb-2">Personalized Financial Management</h4>
                                 <p>Insights and tools designed for the specific needs of users in emerging markets.</p>
                             </div>
                             
-                            <div class="feature-highlight">
-                                <div class="feature-icon">
+                            <div class="card feature-card">
+                                <div class="feature-icon-wrapper">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </div>
-                                <h4 class="feature-title">Data Compensation</h4>
+                                <h4 class="text-xl font-semibold mb-2">Buffr Points in app currency</h4>
                                 <p>A unique value proposition that rewards users for participation in the digital economy.</p>
                             </div>
                         </div>
@@ -331,11 +282,13 @@
                     </div>
                     
                     <div class="lg:w-1/2">
-                        <img 
-                            src="buffr_app_mock.jpeg" 
-                            alt="Buffr App Dashboard" 
-                            class="app-mockup w-full rounded-lg shadow-lg"
-                        >
+                        <div class="app-screenshot-container">
+                            <img 
+                                src="buffr_app_mock.jpeg" 
+                                alt="Buffr App Dashboard" 
+                                class="app-screenshot"
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
