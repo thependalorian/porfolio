@@ -19,8 +19,7 @@ const nextConfig = {
     // Ignores any warning/error coming from ESLint
     ignoreDuringBuilds: true,
   },
-  output: 'export',
-  basePath: '/porfolio'
+  output: 'export'
 };
 
 module.exports = nextConfig; 
