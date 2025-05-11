@@ -8,7 +8,8 @@ const nextConfig = {
         hostname: '**',
       },
     ],
-    formats: ['image/webp']
+    formats: ['image/webp'],
+    unoptimized: true,
   },
   typescript: {
     // Ignores any error happened during type checking
@@ -18,7 +19,8 @@ const nextConfig = {
     // Ignores any warning/error coming from ESLint
     ignoreDuringBuilds: true,
   },
-  output: 'standalone'
+  output: 'export',
+  basePath: '/porfolio'
 };
 
 module.exports = nextConfig; 
