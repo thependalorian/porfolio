@@ -1,0 +1,9 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/buffr/page": "app/buffr/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/certificates/page": "app/certificates/page.js",
+  "/page": "app/page.js",
+  "/namibia/page": "app/namibia/page.js",
+  "/experience/page": "app/experience/page.js"
+}

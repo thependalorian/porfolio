@@ -1,0 +1,71 @@
+{
+  "pages": {
+    "/_not-found": [
+      "static/chunks/webpack-89af5af3b7cb5804.js",
+      "static/chunks/fd9d1056-a0f25f3489a0db28.js",
+      "static/chunks/69-cd74c3765e425f99.js",
+      "static/chunks/main-app-62bf01225db6f488.js",
+      "static/chunks/app/_not-found-e3a3f7413923b260.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-89af5af3b7cb5804.js",
+      "static/chunks/fd9d1056-a0f25f3489a0db28.js",
+      "static/chunks/69-cd74c3765e425f99.js",
+      "static/chunks/main-app-62bf01225db6f488.js",
+      "static/css/d0dca8120b6f3148.css",
+      "static/chunks/app/layout-67f09f9fcd73b4a3.js"
+    ],
+    "/buffr/page": [
+      "static/chunks/webpack-89af5af3b7cb5804.js",
+      "static/chunks/fd9d1056-a0f25f3489a0db28.js",
+      "static/chunks/69-cd74c3765e425f99.js",
+      "static/chunks/main-app-62bf01225db6f488.js",
+      "static/chunks/568-3100d8a498de2900.js",
+      "static/chunks/703-2d3208d8a9fbfbb5.js",
+      "static/chunks/app/buffr/page-9d3b93ef6835c1fc.js"
+    ],
+    "/projects/page": [
+      "static/chunks/webpack-89af5af3b7cb5804.js",
+      "static/chunks/fd9d1056-a0f25f3489a0db28.js",
+      "static/chunks/69-cd74c3765e425f99.js",
+      "static/chunks/main-app-62bf01225db6f488.js",
+      "static/chunks/568-3100d8a498de2900.js",
+      "static/chunks/app/projects/page-6cc58fa285ae129b.js"
+    ],
+    "/certificates/page": [
+      "static/chunks/webpack-89af5af3b7cb5804.js",
+      "static/chunks/fd9d1056-a0f25f3489a0db28.js",
+      "static/chunks/69-cd74c3765e425f99.js",
+      "static/chunks/main-app-62bf01225db6f488.js",
+      "static/chunks/568-3100d8a498de2900.js",
+      "static/chunks/703-2d3208d8a9fbfbb5.js",
+      "static/chunks/app/certificates/page-589ea46ccd516ac7.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-89af5af3b7cb5804.js",
+      "static/chunks/fd9d1056-a0f25f3489a0db28.js",
+      "static/chunks/69-cd74c3765e425f99.js",
+      "static/chunks/main-app-62bf01225db6f488.js",
+      "static/chunks/568-3100d8a498de2900.js",
+      "static/chunks/703-2d3208d8a9fbfbb5.js",
+      "static/chunks/app/page-8a0497265faf0efd.js"
+    ],
+    "/namibia/page": [
+      "static/chunks/webpack-89af5af3b7cb5804.js",
+      "static/chunks/fd9d1056-a0f25f3489a0db28.js",
+      "static/chunks/69-cd74c3765e425f99.js",
+      "static/chunks/main-app-62bf01225db6f488.js",
+      "static/chunks/568-3100d8a498de2900.js",
+      "static/chunks/703-2d3208d8a9fbfbb5.js",
+      "static/chunks/app/namibia/page-da55e2db05ebce5e.js"
+    ],
+    "/experience/page": [
+      "static/chunks/webpack-89af5af3b7cb5804.js",
+      "static/chunks/fd9d1056-a0f25f3489a0db28.js",
+      "static/chunks/69-cd74c3765e425f99.js",
+      "static/chunks/main-app-62bf01225db6f488.js",
+      "static/chunks/568-3100d8a498de2900.js",
+      "static/chunks/app/experience/page-dc8d9c2078ced84a.js"
+    ]
+  }
+}
