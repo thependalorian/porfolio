@@ -274,7 +274,7 @@ export default function Buffr() {
                 </p>
                 <div className="card-actions justify-center mt-4">
                   <a
-                    href="https://www.linkedin.com/company/blackinecom/"
+                    href="https://www.linkedin.com/posts/blackinecom_welcome-to-the-black-in-ecom-conference-activity-7092732100386181120-4053?utm_source=share&utm_medium=member_desktop&rcm=ACoAACHmrKMBJsEPzLjCIhVlKPGEli2lZbQy5EQ"
                     className="btn btn-primary btn-outline btn-sm"
                     target="_blank"
                     rel="noopener noreferrer"
