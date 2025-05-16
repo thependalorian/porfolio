@@ -216,6 +216,132 @@ export default function Buffr() {
         </div>
       </section>
 
+      {/* Experiences Section */}
+      <section className="py-20 bg-base-200/50 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-4">Professional Experiences</h2>
+            <p className="text-xl text-base-content/70">
+              Highlighting key events that shape my fintech journey.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="card glass-card"
+            >
+              <div className="card-body">
+                <h3 className="card-title text-2xl mb-4">FinTech Junction 2023</h3>
+                <p>
+                  Attended Israel's premier fintech conference, FinTech Junction 2023, held at the Hilton Tel Aviv. 
+                  This event brought together over 1,000 attendees from 25 countries, including leaders from banks, 
+                  fintech startups, and venture capital firms. I gained insights into global fintech trends, particularly 
+                  in AI-driven innovation and digital payments, and had the opportunity to network with industry leaders, 
+                  enhancing my understanding of the challenges and opportunities in the fintech landscape.
+                </p>
+                <div className="card-actions justify-center mt-4">
+                  <a
+                    href="https://www.fintechjunction.com"
+                    className="btn btn-primary btn-outline btn-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Conference Page
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="card glass-card"
+            >
+              <div className="card-body">
+                <h3 className="card-title text-2xl mb-4">Black in eCom 2023</h3>
+                <p>
+                  Attended the Black in eCom Conference 2023, a pivotal event focused on empowering Black entrepreneurs and professionals in e-commerce and technology. 
+                  The conference aimed to amplify Black voices in e-commerce, celebrate their contributions, and address industry challenges through networking, education, and empowerment initiatives.
+                </p>
+                <div className="card-actions justify-center mt-4">
+                  <a
+                    href="https://www.blackinecom.com"
+                    className="btn btn-primary btn-outline btn-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Conference Page
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="card glass-card"
+            >
+              <div className="card-body">
+                <h3 className="card-title text-2xl mb-4">MIT FinTech Conference 2024</h3>
+                <p>
+                  Engaged with over 400 innovators and professionals at the MIT FinTech Conference 2024. 
+                  The conference addressed pressing issues in fintech, including real-time payments and AI applications 
+                  in finance. I participated in discussions led by industry leaders from Visa and PayPal, gaining valuable 
+                  insights into the future of financial services and the role of technology in enhancing customer experiences.
+                </p>
+                <div className="card-actions justify-center mt-4">
+                  <a
+                    href="https://www.mitfintechconference.com"
+                    className="btn btn-primary btn-outline btn-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Conference Page
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="card glass-card"
+            >
+              <div className="card-body">
+                <h3 className="card-title text-2xl mb-4">MIT FinTech Conference 2025</h3>
+                <p>
+                  Continued my engagement with cutting-edge fintech discussions at the MIT FinTech Conference 2025. 
+                  This conference focused on the impact of open banking, AI, and digital currencies on financial services. 
+                  I participated in keynotes and networking opportunities, discussing strategies for navigating the evolving 
+                  financial ecosystem and the importance of customer trust in adopting new technologies.
+                </p>
+                <div className="card-actions justify-center mt-4">
+                  <a
+                    href="https://www.mitfintechconference.com"
+                    className="btn btn-primary btn-outline btn-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Conference Page
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-20 bg-base-200/50 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto px-4 text-center">
