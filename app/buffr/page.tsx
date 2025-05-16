@@ -95,21 +95,6 @@ export default function Buffr() {
                 Founded by George Nekwaya, MBA'24 and Evan Goddard, MSF'24, Buffr aims to transform 
                 the financial landscape in Southern Africa, beginning with Namibia.
               </p>
-              <blockquote className="card glass-card p-6 mb-6">
-                <p className="italic text-base-content/70">
-                  "We will vertically integrate into a payment gateway and expand across south Africa and developing countries."
-                </p>
-                <footer className="mt-2 font-semibold">— George Nekwaya, Founder & CEO</footer>
-              </blockquote>
-              <a
-                href="https://www.linkedin.com/posts/brandeisbusiness_lunch-with-this-years-ain-family-start-up-activity-7205901681505546240-Z9Ut"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link link-primary flex items-center gap-2"
-              >
-                <Award className="w-5 h-5" />
-                Buffr was also featured in the Ain Family Start-Up Challenge at Brandeis
-              </a>
             </motion.div>
           </div>
         </div>
@@ -143,10 +128,8 @@ export default function Buffr() {
                   Buffr is an innovative fintech startup addressing the critical challenge of financial exclusion 
                   across Namibia and Southern Africa. Our mission is to empower Millennials and Gen Z by making 
                   financial services accessible, affordable, and enjoyable through an AI-powered platform.
-                </p>
-                <p>
-                  What sets Buffr apart is our unique value proposition of compensating users for their data—making us 
-                  the first in Namibia to do so—while prioritizing financial inclusion for the unbanked and underbanked.
+                  We will begin with the launch of Buffr Lend, providing payday loans through employer-based salary 
+                  deduction agreements, and will integrate additional features to enhance our offerings.
                 </p>
               </div>
             </motion.div>
@@ -190,11 +173,6 @@ export default function Buffr() {
                   which aims to modernize the country's payment infrastructure. As the central bank works to implement 
                   real-time payment capabilities and interoperability standards, Buffr serves as a consumer-facing 
                   interface that leverages this evolving infrastructure.
-                </p>
-                <p>
-                  Our platform is designed to integrate seamlessly with these national payment systems, enhancing 
-                  their reach and adoption among younger demographics while adding value through our AI-powered 
-                  financial management tools.
                 </p>
               </div>
             </motion.div>
