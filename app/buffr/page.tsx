@@ -301,7 +301,7 @@ export default function Buffr() {
                 </p>
                 <div className="card-actions justify-center mt-4">
                   <a
-                    href="https://www.linkedin.com/company/mit-fintech/posts/?feedView=all"
+                    href="https://www.mitfintech.com/"
                     className="btn btn-primary btn-outline btn-sm"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -328,7 +328,7 @@ export default function Buffr() {
                 </p>
                 <div className="card-actions justify-center mt-4">
                   <a
-                    href="https://www.linkedin.com/company/mit-fintech/posts/?feedView=all"
+                    href="https://www.mitfintech.com/"
                     className="btn btn-primary btn-outline btn-sm"
                     target="_blank"
                     rel="noopener noreferrer"
