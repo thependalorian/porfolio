@@ -274,7 +274,7 @@ export default function Buffr() {
                 </p>
                 <div className="card-actions justify-center mt-4">
                   <a
-                    href="https://www.blackinecom.com"
+                    href="https://www.linkedin.com/company/blackinecom/"
                     className="btn btn-primary btn-outline btn-sm"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -294,14 +294,14 @@ export default function Buffr() {
               <div className="card-body">
                 <h3 className="card-title text-2xl mb-4">MIT FinTech Conference 2024</h3>
                 <p>
-                  Engaged with over 400 innovators and professionals at the MIT FinTech Conference 2024. 
+                  Engaged with innovators and professionals at the MIT FinTech Conference 2024. 
                   The conference addressed pressing issues in fintech, including real-time payments and AI applications 
                   in finance. I participated in discussions led by industry leaders from Visa and PayPal, gaining valuable 
                   insights into the future of financial services and the role of technology in enhancing customer experiences.
                 </p>
                 <div className="card-actions justify-center mt-4">
                   <a
-                    href="https://www.mitfintechconference.com"
+                    href="https://www.linkedin.com/company/mit-fintech/posts/?feedView=all"
                     className="btn btn-primary btn-outline btn-sm"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -323,12 +323,12 @@ export default function Buffr() {
                 <p>
                   Continued my engagement with cutting-edge fintech discussions at the MIT FinTech Conference 2025. 
                   This conference focused on the impact of open banking, AI, and digital currencies on financial services. 
-                  I participated in keynotes and networking opportunities, discussing strategies for navigating the evolving 
+                  I participated in networking opportunities, discussing strategies for navigating the evolving 
                   financial ecosystem and the importance of customer trust in adopting new technologies.
                 </p>
                 <div className="card-actions justify-center mt-4">
                   <a
-                    href="https://www.mitfintechconference.com"
+                    href="https://www.linkedin.com/company/mit-fintech/posts/?feedView=all"
                     className="btn btn-primary btn-outline btn-sm"
                     target="_blank"
                     rel="noopener noreferrer"
