@@ -127,34 +127,34 @@ export default function Projects() {
                 </div>
                 <div className="card-body">
                   <h3 className="card-title text-2xl mb-4">Buffr Payment Companion</h3>
-                  <p className="text-lg font-semibold text-white mb-2">"Your Next Payment Companion"</p>
+                  <p className="text-lg font-semibold text-white mb-2">"Addressing Namibia's Financial Inclusion Challenges"</p>
                   <p className="mb-4">
-                    A complete mobile banking app that makes sending and receiving money as easy as sending a text message. 
-                    Built specifically for young people in Namibia and Southern Africa who want modern, safe, and simple financial services.
+                    A comprehensive iOS fintech application that tackles institutional challenges in Namibia's financial sector, 
+                    including the 24.7% informal economy, rural access barriers, and financial literacy gaps through AI-powered solutions.
                   </p>
                   <div className="mb-4">
-                    <h4 className="font-semibold mb-2">What it does:</h4>
+                    <h4 className="font-semibold mb-2">Institutional Challenges Addressed:</h4>
                     <ul className="text-sm space-y-1">
-                      <li>• Send money instantly to friends and family</li>
-                      <li>• Pay for things using your phone camera (QR codes)</li>
-                      <li>• Get help from an AI assistant for financial questions</li>
-                      <li>• Works with Namibian, South African, and Botswanan money</li>
-                      <li>• Designed to work even with slow internet connections</li>
+                      <li>• <strong>Informal Economy Integration:</strong> Digital footprint building for 24.7% of GDP</li>
+                      <li>• <strong>Rural Financial Access:</strong> 40km average distance to financial services</li>
+                      <li>• <strong>Financial Literacy:</strong> Personalized learning calendar with Namibian context</li>
+                      <li>• <strong>Group Lending:</strong> Community savings and lending circles</li>
+                      <li>• <strong>Seller Verification:</strong> Marketplace trust and business formalization</li>
                     </ul>
                   </div>
                   <div className="mb-4">
-                    <h4 className="font-semibold mb-2">Built with:</h4>
+                    <h4 className="font-semibold mb-2">Core Features:</h4>
                     <p className="text-sm">
-                      <strong>Mobile App:</strong> Modern iOS app with beautiful design<br/>
-                      <strong>Banking System:</strong> Secure connection to real banks<br/>
-                      <strong>Smart Features:</strong> AI that helps with money decisions
+                      <strong>AI Financial Assistant:</strong> Voice-activated guidance with Namibian tax integration<br/>
+                      <strong>Apache Fineract Integration:</strong> Enterprise-grade core banking system<br/>
+                      <strong>Financial Literacy Calendar:</strong> Personalized learning with progress tracking
                     </p>
                   </div>
                   <div className="card-actions justify-center">
-                    <span className="badge badge-success">Ready to Launch</span>
-                    <span className="badge badge-accent">Mobile Banking</span>
-                    <span className="badge badge-secondary">AI Assistant</span>
-                    <span className="badge badge-accent">Namibia</span>
+                    <span className="badge badge-success">Production Ready</span>
+                    <span className="badge badge-accent">Financial Inclusion</span>
+                    <span className="badge badge-secondary">AI-Powered</span>
+                    <span className="badge badge-accent">Namibian Context</span>
                   </div>
                 </div>
               </motion.div>
@@ -201,9 +201,9 @@ export default function Projects() {
                       <p className="text-sm text-base-content/60">B2B2C Lending Platform</p>
                     </div>
                   </div>
-                  <p className="text-sm font-semibold text-white mb-2">"Smart Loans, Simple Process"</p>
+                  <p className="text-sm font-semibold text-white mb-2">"Enterprise Lending Platform"</p>
                   <p className="mb-4">
-                    Complete B2B2C lending platform with comprehensive authentication, loan processing, KYC verification, and admin dashboard. Built for partner employers and their permanent employees with salary deduction model.
+                    Complete B2B2C lending platform with comprehensive authentication, loan processing, KYC verification, and admin dashboard. Built for institutional employers and their permanent employees with salary deduction model.
                   </p>
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2 text-sm">What it does:</h4>
@@ -252,10 +252,10 @@ export default function Projects() {
                       <p className="text-sm text-base-content/60">AI Digital Signature Platform</p>
                     </div>
                   </div>
-                  <p className="text-sm font-semibold text-white mb-2">"Get Documents Signed in Minutes, Not Days"</p>
+                  <p className="text-sm font-semibold text-white mb-2">"AI-Powered Document Intelligence"</p>
                   <p className="mb-4">
                     Advanced AI-powered digital signature platform with LlamaIndex + LangGraph + Pydantic AI. 
-                    Features intelligent document processing, compliance validation, and secure signature workflows with 29 legal documents knowledge base.
+                    Features intelligent document processing, compliance validation, and secure signature workflows with comprehensive legal document knowledge base.
                   </p>
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2 text-sm">What it does:</h4>
@@ -264,8 +264,8 @@ export default function Projects() {
                       <li>• LangGraph workflow orchestration and state management</li>
                       <li>• Pydantic AI validation with structured data processing</li>
                       <li>• OCR + Computer Vision for text extraction</li>
-                      <li>• ETA 2019 compliance with 29 legal documents</li>
-                      <li>• Neo4j knowledge graph for entity relationships</li>
+                      <li>• Legal compliance validation and audit trails</li>
+                      <li>• Knowledge graph for entity relationships</li>
                     </ul>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -306,7 +306,7 @@ export default function Projects() {
                       <p className="text-sm text-base-content/60">Hospitality Management Platform</p>
                     </div>
                   </div>
-                  <p className="text-sm font-semibold text-white mb-2">"The Future of Hospitality, Today"</p>
+                  <p className="text-sm font-semibold text-white mb-2">"Comprehensive Hospitality Management"</p>
                   <p className="mb-4">
                     Comprehensive cloud-based hospitality ecosystem management platform combining CRM-driven customer engagement, 
                     AI-powered business intelligence, and streamlined operational tools for restaurants, hotels, spas, and all hospitality amenities.
@@ -318,7 +318,7 @@ export default function Projects() {
                       <li>• Room, menu, staff, and booking management systems</li>
                       <li>• Inventory management with low-stock alerts</li>
                       <li>• Digital menu with QR code access and multi-language support</li>
-                      <li>• Cross-business loyalty programs and point redemption</li>
+                      <li>• Integrated loyalty programs and point redemption</li>
                       <li>• AI-driven business intelligence and performance metrics</li>
                     </ul>
                   </div>
