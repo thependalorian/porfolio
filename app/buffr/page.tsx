@@ -6,10 +6,10 @@ import { Award, Users, Target, Lightbulb, Mail, ArrowRight } from 'lucide-react'
 import Image from 'next/image';
 
 const challenges = [
-  'In Namibia, approximately 42% of the adult population remains unbanked',
-  '25% face barriers due to lack of access to affordable financial services',
-  'Traditional banking systems often fail to meet the needs of younger generations',
-  'Financial exclusion perpetuates inequality and limits economic participation'
+  '24.7% of Namibia\'s GDP comes from the informal economy with limited digital footprint',
+  '40km average distance to financial services in rural areas creates access barriers',
+  'Limited financial literacy and digital financial education resources',
+  'No data → No rating → No credit cycle prevents informal economy formalization'
 ];
 
 export default function Buffr() {
@@ -31,7 +31,7 @@ export default function Buffr() {
                 Buffr - Your Next Payment Companion
               </h1>
               <p className="text-xl mb-6">
-                Empowering Millennials and Gen Z in Namibia and Southern Africa with AI-powered financial solutions that make financial services accessible, affordable, and enjoyable.
+                A comprehensive fintech ecosystem tackling institutional challenges in Namibia's financial sector, including the 24.7% informal economy, rural access barriers, and financial literacy gaps through AI-powered solutions.
               </p>
               <p className="text-lg mb-8">
                 Winner of the 2023 Asper Student Startup Prize in Apps, Software and Computer Science category. 
@@ -126,11 +126,11 @@ export default function Buffr() {
               <div className="card-body">
                 <h3 className="card-title text-2xl mb-4">Our Mission</h3>
                 <p className="mb-6">
-                  Buffr is an innovative fintech startup addressing the critical challenge of financial exclusion 
-                  across Namibia and Southern Africa. Our mission is to empower Millennials and Gen Z by making 
-                  financial services accessible, affordable, and enjoyable through an AI-powered platform.
-                  We will begin with the launch of Buffr Lend, providing payday loans through employer-based salary 
-                  deduction agreements, and will integrate additional features to enhance our offerings.
+                  Buffr is an innovative fintech startup addressing critical institutional challenges in Namibia's financial sector. 
+                  Our mission is to bridge the gap between formal and informal economies through AI-powered solutions that address 
+                  the 24.7% informal economy, rural access barriers, and financial literacy gaps. We provide comprehensive 
+                  financial services including group lending, seller verification, financial literacy education, and 
+                  AI-powered financial assistance tailored to Namibia's unique economic landscape.
                 </p>
               </div>
             </motion.div>
@@ -190,14 +190,14 @@ export default function Buffr() {
                     <p className="text-sm text-base-content/60">B2B2C Lending Platform</p>
                   </div>
                 </div>
-                <p className="text-sm font-semibold text-white mb-2">"Smart Loans, Simple Process"</p>
+                <p className="text-sm font-semibold text-white mb-2">"Enterprise Lending Platform"</p>
                 <p className="text-sm mb-4 flex-1">
                   Complete B2B2C lending platform with AI-powered KYC verification, 
-                  WhatsApp AI agents, and enterprise CRM system for partner employers.
+                  comprehensive loan processing, and enterprise CRM system for institutional employers.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="badge badge-success badge-sm">AI KYC</span>
-                  <span className="badge badge-accent badge-sm">WhatsApp AI</span>
+                  <span className="badge badge-accent badge-sm">Apache Fineract</span>
                   <span className="badge badge-secondary badge-sm">Enterprise CRM</span>
                 </div>
                 <div className="card-actions justify-end">
@@ -273,7 +273,7 @@ export default function Buffr() {
                 <p className="text-sm font-semibold text-white mb-2">"The Future of Hospitality, Today"</p>
                 <p className="text-sm mb-4 flex-1">
                   Comprehensive cloud-based hospitality ecosystem management platform combining 
-                  CRM-driven customer engagement and AI-powered business intelligence.
+                  CRM-driven customer engagement and AI-powered business intelligence for restaurants and hotels.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="badge badge-accent badge-sm">AI Receptionist</span>
@@ -347,20 +347,11 @@ export default function Buffr() {
                       • <strong>Comprehensive Analytics:</strong> Users access dashboards with spending patterns, savings trends, and personalized financial health scores to inform better decision-making.
                     </li>
                     <li>
-                      • <strong>Community Support:</strong> Social features connect users for peer learning, support, and collaborative goal setting, strengthening the informal sector's collective resilience.
+                      • <strong>Financial Literacy Calendar:</strong> Personalized learning calendar with Namibian context, progress tracking, and gamified financial education modules.
                     </li>
                   </ul>
                 </div>
 
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2">Market Opportunity:</h4>
-                  <ul className="text-sm space-y-1">
-                    <li>• TAM of $756 Million projected to grow to $1.47 Billion by 2030</li>
-                    <li>• Target: 75% market capture by 2030</li>
-                    <li>• Focus on 42% unbanked population in Namibia</li>
-                    <li>• Strategic partnerships with Adumo for card payment processing</li>
-                  </ul>
-                </div>
               </div>
             </motion.div>
 
