@@ -24,45 +24,46 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
   {
-    title: 'Project Manager, DEIJ & Workforce Development',
-    company: 'The Alliance for Climate Transition (ACT)',
-    period: 'Oct 2024 - Present',
+    title: 'Founder',
+    company: 'Buffr',
+    period: 'Jan 2023 - Present',
     description: [
-      'Led workforce development assessment with MassCEC, identifying critical skill gaps across 12+ clean energy subsectors',
-      'Developed an AI climate economy assistant for career guidance and job matching',
-      'Conducted skill gap analysis for Massachusetts climate economy',
-      'Skills: Project Management, Workforce Development, DEIJ Strategies, RAG, AI Applications'
-    ],
-    type: 'work',
-    icon: Briefcase
-  },
-  {
-    title: 'Business Development',
-    company: 'Aquasaic Corporation',
-    period: 'Oct 2024 - April 2025',
-    description: [
-      'Conduct comprehensive commercial and technical research on cutting-edge water treatment technologies',
-      'Developed a dashboard for water quality data',
-      'Led initiatives to apply for funding and accelerator programs',
-      'Designed company website, marketing materials, and created persuasive pitch decks for investors',
-      'Skills: Technical Research, Product Development, Marketing Strategy'
-    ],
-    type: 'work',
-    icon: Briefcase
-  },
-  {
-    title: 'Founder & CEO',
-    company: 'Buffr Inc.',
-    period: '2023 - Present',
-    description: [
-      'Founded Buffr Inc., developing digital financial inclusion solutions inspired by India\'s UPI success',
-      'Building instant payment infrastructure to improve financial accessibility',
-      'Researching global digital payment ecosystems with field studies in India\'s UPI system',
-      'Developing solutions that address specific challenges in emerging markets',
-      'Creating secure, scalable payment technology focused on financial inclusion'
+      'Founded digital financial inclusion startup inspired by global payment systems like India\'s UPI',
+      'Conducted comprehensive field studies on digital payment ecosystems across multiple countries',
+      'Developed infrastructure for instant payment solutions to improve financial accessibility in emerging markets (Buffr Payment Companion)',
+      'Developed AI-assisted lending platform (BuffrLend) with B2B2C focus and salary deduction model',
+      'Developed intuitive digital signature platform with audit trail (BuffrSign) using LlamaIndex + LangGraph + Pydantic AI',
+      'Created Buffr Host: AI-powered hospitality management platform with voice AI and RAG systems',
+      'Skills: AI/ML (Pydantic AI, LlamaIndex, LangGraph), Full-Stack Development, Financial Technology, Market Research, Strategic Planning, Team Leadership'
     ],
     type: 'work',
     icon: Building2
+  },
+  {
+    title: 'Project Manager, DEIJ & Workforce Development',
+    company: 'The Alliance for Climate Transition (ACT)',
+    period: 'Oct 2024 - June 2025',
+    description: [
+      'Lead workforce development assessment in partnership with MassCEC, focusing on clean energy sector hiring needs',
+      'Collaborate with educational institutions to enhance student engagement in clean energy programs',
+      'Develop strategies to increase diversity and inclusion in the clean energy workforce',
+      'Skills: Project Management, Workforce Development, DEIJ Strategies, Clean Energy, Strategic Planning'
+    ],
+    type: 'work',
+    icon: Briefcase
+  },
+  {
+    title: 'Business Development Consultant',
+    company: 'Aquasaic Corporation (Remote)',
+    period: 'Oct 2024 - Mar 2025',
+    description: [
+      'Conducted comprehensive commercial and technical research on cutting-edge water treatment technologies',
+      'Designed the initial architecture for the Aquasaic-water-platform, focusing on democratizing access to water quality data using AI and machine learning',
+      'Led the development of pitch decks tailored for different funding opportunities',
+      'Skills: Technical Research, Product Development, Marketing Strategy, AI/ML Integration'
+    ],
+    type: 'work',
+    icon: Briefcase
   },
   {
     title: 'Business Development',
