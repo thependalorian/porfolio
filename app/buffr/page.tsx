@@ -315,6 +315,43 @@ export default function Buffr() {
                   real-time payment capabilities and interoperability standards, Buffr serves as a consumer-facing 
                   interface that leverages this evolving infrastructure.
                 </p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-3">How Buffr Addresses Institutional Challenges in Namibia's Informal Economy</h4>
+                  <p className="text-sm mb-3">
+                    Buffr's approach to institutional challenges in Namibia's informal sector is rooted in practical, technology-driven solutions that target the root causes of exclusion and inefficiency. Rather than simply listing features, our strategy is to close the data, credit, and compliance gaps that hinder financial inclusion and economic growth.
+                  </p>
+                  <ul className="text-sm space-y-2">
+                    <li>
+                      • <strong>Data Visibility for Micro-Enterprises:</strong> We enable real-time transaction data capture and analytics (via Apache Fineract integration), giving micro-sellers a digital footprint and actionable business intelligence.
+                    </li>
+                    <li>
+                      • <strong>Simplified Tax Compliance:</strong> Buffr integrates Namibian tax rules directly into the app, automating tax calculations, presumptive tax filing, and compliance reporting for informal traders.
+                    </li>
+                    <li>
+                      • <strong>Inclusive Credit Scoring:</strong> Our AI models use transaction and behavioral data to generate fair credit scores for users with no formal credit history, breaking the "No Data → No Rating → No Credit" cycle.
+                    </li>
+                    <li>
+                      • <strong>Regulatory Alignment:</strong> We provide built-in KYC/AML workflows, audit trails, and risk assessments to help users and partners meet NAMFISA requirements.
+                    </li>
+                    <li>
+                      • <strong>Financial Literacy & Engagement:</strong> Gamified modules, progress tracking, and community features foster financial education and encourage positive financial behaviors.
+                    </li>
+                    <li>
+                      • <strong>Personalized AI Assistance:</strong> Users receive real-time tax calculations, financial coaching, and actionable insights from our AI-powered assistant.
+                    </li>
+                    <li>
+                      • <strong>Actionable Financial Insights:</strong> The platform delivers spending analysis, savings tips, debt management tools, and risk assessments tailored to each user.
+                    </li>
+                    <li>
+                      • <strong>Comprehensive Analytics:</strong> Users access dashboards with spending patterns, savings trends, and personalized financial health scores to inform better decision-making.
+                    </li>
+                    <li>
+                      • <strong>Community Support:</strong> Social features connect users for peer learning, support, and collaborative goal setting, strengthening the informal sector's collective resilience.
+                    </li>
+                  </ul>
+                </div>
+
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Market Opportunity:</h4>
                   <ul className="text-sm space-y-1">
