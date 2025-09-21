@@ -82,31 +82,31 @@ export default function Projects() {
                 <div className="card-body">
                   <h3 className="card-title text-2xl mb-4">BeerGoggles - Smart Beer Recognition App</h3>
                   <p className="mb-4">
-                    A fun app that uses your phone's camera to instantly recognize <strong>24+ different Namibian beers</strong> 
+                    A fun app that uses your phone's camera to instantly recognize <strong>24+ Namibian Breweries Limited (NBL) products</strong> 
                     and tells you interesting facts about them. It can even detect if you're smiling and share more fun information!
                   </p>
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2">What it does:</h4>
                     <ul className="text-sm space-y-1">
-                      <li>• Point your camera at any Namibian beer and it tells you what it is</li>
-                      <li>• Shares fun facts and stories about each beer</li>
+                      <li>• Point your camera at any NBL product and it tells you what it is</li>
+                      <li>• Shares fun facts and stories about each beer and soft drink</li>
                       <li>• Detects your facial expressions to make it more interactive</li>
-                      <li>• Works with beers from all over Namibia</li>
-                      <li>• Keeps track of which beers you've discovered</li>
+                      <li>• Works with Namibian Breweries products only (Windhoek, Tafel, King, etc.)</li>
+                      <li>• Keeps track of which products you've discovered</li>
                     </ul>
                   </div>
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2">Built with:</h4>
                     <p className="text-sm">
-                      <strong>Smart Camera:</strong> Uses AI to recognize beer bottles instantly<br/>
-                      <strong>Fun Facts:</strong> Database of interesting beer information<br/>
-                      <strong>Facial Recognition:</strong> Detects smiles and expressions
+                      <strong>Smart Camera:</strong> Uses AI to recognize NBL products instantly<br/>
+                      <strong>Fun Facts:</strong> Database of 100+ interesting NBL product facts<br/>
+                      <strong>Facial Recognition:</strong> Detects smiles and expressions for interactive fun
                     </p>
                   </div>
                   <div className="card-actions justify-center">
                     <span className="badge badge-accent">Camera App</span>
-                    <span className="badge badge-secondary">Beer Recognition</span>
-                    <span className="badge badge-accent">Namibia</span>
+                    <span className="badge badge-secondary">NBL Product Recognition</span>
+                    <span className="badge badge-accent">Namibian Breweries</span>
                     <span className="badge badge-neutral">Fun Facts</span>
                   </div>
                 </div>
