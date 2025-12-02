@@ -134,24 +134,30 @@ export default function Experience() {
   const awards = [
     { award: 'Asper Student Startup Prize Winner', organization: 'Brandeis University', year: '2023' },
     { award: 'Student Group of the Year (IBSSA VP)', organization: 'Brandeis University', year: '2023' },
-    { award: 'Student Choice for Community Engagement', organization: 'Brandeis University', year: '2023' },
-    { award: 'Prime Liaison Recognition', organization: 'Brandeis University', year: '2024' },
+    { award: 'Student Choice for Community Engagement (IBSSA)', organization: 'Brandeis International Business School Student Association', year: '2023' },
+    { award: 'Prime Liaison Recognition (GSA)', organization: 'Graduate Student Association', year: '2024' },
     { award: 'Hassenfeld Fellowship', organization: 'Brandeis International Business School', year: '2023-2024' },
   ]
 
   const accelerators = [
     {
       name: 'Brandeis Spark',
-      description: 'Venture incubation program within Brandeis University ecosystem. Received mentorship and strategic support for Buffr development.',
+      logo: '/images/logos/brandeis-spark-logo.png',
+      description: 'Participated in the Brandeis Spark Startup Cohort, receiving guidance and support to develop and launch my startup within the Brandeis University ecosystem.',
+      link: 'https://www.brandeis.edu/innovation/grant-programs/spark/index.html'
     },
     {
       name: 'MassChallenge',
-      description: 'Selected for Early Stage Foundations Cohort. Accessed mentorship, resources, and network for startup development.',
+      logo: '/images/logos/masschallenge-logo.png',
+      description: 'As part of the MassChallenge Early Stage Foundations Cohort, accessed mentorship, resources, and a network to refine entrepreneurial skills and grow ventures.',
+      link: 'https://www.masschallenge.org/'
     },
     {
       name: 'Global Venture Labs',
-      description: 'International accelerator cohort focused on business strategy and scaling startups.',
-    },
+      logo: '/images/logos/global-venture-labs-logo.png',
+      description: 'Participated in the Global Venture Labs Accelerator Cohort, gaining valuable insights into entrepreneurship, business strategy, and scaling startups.',
+      link: 'https://www.globalventurelabs.org/'
+    }
   ]
 
   return (

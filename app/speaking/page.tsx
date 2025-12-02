@@ -48,54 +48,48 @@ export default function Speaking() {
     {
       title: 'Financial Inclusion in Emerging Markets',
       description: 'Exploring how technology can bridge the gap between informal economies and formal financial services.',
-      icon: '💳',
     },
     {
       title: 'AI/ML Applications in Fintech',
       description: 'Leveraging artificial intelligence and machine learning to create financial identity and enable access.',
-      icon: '🤖',
     },
     {
       title: 'Building Startups in Africa',
       description: 'Lessons learned from building fintech infrastructure across Southern Africa\'s diverse markets.',
-      icon: '🚀',
     },
     {
       title: 'Data-Driven Decision Making',
       description: 'Transforming raw data into actionable insights for business strategy and social impact.',
-      icon: '📊',
     },
     {
       title: 'Lessons from India\'s UPI System',
       description: 'How India Stack revolutionized digital payments and what Africa can learn from this success.',
-      icon: '🇮🇳',
     },
   ]
 
   return (
-    <div className="pt-20">
+    <div className="min-h-screen">
       {/* Page Header */}
-      <section className="py-20 px-6 text-center bg-gradient-to-b from-navy to-navy-light">
-        <div className="container mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Speaking & <span className="gradient-text">Events</span>
+      <section className="section grid-pattern">
+        <div className="container-custom text-center">
+          <h1 className="mb-6">
+            Conferences & <span className="gradient-text">Events</span>
           </h1>
-          <p className="text-xl text-gray-soft max-w-3xl mx-auto">
-            Sharing Insights on Fintech, Innovation, and Impact
+          <p className="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
+            Engaging with global fintech leaders, innovators, and industry experts across continents
           </p>
         </div>
       </section>
 
       {/* Speaking Topics */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12 text-center gradient-text">Speaking Topics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="section section-alt">
+        <div className="container-custom max-w-6xl">
+          <h2 className="text-center mb-12 gradient-text">Areas of Expertise</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {topics.map((topic, index) => (
-              <div key={index} className="bg-navy-light p-8 rounded-xl border border-blue-electric/30 hover:border-blue-electric transition-all duration-300">
-                <div className="text-5xl mb-4">{topic.icon}</div>
-                <h3 className="text-2xl font-bold mb-3 text-blue-electric">{topic.title}</h3>
-                <p className="text-gray-300">{topic.description}</p>
+              <div key={index} className="card p-8 hover:glow">
+                <h3 className="text-2xl font-bold mb-3 text-[var(--color-primary)]">{topic.title}</h3>
+                <p className="text-[var(--color-text-secondary)]">{topic.description}</p>
               </div>
             ))}
           </div>
@@ -103,17 +97,17 @@ export default function Speaking() {
       </section>
 
       {/* Conferences Attended */}
-      <section className="py-20 px-6 bg-navy-light">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12 text-center">Conferences Attended</h2>
+      <section className="section">
+        <div className="container-custom max-w-6xl">
+          <h2 className="text-center mb-12">Conference Participation</h2>
           <div className="space-y-6">
             {conferences.map((conf, index) => (
-              <div key={index} className="bg-navy p-8 rounded-lg border border-gray-soft/20 hover:border-blue-electric transition-all duration-300">
+              <div key={index} className="card p-8">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div className="flex-1">
-                    <div className="text-gold-warm text-sm font-semibold mb-2">{conf.years}</div>
-                    <h3 className="text-2xl font-bold mb-2 text-blue-electric">{conf.event}</h3>
-                    <div className="text-gray-soft flex items-center mb-4">
+                    <div className="badge badge-primary mb-3">{conf.years}</div>
+                    <h3 className="text-2xl font-bold mb-2 text-[var(--color-primary)]">{conf.event}</h3>
+                    <div className="text-[var(--color-text-secondary)] flex items-center mb-4">
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -126,7 +120,7 @@ export default function Speaking() {
                       href={conf.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 md:mt-0 inline-flex items-center px-4 py-2 bg-blue-electric text-white rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap"
+                      className="btn btn-outline mt-4 md:mt-0"
                     >
                       Learn More
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,47 +129,21 @@ export default function Speaking() {
                     </a>
                   )}
                 </div>
-                <p className="text-gray-300">{conf.description}</p>
+                <p className="text-[var(--color-text-secondary)]">{conf.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Speaking Inquiries */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-8">Speaking Inquiries</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            I'm available for speaking engagements on fintech, innovation, data analytics,
-            and building technology solutions for emerging markets.
-          </p>
-          <div className="bg-navy-light p-8 rounded-xl border border-blue-electric/30 inline-block">
-            <p className="text-lg mb-4">For speaking opportunities, please contact:</p>
-            <a
-              href="mailto:george@buffr.ai"
-              className="text-2xl font-bold text-blue-electric hover:text-gold-warm transition-colors"
-            >
-              george@buffr.ai
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-900">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">
-            Let's Collaborate
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Interested in partnering, collaborating, or discussing opportunities?
-            I'd love to connect.
+      <section className="section section-alt">
+        <div className="container-custom max-w-4xl text-center">
+          <h2 className="mb-6">Let's Connect</h2>
+          <p className="text-xl text-[var(--color-text-secondary)] mb-8">
+            Interested in partnering, collaborating, or discussing opportunities? I'd love to hear from you.
           </p>
-          <a
-            href="/connect/"
-            className="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
-          >
+          <a href="/connect/" className="btn btn-primary">
             Get in Touch
           </a>
         </div>
