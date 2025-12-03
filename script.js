@@ -28,10 +28,29 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'BuffrSign', description: 'Digital signature module' },
         { name: 'Buffr Host', description: 'Front desk AI for independent hospitality properties' },
     ];
+
+    const accelerators = [
+        {
+            name: 'Brandeis Spark',
+            logo: 'public/images/logos/brandeis-spark-logo.png',
+            description: 'Participated in the Brandeis Spark Startup Cohort, receiving guidance and support to develop and launch my startup within the Brandeis University ecosystem.',
+            link: 'https://www.brandeis.edu/innovation/grant-programs/spark/index.html'
+        },
+        {
+            name: 'MassChallenge',
+            logo: 'public/images/logos/masschallenge-logo.png',
+            description: 'As part of the MassChallenge Early Stage Foundations Cohort, accessed mentorship, resources, and a network to refine entrepreneurial skills and grow ventures.',
+            link: 'https://www.masschallenge.org/'
+        },
+        {
+            name: 'Global Venture Labs',
+            logo: 'public/images/logos/global-venture-labs-logo.png',
+            description: 'Participated in the Global Venture Labs Accelerator Cohort, gaining valuable insights into entrepreneurship, business strategy, and scaling startups.',
+            link: 'https://www.globalventurelabs.org/'
+        }
+    ];
+
     const recognition = [
-        'MassChallenge Early Stage Foundations Cohort',
-        'Global Venture Labs Accelerator Cohort',
-        'Brandeis Spark Startup Cohort',
         'Asper Student Startup Prize Winner (Apps, Software & Computer Science)',
     ];
 
@@ -161,6 +180,14 @@ networking, education, and empowerment initiatives.`
         if (!container) return;
 
         const productsHtml = buffrProducts.map(p => `<div class="card"><h4>${p.name}</h4><p>${p.description}</p></div>`).join('');
+        const acceleratorsHtml = accelerators.map(acc => `
+            <div class="card">
+                <img src="${acc.logo}" alt="${acc.name} Logo" style="height: 60px; object-fit: contain; margin-bottom: 1rem;">
+                <h4>${acc.name}</h4>
+                <p>${acc.description}</p>
+                <a href="${acc.link}" target="_blank" rel="noopener noreferrer" class="card-link">Learn More</a>
+            </div>
+        `).join('');
         const recognitionHtml = recognition.map(r => `<li>${r}</li>`).join('');
 
         container.innerHTML = `
@@ -211,6 +238,9 @@ networking, education, and empowerment initiatives.`
             </div>
 
             <h3 class="subsection-title">Accelerator Recognition</h3>
+            <div class="card-grid three-col">${acceleratorsHtml}</div>
+
+            <h3 class="subsection-title">Additional Recognition</h3>
             <div class="card">
                 <ul class="recognition-list">${recognitionHtml}</ul>
             </div>

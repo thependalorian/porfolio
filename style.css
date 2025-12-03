@@ -288,6 +288,7 @@ body {
     color: var(--color-text-secondary);
 }
 .two-col { grid-template-columns: 1fr; }
+.three-col { grid-template-columns: 1fr; }
 .four-col { grid-template-columns: 1fr; }
 .recognition-list {
     list-style: none;
@@ -415,6 +416,7 @@ th {
     .mobile-menu-button { display: none; }
     .card-grid { grid-template-columns: repeat(2, 1fr); }
     .two-col { grid-template-columns: repeat(2, 1fr); }
+    .three-col { grid-template-columns: repeat(3, 1fr); }
     .four-col { grid-template-columns: repeat(4, 1fr); }
     .recognition-list { grid-template-columns: repeat(2, 1fr); }
     .carousel-item { flex-basis: 45%; }
