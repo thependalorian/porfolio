@@ -206,6 +206,34 @@ body {
     color: var(--color-accent);
 }
 
+.hero-cta {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.resume-download-btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: var(--radius-m);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(178, 222, 38, 0.3);
+}
+
+.resume-download-btn:hover {
+    background: #9FC520;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(178, 222, 38, 0.4);
+}
+
+.resume-download-btn:active {
+    transform: translateY(0);
+}
+
 
 /* ============================================
    GENERAL SECTION & CARD STYLES

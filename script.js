@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Polar Power Inc.': 'public/images/logos/polarpower_logo.png',
         'Lithon Project Consultants': 'public/images/logos/lithon.png',
         'Namibia University of Science & Technology': 'public/images/logos/nust.png',
-        'Aquasaic Corporation': 'public/images/logos/Screenshot 2025-12-03 at 10.57.12 AM.png'
+        'Aquasaic Corporation': 'public/images/logos/aquasaic_logo.png'
     };
 
     const professionalExperience = [
