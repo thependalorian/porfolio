@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- DATA FROM RESUME AND SNIPPETS ---
 
     const companyLogos = {
-        'The Alliance for Climate Transition (ACT)': 'images/logos/ACT Primary Logo Horizontal Black Text Default.svg',
-        'Buffr Inc.': 'images/logos/Buffr_Logo.png',
-        'Insait IO': 'images/logos/insait_logo.png',
-        'Brandeis International Business School': 'images/logos/IBS_logo_stack_center_blue_DIGITAL.png',
-        'Polar Power Inc.': 'images/logos/polarpower_logo.png',
-        'Lithon Project Consultants': 'images/logos/lithon.png',
-        'Namibia University of Science & Technology': 'images/logos/nust.png',
-        'Aquasaic Corporation': 'images/logos/global-venture-labs-logo.png' // Placeholder, assuming a logo
+        'The Alliance for Climate Transition (ACT)': 'public/images/logos/ACT Primary Logo Horizontal Black Text Default.svg',
+        'Buffr Inc.': 'public/images/logos/Buffr_Logo.png',
+        'Insait IO': 'public/images/logos/insait_logo.png',
+        'Brandeis International Business School': 'public/images/logos/IBS_logo_stack_center_blue_DIGITAL.png',
+        'Polar Power Inc.': 'public/images/logos/polarpower_logo.png',
+        'Lithon Project Consultants': 'public/images/logos/lithon.png',
+        'Namibia University of Science & Technology': 'public/images/logos/nust.png',
+        'Aquasaic Corporation': 'public/images/logos/global-venture-labs-logo.png' // Placeholder, assuming a logo
     };
 
     const professionalExperience = [
@@ -70,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     const certificateImages = [
-        { src: 'images/certificates/aibootcamp-cert.png', alt: 'AI Bootcamp Certificate' },
-        { src: 'images/certificates/fintech-cert.png', alt: 'Fintech Certificate' },
-        { src: 'images/certificates/openbanking-cert.png', alt: 'Open Banking Certificate' },
-        { src: 'images/certificates/engineering-degree.JPG', alt: 'Engineering Degree' },
-        { src: 'images/certificates/mba-certificate.JPG', alt: 'MBA Certificate' },
-        { src: 'images/certificates/operations-cert.JPG', alt: 'Operations Certificate' }
+        { src: 'public/images/certificates/aibootcamp-cert.png', alt: 'AI Bootcamp Certificate' },
+        { src: 'public/images/certificates/fintech-cert.png', alt: 'Fintech Certificate' },
+        { src: 'public/images/certificates/openbanking-cert.png', alt: 'Open Banking Certificate' },
+        { src: 'public/images/certificates/engineering-degree.JPG', alt: 'Engineering Degree' },
+        { src: 'public/images/certificates/mba-certificate.JPG', alt: 'MBA Certificate' },
+        { src: 'public/images/certificates/operations-cert.JPG', alt: 'Operations Certificate' }
     ];
 
     const hassenfeldFellowship = {
@@ -184,12 +184,12 @@ networking, education, and empowerment initiatives.`
             <h3 class="subsection-title">Platform Capabilities</h3>
             <div class="card-grid two-col">
                 <div class="card">
-                    <img src="images/buffr/buffr_app_mock.jpeg" alt="Buffr App" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+                    <img src="public/images/buffr/buffr_app_mock.jpeg" alt="Buffr App" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
                     <h4>Real-Time Transaction Data</h4>
                     <p>Creates digital footprints for cash-based operations, building verifiable business histories and enabling data-driven financial assessments.</p>
                 </div>
                 <div class="card">
-                    <img src="images/buffr/buffr_app_mock2.png" alt="Buffr Features" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+                    <img src="public/images/buffr/buffr_app_mock2.png" alt="Buffr Features" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
                     <h4>AI-Powered Credit Scoring</h4>
                     <p>Machine learning algorithms assess creditworthiness based on actual economic behavior rather than traditional credit history requirements.</p>
                 </div>
