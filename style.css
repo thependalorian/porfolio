@@ -37,6 +37,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -46,12 +48,19 @@ body {
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
 }
 
 /* ============================================
@@ -466,4 +475,52 @@ th {
 
 @media (min-width: 1440px) {
     .carousel-item { flex-basis: 23%; }
+}
+
+/* ============================================
+   MOBILE-SPECIFIC OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .card-grid {
+        gap: 1rem;
+    }
+
+    .education-logo {
+        height: 60px;
+    }
+
+    .mobile-nav a {
+        padding: 0.875rem;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+
+    .card-link {
+        padding: 0.5rem 0;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
