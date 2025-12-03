@@ -452,3 +452,7 @@ th {
     .carousel-item { flex-basis: 30%; }
     .card-list { grid-template-columns: repeat(3, 1fr); }
 }
+
+@media (min-width: 1440px) {
+    .carousel-item { flex-basis: 23%; }
+}

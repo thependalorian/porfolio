@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'public/images/certificates/aibootcamp-cert.png', alt: 'AI Bootcamp Certificate' },
         { src: 'public/images/certificates/fintech-cert.png', alt: 'Fintech Certificate' },
         { src: 'public/images/certificates/openbanking-cert.png', alt: 'Open Banking Certificate' },
-        { src: 'public/images/certificates/mba-certificate.JPG', alt: 'MBA Certificate' }
+        { src: 'public/images/certificates/mba-certificate.JPG', alt: 'MBA Certificate' },
+        { src: 'public/images/certificates/certificate5.png', alt: 'Professional Certificate' }
     ];
 
     const hassenfeldFellowship = {
