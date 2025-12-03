@@ -50,9 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    const recognition = [
-        'Asper Student Startup Prize Winner (Apps, Software & Computer Science)',
-    ];
+    const recognition = {
+        title: 'Asper Student Startup Prize Winner (Apps, Software & Computer Science)',
+        image: 'public/images/buffr/asper_win.jpeg',
+        description: 'Winner of the Asper Student Startup Prize in the Apps, Software & Computer Science category at Brandeis International Business School for Buffr.'
+    };
 
     const researchProjects = [
         { title: 'Machine Learning in Peer-to-Peer Lending', year: '2024', description: 'Analyzed 1.8 million loan records using machine learning for investment optimization. Implemented predictive models: random forests, gradient boosting.' },
@@ -182,13 +184,12 @@ networking, education, and empowerment initiatives.`
         const productsHtml = buffrProducts.map(p => `<div class="card"><h4>${p.name}</h4><p>${p.description}</p></div>`).join('');
         const acceleratorsHtml = accelerators.map(acc => `
             <div class="card">
-                <img src="${acc.logo}" alt="${acc.name} Logo" style="height: 60px; object-fit: contain; margin-bottom: 1rem;">
+                <img src="${acc.logo}" alt="${acc.name} Logo" class="logo-image">
                 <h4>${acc.name}</h4>
                 <p>${acc.description}</p>
                 <a href="${acc.link}" target="_blank" rel="noopener noreferrer" class="card-link">Learn More</a>
             </div>
         `).join('');
-        const recognitionHtml = recognition.map(r => `<li>${r}</li>`).join('');
 
         container.innerHTML = `
             <div class="buffr-header">
@@ -241,8 +242,10 @@ networking, education, and empowerment initiatives.`
             <div class="card-grid three-col">${acceleratorsHtml}</div>
 
             <h3 class="subsection-title">Additional Recognition</h3>
-            <div class="card">
-                <ul class="recognition-list">${recognitionHtml}</ul>
+            <div class="card recognition-card">
+                <img src="${recognition.image}" alt="Asper Win" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+                <h4>${recognition.title}</h4>
+                <p>${recognition.description}</p>
             </div>
             <div class="learn-more-container">
                 <a href="https://buffr.ai" target="_blank" rel="noopener noreferrer" class="card-link">Learn More at buffr.ai</a>
