@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Polar Power Inc.': 'public/images/logos/polarpower_logo.png',
         'Lithon Project Consultants': 'public/images/logos/lithon.png',
         'Namibia University of Science & Technology': 'public/images/logos/nust.png',
-        'Aquasaic Corporation': 'public/images/logos/global-venture-labs-logo.png' // Placeholder, assuming a logo
+        'Aquasaic Corporation': 'public/images/logos/Screenshot 2025-12-03 at 10.57.12 AM.png'
     };
 
     const professionalExperience = [
@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const education = {
-        mba: { degree: 'Master of Business Administration (STEM-Designated)', school: 'Brandeis International Business School', location: 'Waltham, MA', date: 'May 2024', concentrations: ['Data Analytics', 'Strategy & Innovation'], gpa: '3.45/4.0', courses: ['Advanced Data Analytics', 'Competition and Strategy', 'Machine Learning for Business & Finance', 'Marketing Management', 'Forecasting in Finance and Economics', 'Business Dynamics: Managing in a Complex World', 'Python and Applications to Business Analytics', 'Business in Global Markets', 'Information Visualization', 'Entrepreneurship and Rapid Prototyping', 'Credit Risk Analysis', 'Business & Economic Strategies in Emerging Markets'], leadership: ['Vice President, International Business School Student Association (IBSSA)', 'Graduate Student Senator, Graduate Student Association (GSA) (Aug 2023 - May 2024)', 'Asper Center for Global Entrepreneurship - Intern (Feb 2024 - May 2024)', 'Instructional Assistant, Social Impact Investing (Jan 2024 - June 2024)', 'Instructional Assistant, MBA Career and Management Communication (Aug 2023 - Dec 2023)', 'Board Member, Student Conduct Board (Aug 2023 - Nov 2023)', 'Led IBSSA to "2023 Student Group of the Year" recognition'] },
-        beng: { degree: 'Bachelor of Engineering: Civil & Environmental Engineering', school: 'Namibia University of Science & Technology', location: 'Windhoek, Namibia', date: 'October 2017', capstone: 'Comprehensive water tower system design for Kalkrand township', extra: ['International Exchange: FH-Aachen University, Germany (Project Management)', 'Engineering Students Association Committee Member'] }
+        mba: { degree: 'Master of Business Administration (STEM-Designated)', school: 'Brandeis International Business School', location: 'Waltham, MA', date: 'May 2024', logo: 'public/images/logos/IBS_logo_stack_center_blue_DIGITAL.png', concentrations: ['Data Analytics', 'Strategy & Innovation'], gpa: '3.45/4.0', courses: ['Advanced Data Analytics', 'Competition and Strategy', 'Machine Learning for Business & Finance', 'Marketing Management', 'Forecasting in Finance and Economics', 'Business Dynamics: Managing in a Complex World', 'Python and Applications to Business Analytics', 'Business in Global Markets', 'Information Visualization', 'Entrepreneurship and Rapid Prototyping', 'Credit Risk Analysis', 'Business & Economic Strategies in Emerging Markets'], leadership: ['Vice President, International Business School Student Association (IBSSA)', 'Graduate Student Senator, Graduate Student Association (GSA) (Aug 2023 - May 2024)', 'Asper Center for Global Entrepreneurship - Intern (Feb 2024 - May 2024)', 'Instructional Assistant, Social Impact Investing (Jan 2024 - June 2024)', 'Instructional Assistant, MBA Career and Management Communication (Aug 2023 - Dec 2023)', 'Board Member, Student Conduct Board (Aug 2023 - Nov 2023)', 'Led IBSSA to "2023 Student Group of the Year" recognition'] },
+        beng: { degree: 'Bachelor of Engineering: Civil & Environmental Engineering', school: 'Namibia University of Science & Technology', location: 'Windhoek, Namibia', date: 'October 2017', logo: 'public/images/logos/nust.png', capstone: 'Comprehensive water tower system design for Kalkrand township', extra: ['International Exchange: FH-Aachen University, Germany (Project Management)', 'Engineering Students Association Committee Member'] }
     };
 
     const awards = [
@@ -323,7 +323,8 @@ networking, education, and empowerment initiatives.`
         const mba = education.mba;
         const beng = education.beng;
         container.innerHTML = `
-            <div class="card">
+            <div class="card education-card">
+                <img src="${mba.logo}" alt="${mba.school} Logo" class="education-logo">
                 <h3>${mba.degree}</h3>
                 <p>${mba.school} | ${mba.location}</p>
                 <p class="job-meta">${mba.date}</p>
@@ -334,7 +335,8 @@ networking, education, and empowerment initiatives.`
                 <h4>Leadership & Campus Involvement:</h4>
                 <ul>${mba.leadership.map(item => `<li>${item}</li>`).join('')}</ul>
             </div>
-            <div class="card">
+            <div class="card education-card">
+                <img src="${beng.logo}" alt="${beng.school} Logo" class="education-logo">
                 <h3>${beng.degree}</h3>
                 <p>${beng.school} | ${beng.location}</p>
                 <p class="job-meta">${beng.date}</p>
