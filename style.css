@@ -1,0 +1,427 @@
+/* ============================================
+   iOS/Apple Inspired Design System
+   ============================================ */
+
+:root {
+    /* ACT Brand Colors */
+    --color-midnight-forest: #001818;
+    --color-spring-green: #B2DE26;
+    --color-white: #FFFFFF;
+    --color-sand-gray: #EBE9E1;
+    --color-moss-green: #394816;
+    --color-seafoam-blue: #E0FFFF;
+    --color-mint: #d9f09d;
+
+    /* UI Colors */
+    --color-bg: #081212; /* Slightly lighter than midnight forest */
+    --color-text-primary: #F5F5F7; /* Apple's off-white */
+    --color-text-secondary: #A1A1A6;
+    --color-text-tertiary: #86868B;
+    --color-accent: var(--color-spring-green);
+    --color-border: rgba(255, 255, 255, 0.15);
+    --color-card-bg: rgba(28, 28, 30, 0.7); /* Translucent dark grey */
+    
+    /* UI Metrics */
+    --radius-l: 24px; /* More rounded */
+    --radius-m: 16px;
+    --radius-s: 12px;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
+.main-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(18, 18, 18, 0.75); /* iOS-like translucent header */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+.nav-links {
+    display: none;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-text-primary);
+}
+
+.mobile-menu-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu-button span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px;
+    background-color: var(--color-text-primary);
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--color-bg);
+    padding: 1rem 0;
+    z-index: 999;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-nav a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    padding: 10rem 2rem 6rem;
+    text-align: center;
+}
+
+.hero .avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--color-accent);
+    margin: 0 auto 2rem;
+    object-fit: cover;
+    box-shadow: 0 5px 25px rgba(178, 222, 38, 0.3);
+}
+
+.hero h1 {
+    font-family: "SF Pro Display", "Helvetica Neue", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+}
+
+.hero .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    color: var(--color-text-tertiary);
+}
+
+.hero .contact-info a {
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero .contact-info a:hover {
+    color: var(--color-accent);
+}
+
+
+/* ============================================
+   GENERAL SECTION & CARD STYLES
+   ============================================ */
+
+.section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-family: "SF Pro Display", "Helvetica Neue", sans-serif;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-text-primary);
+}
+
+.subsection-title {
+    font-family: "SF Pro Display", "Helvetica Neue", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-primary);
+}
+
+.card {
+    background: var(--color-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-l);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-soft);
+    border-color: rgba(178, 222, 38, 0.5);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   SPECIFIC SECTION STYLES
+   ============================================ */
+
+/* Buffr Section */
+.buffr-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.buffr-header .section-title {
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+.section-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+.section-tagline {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+}
+.two-col { grid-template-columns: 1fr; }
+.four-col { grid-template-columns: 1fr; }
+.recognition-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.recognition-list li::before {
+    content: '✓';
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+}
+.learn-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+/* Experience */
+.experience-card {
+    display: flex;
+    flex-direction: column;
+}
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.company-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: var(--radius-s);
+    background: var(--color-white);
+    padding: 5px;
+}
+.experience-title {
+    flex: 1;
+}
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+.job-meta {
+    font-size: 0.9rem;
+    color: var(--color-text-tertiary);
+}
+.job-points h4 {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+.job-points ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+    color: var(--color-text-tertiary);
+}
+
+/* Awards Table */
+.table-container {
+    overflow-x: auto;
+    border-radius: var(--radius-m);
+    border: 1px solid var(--color-border);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+tr:last-child td {
+    border-bottom: none;
+}
+th {
+    background-color: rgba(57, 72, 22, 0.5);
+    color: var(--color-text-primary);
+}
+
+/* Certifications Carousel */
+.carousel-container { position: relative; }
+.carousel-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1rem; padding-bottom: 1rem; scrollbar-width: none; }
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-item { flex: 0 0 70%; scroll-snap-align: center; }
+.carousel-item img { width: 100%; height: auto; border-radius: var(--radius-m); }
+.carousel-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); border: 1px solid var(--color-border); color: var(--color-white); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; font-size: 1.5rem; z-index: 10; }
+.carousel-button.prev { left: -22px; }
+.carousel-button.next { right: -22px; }
+
+/* Conferences */
+.card-list { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+.card-list .card h3 { font-size: 1.2rem; color: var(--color-text-primary); }
+.card-list .card p {
+    white-space: pre-line;
+    margin-bottom: 1rem;
+    color: var(--color-text-tertiary);
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.main-footer-bottom {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-tertiary);
+}
+.main-footer-bottom a { color: var(--color-text-tertiary); text-decoration: none; }
+.main-footer-bottom a:hover { color: var(--color-accent); }
+
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (min-width: 768px) {
+    .nav-links { display: block; }
+    .mobile-menu-button { display: none; }
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: repeat(2, 1fr); }
+    .four-col { grid-template-columns: repeat(4, 1fr); }
+    .recognition-list { grid-template-columns: repeat(2, 1fr); }
+    .carousel-item { flex-basis: 45%; }
+    .card-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .carousel-item { flex-basis: 30%; }
+    .card-list { grid-template-columns: repeat(3, 1fr); }
+}
