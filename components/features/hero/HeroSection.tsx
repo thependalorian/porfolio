@@ -10,14 +10,14 @@
  * - Profile avatar image in circular gradient border
  * - Staggered text animations
  * - Contact info with icons
- * - CTA buttons (View Projects, Visit Buffr, Download Resume, Japanese Resumes)
+ * - CTA buttons (View Projects, Download Resume, Japanese Resumes)
  * - Scroll indicator
  */
 
 'use client';
 
 import { motion } from "framer-motion";
-import { MapPin, Mail, Linkedin, ExternalLink } from "lucide-react";
+import { MapPin, Mail, Linkedin } from "lucide-react";
 import { personalInfo } from "@/lib/data/professional-data";
 import Link from "next/link";
 import Image from "next/image";
@@ -140,14 +140,6 @@ const HeroSection = () => {
             >
               View Projects
             </Link>
-            <a
-              href={personalInfo.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition-all hover:scale-105 flex items-center gap-2"
-            >
-              Visit Buffr <ExternalLink size={16} />
-            </a>
             <Link
               href="/public/George-Nekwaya-Resume.pdf"
               download
