@@ -80,6 +80,10 @@ const nextConfig = {
         tls: false,
       };
     }
+    
+    // Ignore modules from parent directories or other projects
+    config.resolve.symlinks = false;
+    
     return config;
   },
 };

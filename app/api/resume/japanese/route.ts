@@ -8,6 +8,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { sql } from '@/lib/db/neon'
 
+export const dynamic = 'force-dynamic' // This route uses dynamic data
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
