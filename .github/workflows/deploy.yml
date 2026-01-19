@@ -54,34 +54,36 @@ jobs:
           # Real DATABASE_URL should be set in GitHub Pages environment or Vercel
           DATABASE_URL: postgresql://dummy:dummy@dummy:5432/dummy
 
-      - name: Ensure CNAME is in build output
-        run: |
-          # Copy CNAME to .next/out if using static export
-          if [ -d ".next/out" ]; then
-            cp public/CNAME .next/out/CNAME
-            echo "✓ CNAME copied to .next/out/"
-          fi
-          # Also ensure it's in the root for GitHub Pages
-          cp public/CNAME ./CNAME
-          echo "✓ CNAME file ready for deployment: $(cat ./CNAME)"
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Prepare deployment artifact
+      - name: Prepare static export
         run: |
-          # Create out directory if it doesn't exist
-          mkdir -p .next/out
+          # Next.js outputs to .next/standalone or .next/out depending on config
+          # For GitHub Pages, we need static files
+          # Check if static export was used (output: 'export' in next.config.js)
+          if [ -d ".next/out" ]; then
+            echo "✓ Found .next/out (static export)"
+            DEPLOY_PATH=".next/out"
+          elif [ -d ".next/standalone" ]; then
+            echo "⚠️  Found .next/standalone (not suitable for GitHub Pages)"
+            echo "⚠️  Consider using Vercel or configuring static export"
+            exit 1
+          else
+            echo "⚠️  No static output found. Next.js App Router requires static export for GitHub Pages."
+            echo "⚠️  Add 'output: \"export\"' to next.config.js or use Vercel for deployment."
+            exit 1
+          fi
+          
           # Ensure CNAME is in the output directory
-          cp public/CNAME .next/out/CNAME || cp ./CNAME .next/out/CNAME
-          # Also keep it in root
-          cp public/CNAME ./CNAME || true
-          echo "✓ CNAME file prepared: $(cat ./CNAME)"
+          cp public/CNAME "$DEPLOY_PATH/CNAME"
+          echo "✓ CNAME file copied to $DEPLOY_PATH: $(cat $DEPLOY_PATH/CNAME)"
+          echo "DEPLOY_PATH=$DEPLOY_PATH" >> $GITHUB_ENV
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .next/out
+          path: ${{ env.DEPLOY_PATH || '.next/out' }}
           retention-days: 1
 
   deploy:
@@ -96,9 +98,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # Ensure CNAME is preserved
-          artifact_name: pages-artifact
 
       - name: Verify deployment
         run: |
