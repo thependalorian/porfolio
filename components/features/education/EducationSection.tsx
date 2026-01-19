@@ -16,6 +16,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from 'next/image';
 import { GraduationCap, MapPin, Calendar, Award } from "lucide-react";
 import { education, awards, hassenfeldFellowship } from "@/lib/data/professional-data";
 
@@ -102,9 +103,22 @@ export const EducationSection = () => {
                 className={`bento-item ${edu.featured ? "border-2 border-primary" : ""}`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/10 text-primary flex-shrink-0">
-                    <GraduationCap size={24} />
-                  </div>
+                  {edu.featured && education.mba.logo ? (
+                    <div className="flex items-center justify-center flex-shrink-0 w-24 h-16">
+                      <Image
+                        src={education.mba.logo}
+                        alt={`${edu.institution} Logo`}
+                        width={96}
+                        height={64}
+                        className="object-contain w-full h-full"
+                        style={{ maxWidth: '96px', maxHeight: '64px', width: 'auto', height: 'auto' }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="p-3 rounded-xl bg-primary/10 text-primary flex-shrink-0">
+                      <GraduationCap size={24} />
+                    </div>
+                  )}
                   
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-1">{edu.degree}</h3>
