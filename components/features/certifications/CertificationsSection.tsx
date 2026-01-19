@@ -52,7 +52,8 @@ export function CertificationsSection() {
                   {/* Accredible certificates: Use only accredibleImageUrl, never local images */}
                   {hasAccredibleLink && cert.accredibleImageUrl ? (
                     <div className="relative w-full mb-3 rounded-lg overflow-hidden bg-bg-secondary border border-border-light group cursor-pointer">
-                      <div className="relative w-full h-[200px] md:h-[250px]">
+                      {/* For featured certificates, use aspect ratio instead of fixed height */}
+                      <div className={`relative w-full ${isFeatured ? 'aspect-[16/10] max-h-[400px]' : 'h-[200px] md:h-[250px]'}`}>
                         <Image
                           src={cert.accredibleImageUrl}
                           alt={cert.title}
@@ -71,14 +72,28 @@ export function CertificationsSection() {
                     </div>
                   ) : !hasAccredibleLink && cert.image ? (
                     <div className="relative w-full mb-3 rounded-lg overflow-hidden bg-bg-secondary border border-border-light group cursor-pointer">
-                      <Image
-                        src={cert.image}
-                        alt={cert.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                        onClick={() => setSelectedImage(cert.image || null)}
-                      />
+                      {/* For landscape certificates (like MBA), use aspect ratio container */}
+                      {isFeatured ? (
+                        <div className="relative w-full" style={{ aspectRatio: '16/10', maxHeight: '400px' }}>
+                          <Image
+                            src={cert.image}
+                            alt={cert.title}
+                            fill
+                            className="object-contain transition-transform duration-300 group-hover:scale-105"
+                            onClick={() => setSelectedImage(cert.image || null)}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        </div>
+                      ) : (
+                        <Image
+                          src={cert.image}
+                          alt={cert.title}
+                          width={600}
+                          height={400}
+                          className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                          onClick={() => setSelectedImage(cert.image || null)}
+                        />
+                      )}
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                         <Maximize2 className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
