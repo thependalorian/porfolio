@@ -8,7 +8,6 @@
  */
 
 import Link from 'next/link'
-import { BuffrSection } from '@/components/features/buffr/BuffrSection'
 import { ExperienceSection } from '@/components/features/experience/ExperienceSection'
 import { EducationSection } from '@/components/features/education/EducationSection'
 import { AwardsSection } from '@/components/features/awards/AwardsSection'
@@ -70,9 +69,6 @@ export default function Home() {
       {/* Bento Grid Sections */}
       <div className="p-4 sm:p-6 md:p-8 bg-background">
         <BentoGrid columns={{ sm: 1, md: 2, lg: 4 }} gap="lg" className="max-w-7xl mx-auto">
-          <BentoCard span={{ col: 4, row: 1 }} className="md:col-span-4" variant="default">
-            <BuffrSection />
-          </BentoCard>
           <BentoCard span={{ col: 2, row: 1 }} className="md:col-span-2" variant="default">
             <AwardsSection />
           </BentoCard>
