@@ -35,7 +35,32 @@ vercel --prod
 
 ## Environment Variables
 
-Add these in **Vercel Dashboard → Your Project → Settings → Environment Variables**:
+### Option 1: Automatic Export (Recommended)
+
+Use the provided script to automatically export all variables from `.env.local`:
+
+```bash
+# Make sure you're logged in and linked
+vercel login
+vercel link
+
+# Export all secrets
+npm run export-secrets
+# OR
+node scripts/export-secrets-to-vercel.js
+# OR
+./scripts/export-secrets-to-vercel.sh
+```
+
+The script will:
+- ✅ Read all variables from `.env.local`
+- ✅ Skip empty or placeholder values
+- ✅ Export to production, preview, and development environments
+- ✅ Show you what was exported
+
+### Option 2: Manual Setup
+
+Add these manually in **Vercel Dashboard → Your Project → Settings → Environment Variables**:
 
 ### Required Variables
 

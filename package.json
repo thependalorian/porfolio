@@ -9,7 +9,8 @@
     "lint": "next lint",
     "generate-resumes": "tsx scripts/generate-default-resumes.ts",
     "test-smtp": "tsx scripts/test-smtp.ts",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "export-secrets": "node scripts/export-secrets-to-vercel.js"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.0",
