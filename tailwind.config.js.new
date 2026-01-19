@@ -1,0 +1,100 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // ACT Brand Colors (Alliance for Climate Transition)
+        // Primary Colors
+        'midnight-forest': '#001818', // Darkest value (R0 G24 B24, C83 M65 Y65 K80)
+        'moss-green': '#394816', // (R57 G72 B22, C70 M50 Y100 K50)
+        'spring-green': '#B2DE26', // Accent color (R178 G222 B38)
+        'seafoam-blue': '#E0FFFF', // (R224 G225 B225, C10 M0 Y2 K0)
+        'sand-gray': '#EBE9E1', // (R235 G233 B225, C7 M5 Y0 K0)
+        'white': '#FFFFFF', // Instead of Black
+        
+        // Secondary Colors (Tints)
+        'mint': '#E6F5D3', // Spring Green 30%
+        'sage': '#B8C89A', // Moss Green 60%
+        'silver': '#4D5A4D', // Midnight Forest 30%
+        
+        // Text Colors (ACT-based with high contrast)
+        'text-primary': '#001818', // Midnight Forest (WCAG AAA)
+        'text-secondary': '#394816', // Moss Green (WCAG AA)
+        'text-tertiary': '#475569', // Medium gray (WCAG AA on white)
+        
+        // Background Colors (ACT-based)
+        'bg-light': '#EBE9E1', // Sand Gray
+        'bg-lighter': '#F8FAFC', // Light background
+        'bg-white': '#FFFFFF',
+        'bg-secondary': '#F8FAFC',
+        
+        // Border Colors
+        'border-light': '#E2E8F0',
+        'border-subtle': '#F1F5F9',
+        'border-act': '#B2DE26', // Spring Green for frames
+        
+        // Semantic Colors (WCAG AA Compliant)
+        'success': '#10b981', // Green
+        'warning': '#f59e0b', // Orange
+        'error': '#ef4444', // Red
+        'info': '#2563EB', // Blue
+      },
+      fontFamily: {
+        // ACT Typography
+        'title': ['Helvetica', 'Arial', 'sans-serif'], // Title font (Thin, Light, Regular, Medium)
+        'body': ['Inter', 'sans-serif'], // Body font (Thin, Extra Light, Light, Regular, Medium, Semi Bold, Bold)
+        sans: ['Inter', 'sans-serif'], // Default body font
+        'noto-jp': ['Noto Sans JP', 'sans-serif'],
+      },
+      letterSpacing: {
+        // ACT Typography Tracking
+        'act-title': '-0.02em', // -20 tracking for titles (28pt type)
+        'act-body': '0', // 0 tracking for body (12pt type)
+        'act-body-large': '-0.02em', // -20 tracking for large body (24pt type)
+      },
+      lineHeight: {
+        // ACT Typography Leading
+        'act-title': '1.14', // 32pt leading for 28pt type
+        'act-body': '1.25', // 15pt leading for 12pt type
+        'act-body-large': '1.33', // 32pt leading for 24pt type
+      },
+      backdropBlur: {
+        'act': '8px', // For ACT blur effects
+      },
+    },
+  },
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          'base-100': '#FFFFFF', // White
+          'base-200': '#EBE9E1', // Sand Gray
+          'base-300': '#F1F5F9',
+          'base-content': '#001818', // Midnight Forest (ACT primary text)
+          primary: '#B2DE26', // Spring Green (ACT accent)
+          'primary-content': '#001818', // Midnight Forest on Spring Green
+          secondary: '#394816', // Moss Green
+          'secondary-content': '#FFFFFF',
+          accent: '#B2DE26', // Spring Green
+          'accent-content': '#001818',
+          neutral: '#001818', // Midnight Forest
+          'neutral-content': '#FFFFFF',
+          success: '#10b981',
+          warning: '#f59e0b',
+          error: '#ef4444',
+          info: '#2563EB',
+        },
+      },
+    ],
+    base: true,
+    styled: true,
+    utils: true,
+    darkTheme: false, // Disabling dark theme
+  },
+};

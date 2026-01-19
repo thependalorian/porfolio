@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ACT Brand Design System - Adapted for George Nekwaya Portfolio */
+
+@layer base {
+  :root {
+    /* ACT Brand Colors - HSL Values */
+    --midnight-forest: 180 100% 5%;
+    --moss-green: 82 54% 18%;
+    --spring-green: 74 73% 51%;
+    --seafoam-blue: 180 100% 94%;
+    --sand-gray: 43 24% 90%;
+    
+    /* Semantic tokens */
+    --background: 180 100% 5%;
+    --foreground: 0 0% 100%;
+
+    --card: 180 50% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 180 50% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 74 73% 51%;
+    --primary-foreground: 180 100% 5%;
+
+    --secondary: 82 54% 18%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 180 30% 12%;
+    --muted-foreground: 180 10% 60%;
+
+    --accent: 180 100% 94%;
+    --accent-foreground: 180 100% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 20% 20%;
+    --input: 180 20% 20%;
+    --ring: 74 73% 51%;
+
+    --radius: 0.75rem;
+
+    /* Custom properties */
+    --gradient-spring: linear-gradient(135deg, hsl(74 73% 51%), hsl(82 54% 35%));
+    --gradient-dark: linear-gradient(180deg, hsl(180 100% 5%), hsl(180 50% 8%));
+    --shadow-glow: 0 0 40px hsl(74 73% 51% / 0.15);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
+
+    /* Sidebar - keeping for compatibility */
+    --sidebar-background: 180 100% 5%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 74 73% 51%;
+    --sidebar-primary-foreground: 180 100% 5%;
+    --sidebar-accent: 180 50% 8%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 180 20% 20%;
+    --sidebar-ring: 74 73% 51%;
+
+    /* Legacy ACT variables (for backward compatibility) */
+    --act-midnight-forest: #001818;
+    --act-spring-green: #B2DE26;
+    --act-moss-green: #A9C23F;
+    --act-sand-gray: #F5F5F5;
+    --act-seafoam-blue: #E0FFFF;
+    --act-white: #FFFFFF;
+    --act-mint: #D4E8B8;
+    --act-sage: #6B7D42;
+    --act-silver: #A8A8A8;
+    
+    /* Typography */
+    --act-font-title: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    --act-font-body: 'Inter', system-ui, -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', sans-serif;
+    --act-font-jp: 'Noto Sans JP', sans-serif;
+    
+    /* Responsive Spacing (clamp for fluid scaling) */
+    --act-unit: clamp(20px, 3vw, 24px);
+    --act-spacing-0-5: clamp(8px, 1.5vw, 12px);
+    --act-spacing-1: clamp(16px, 3vw, 24px);
+    --act-spacing-1-5: clamp(24px, 4.5vw, 36px);
+    --act-spacing-2: clamp(32px, 6vw, 48px);
+    --act-spacing-3: clamp(48px, 9vw, 72px);
+    --act-spacing-4: clamp(64px, 12vw, 96px);
+    --act-spacing-6: clamp(96px, 18vw, 144px);
+    --act-spacing-8: clamp(128px, 24vw, 192px);
+    
+    /* Layout Constants */
+    --act-nav-height: clamp(72px, 10vw, 96px);
+    --act-content-max: min(1400px, calc(100vw - 2rem));
+    --act-line-max: min(70ch, calc(100vw - 2rem));
+    --act-frame-max: min(66.666667%, calc(100vw - 2rem));
+    
+    /* Border Radius */
+    --act-radius-sm: clamp(8px, 1.5vw, 12px);
+    --act-radius: clamp(16px, 3vw, 24px);
+    --act-radius-lg: clamp(24px, 4.5vw, 36px);
+    
+    /* Shadows */
+    --act-shadow-card: 0 2px 8px rgba(0, 24, 24, 0.03), 0 4px 16px rgba(0, 24, 24, 0.05);
+    --act-shadow-card-hover: 0 4px 16px rgba(0, 24, 24, 0.06), 0 8px 32px rgba(0, 24, 24, 0.08);
+    --act-shadow-nav: 0 1px 4px rgba(0, 24, 24, 0.05), 0 2px 8px rgba(0, 24, 24, 0.1);
+    --act-shadow-focus: 0 0 0 2px #B2DE26, 0 0 0 4px rgba(178, 222, 38, 0.2);
+    
+    /* Typography Tracking & Leading */
+    --act-tracking-title: -0.02em;
+    --act-tracking-body: 0;
+    --act-leading-title: 1.14;
+    --act-leading-body: 1.25;
+    --act-leading-body-large: 1.33;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    font-size: clamp(14px, 2.5vw, 16px);
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-size: clamp(14px, 1.2vw + 0.8rem, 16px);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.14;
+  }
+
+  #__next {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  [data-nextjs-scroll-focus-boundary] {
+    display: contents;
+  }
+
+  main {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-spring);
+  }
+
+  .card-glass {
+    @apply bg-card/60 backdrop-blur-md border border-border rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  .glow-spring {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .bento-item {
+    @apply card-glass p-6 transition-all duration-300 hover:border-primary/30 hover:glow-spring;
+  }
+
+  .section-title {
+    @apply text-sm font-medium uppercase tracking-widest text-primary mb-4;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-delay-100 { animation-delay: 0.1s; }
+  .animate-delay-200 { animation-delay: 0.2s; }
+  .animate-delay-300 { animation-delay: 0.3s; }
+  .animate-delay-400 { animation-delay: 0.4s; }
+
+  /* ACT Brand Typography Classes */
+  .font-act-title {
+    font-family: var(--act-font-title);
+    letter-spacing: var(--act-tracking-title);
+    line-height: var(--act-leading-title);
+  }
+
+  .font-act-body {
+    font-family: var(--act-font-body);
+    letter-spacing: var(--act-tracking-body);
+    line-height: var(--act-leading-body);
+  }
+
+  .tracking-act-title {
+    letter-spacing: var(--act-tracking-title);
+  }
+
+  /* ACT Brand Buttons */
+  .act-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    border: none;
+    border-radius: var(--act-radius);
+    font-family: var(--act-font-body);
+    font-weight: 600;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .act-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--act-shadow-focus);
+  }
+
+  .act-btn-primary {
+    background: hsl(var(--spring-green));
+    color: #000000;
+    border: 2px solid hsl(var(--spring-green));
+  }
+
+  .act-btn-primary:hover {
+    background: transparent;
+    color: hsl(var(--spring-green));
+    transform: translateY(-1px);
+  }
+
+  .act-btn-secondary {
+    background: transparent;
+    color: hsl(var(--midnight-forest));
+    border: 2px solid hsl(var(--midnight-forest));
+  }
+
+  .act-btn-secondary:hover {
+    background: hsl(var(--midnight-forest));
+    color: hsl(var(--foreground));
+    border-color: hsl(var(--spring-green));
+    transform: translateY(-1px);
+  }
+
+  .act-btn-large {
+    padding: clamp(1rem, 2.5vw, 1.25rem) clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1rem, 2.2vw, 1.125rem);
+  }
+
+  /* Legacy Button Classes (for compatibility) */
+  .btn-primary {
+    background-color: hsl(var(--spring-green));
+    color: #000000;
+    border: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--act-mint);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: hsl(var(--spring-green));
+    border: 2px solid hsl(var(--spring-green));
+    transition: all 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    background-color: hsl(var(--spring-green));
+    color: #000000;
+  }
+
+  /* ACT Navigation */
+  .act-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: hsl(var(--midnight-forest) / 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid hsl(var(--border));
+    height: var(--act-nav-height);
+    z-index: 100;
+    transition: all 0.3s ease;
+  }
+
+  .act-nav.scrolled {
+    box-shadow: var(--act-shadow-nav);
+  }
+
+  .act-nav-container {
+    width: 100%;
+    height: 100%;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .act-nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+
+  .act-nav-link {
+    position: relative;
+    text-decoration: none;
+    color: hsl(var(--foreground));
+    transition: all 0.2s ease;
+    padding: 0.5rem 0;
+  }
+
+  .act-nav-link:hover,
+  .act-nav-link.active {
+    color: hsl(var(--spring-green));
+  }
+
+  .act-nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: hsl(var(--spring-green));
+    border-radius: 1px;
+  }
+
+  /* ACT Cards */
+  .card,
+  .act-card {
+    background: hsl(var(--card));
+    border-radius: var(--act-radius);
+    padding: var(--act-spacing-2);
+    box-shadow: var(--act-shadow-card);
+    transition: all 0.3s ease;
+    border: 1px solid hsl(var(--border));
+  }
+
+  .act-card:hover {
+    box-shadow: var(--act-shadow-card-hover);
+    transform: translateY(-2px);
+  }
+
+  /* ACT Footer */
+  .act-footer {
+    background: hsl(var(--midnight-forest));
+    color: hsl(var(--foreground));
+    padding: var(--act-spacing-4) 0 var(--act-spacing-2);
+    margin-top: auto;
+  }
+
+  .act-footer-content {
+    width: 100%;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--act-spacing-2);
+  }
+
+  .act-footer-section h4 {
+    font-family: var(--act-font-body);
+    font-weight: 600;
+    font-size: clamp(1rem, 2.2vw, 1.125rem);
+    color: hsl(var(--spring-green));
+    margin-bottom: var(--act-spacing-1);
+  }
+
+  .act-footer-link {
+    color: hsl(var(--foreground));
+    text-decoration: none;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    transition: color 0.2s ease;
+    display: inline-block;
+    padding: 0.25rem 0;
+  }
+
+  .act-footer-link:hover {
+    color: hsl(var(--spring-green));
+  }
+
+  .act-footer-legal {
+    margin-top: var(--act-spacing-2);
+    padding-top: var(--act-spacing-1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    color: var(--act-silver);
+  }
+
+  /* ACT Typography Classes */
+  .act-h1 {
+    font-family: var(--act-font-title);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.2;
+    letter-spacing: var(--act-tracking-title);
+    margin-bottom: var(--act-spacing-1);
+  }
+
+  .act-h2 {
+    font-family: var(--act-font-title);
+    font-weight: 400;
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+    line-height: 1.2;
+    letter-spacing: var(--act-tracking-title);
+    margin-bottom: var(--act-spacing-0-5);
+  }
+
+  .act-h3 {
+    font-family: var(--act-font-body);
+    font-weight: 600;
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    line-height: 1.2;
+    letter-spacing: var(--act-tracking-title);
+    margin-bottom: var(--act-spacing-0-5);
+  }
+
+  .act-h4 {
+    font-family: var(--act-font-body);
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.2;
+    margin-bottom: var(--act-spacing-0-5);
+  }
+
+  .act-body-large {
+    font-family: var(--act-font-body);
+    font-weight: 400;
+    font-size: clamp(1rem, 2.2vw, 1.125rem);
+    line-height: 1.4;
+    margin-bottom: var(--act-spacing-0-5);
+  }
+
+  .act-body {
+    font-family: var(--act-font-body);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.5;
+    margin-bottom: var(--act-spacing-0-5);
+  }
+
+  .act-body-small {
+    font-family: var(--act-font-body);
+    font-weight: 400;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    line-height: 1.4;
+  }
+
+  /* ACT Content Wrapper */
+  .act-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .act-content {
+    width: 100%;
+    max-width: var(--act-content-max);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+  }
+
+  .act-content-full {
+    width: 100%;
+    margin: 0;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .act-section {
+    padding: var(--act-spacing-3) 0;
+  }
+
+  .act-section + .act-section {
+    padding-top: 0;
+  }
+
+  /* ACT Hero */
+  .act-hero {
+    position: relative;
+    min-height: clamp(60vh, 80vh, 100vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .act-hero-content {
+    width: 100%;
+    max-width: var(--act-content-max);
+    padding: var(--act-spacing-2);
+    text-align: center;
+    z-index: 2;
+  }
+
+  /* ACT Color Utilities */
+  .text-act-primary { color: hsl(var(--midnight-forest)); }
+  .text-act-accent { color: hsl(var(--spring-green)); }
+  .bg-act-primary { background-color: hsl(var(--midnight-forest)); }
+  .bg-act-accent { background-color: hsl(var(--spring-green)); }
+  .bg-act-sand { background-color: hsl(var(--sand-gray)); }
+  .border-act { border-color: hsl(var(--spring-green)); }
+
+  /* Legacy color utilities for backward compatibility */
+  .text-act-white { color: var(--act-white); }
+  .text-act-sand-gray { color: var(--act-sand-gray); }
+  .text-act-moss-green { color: var(--act-moss-green); }
+  .bg-act-midnight-forest { background-color: hsl(var(--midnight-forest)); }
+  .bg-act-spring-green { background-color: hsl(var(--spring-green)); }
+  .bg-act-moss-green { background-color: hsl(var(--moss-green)); }
+  .bg-act-sand-gray { background-color: hsl(var(--sand-gray)); }
+  .bg-act-seafoam-blue { background-color: hsl(var(--seafoam-blue)); }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(74 73% 51% / 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(74 73% 51% / 0.4);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Mobile Navigation */
+@media (max-width: 767px) {
+  .act-nav-links {
+    position: fixed;
+    top: var(--act-nav-height);
+    left: 0;
+    right: 0;
+    background: hsl(var(--midnight-forest) / 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: var(--act-spacing-2);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--act-shadow-nav);
+  }
+  
+  .act-nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .act-nav-link {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .act-nav-toggle {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    justify-content: space-between;
+  }
+  
+  .act-nav-toggle span {
+    width: 100%;
+    height: 2px;
+    background: hsl(var(--foreground));
+    transition: all 0.3s ease;
+    border-radius: 1px;
+  }
+  
+  .act-nav-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .act-nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .act-nav-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .act-btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  .act-nav-link {
+    padding: 1rem 0.5rem;
+  }
+
+  .act-card:hover {
+    transform: none;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .act-nav,
+  .act-btn,
+  .act-footer,
+  .pdf-export-button {
+    display: none !important;
+  }
+  
+  .act-hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}

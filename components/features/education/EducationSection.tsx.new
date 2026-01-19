@@ -1,0 +1,235 @@
+/**
+ * Education Section - Restructured with Brandeis Grouping
+ * 
+ * Purpose: Display educational background with Brandeis experience grouped together
+ * Location: /components/features/education/EducationSection.tsx
+ */
+
+import Image from 'next/image'
+import { education, awards, hassenfeldFellowship } from '@/lib/data/professional-data'
+import { BentoGrid, BentoCard } from '@/components/ui/BentoGrid'
+import { GraduationCap, Award, BookOpen, Trophy, Star, Globe, MapPin } from 'lucide-react'
+
+export function EducationSection() {
+  // Filter Brandeis awards
+  const brandeisAwards = awards.filter(award => 
+    award.org.includes('Brandeis')
+  )
+
+  return (
+    <div>
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-text-primary mb-2 font-act-title tracking-act-title">
+          Education & Achievements
+        </h2>
+        <p className="text-md text-text-secondary max-w-2xl mx-auto leading-relaxed font-act-body">
+          Academic credentials, recognition, and professional certifications
+        </p>
+      </div>
+      <BentoGrid columns={{ sm: 1, md: 2, lg: 3 }} gap="md">
+        {/* Brandeis International Business School - Unified Section */}
+        <BentoCard 
+          span={{ col: 2, row: 3 }} 
+          variant="elevated" 
+          hover 
+          className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-act-spring-green/10 to-act-mint/10 border-2 border-act-spring-green/30 shadow-xl"
+        >
+          {/* Brandeis Header */}
+          <div className="flex flex-col items-center text-center mb-4 pb-4 border-b border-border-light">
+            {education.mba.logo && (
+              <div className="flex items-center justify-center mb-3 h-[100px]">
+                <Image
+                  src={education.mba.logo}
+                  alt={`${education.mba.school} Logo`}
+                  width={100}
+                  height={100}
+                  className="object-contain max-h-full"
+                  style={{ width: 'auto', height: 'auto', maxWidth: '100px', maxHeight: '100px' }}
+                />
+              </div>
+            )}
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <GraduationCap className="w-5 h-5 text-act-spring-green" />
+              <h3 className="text-xl font-bold text-text-primary font-act-title tracking-act-title">{education.mba.degree}</h3>
+            </div>
+            <p className="text-md text-text-secondary mb-1 font-semibold font-act-body">
+              {education.mba.school}
+            </p>
+            <p className="text-sm text-text-tertiary mb-3 font-act-body">{education.mba.date}</p>
+            
+            {education.mba.gpa && (
+              <div className="badge badge-md badge-primary bg-act-spring-green text-black border-0 px-3 py-1 text-xs font-semibold">
+                GPA: {education.mba.gpa}
+              </div>
+            )}
+          </div>
+
+          {/* Brandeis Awards Section */}
+          {brandeisAwards.length > 0 && (
+            <div className="mb-4 pb-4 border-b border-border-light">
+              <div className="flex items-center gap-2 mb-3">
+                <Trophy className="w-4 h-4 text-act-spring-green" />
+                <h4 className="text-md font-bold text-text-primary font-act-title">Awards & Recognition</h4>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-2">
+                {brandeisAwards.map((award, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-2 p-2 bg-bg-secondary rounded-lg border border-border-light hover:border-act-spring-green/30 transition-colors"
+                  >
+                    <div className="flex-shrink-0 p-1 bg-act-spring-green/10 rounded">
+                      {idx === 0 ? (
+                        <Trophy className="w-3 h-3 text-act-spring-green" />
+                      ) : (
+                        <Star className="w-3 h-3 text-act-spring-green" />
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h5 className="text-xs font-semibold text-text-primary mb-0.5 leading-tight font-act-title">
+                        {award.award}
+                      </h5>
+                      <p className="text-xs text-text-tertiary font-act-body">{award.year}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Concentrations & Courses */}
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            {education.mba.concentrations && (
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Award className="w-4 h-4 text-act-spring-green" />
+                  <h4 className="text-sm font-bold text-text-primary font-act-title">Concentrations:</h4>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {education.mba.concentrations.map((concentration, idx) => (
+                    <span
+                      key={idx}
+                      className="badge badge-primary badge-sm bg-act-spring-green/20 text-act-spring-green border-act-spring-green/30 text-xs font-medium"
+                    >
+                      {concentration}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+            {education.mba.courses && (
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <BookOpen className="w-4 h-4 text-act-spring-green" />
+                  <h4 className="text-sm font-bold text-text-primary font-act-title">Key Courses:</h4>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {education.mba.courses.map((course, idx) => (
+                    <span
+                      key={idx}
+                      className="badge badge-outline badge-xs border-border-light text-text-secondary hover:border-act-spring-green hover:text-act-spring-green transition-colors"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          
+          {/* Hassenfeld Immersion Program */}
+          <div className="pt-4 border-t-2 border-act-spring-green/30">
+            <div className="flex items-center gap-2 mb-3">
+              <Globe className="w-4 h-4 text-act-spring-green" />
+              <h4 className="text-md font-bold text-text-primary font-act-title">Hassenfeld Immersion Program</h4>
+            </div>
+            <p className="text-xs text-text-secondary mb-3 leading-relaxed font-act-body">
+              {hassenfeldFellowship.description}
+            </p>
+            
+            <div className="space-y-3">
+              {hassenfeldFellowship.locations.map((location, idx) => (
+                <div
+                  key={idx}
+                  className="p-3 bg-bg-secondary rounded-lg border border-border-light"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <MapPin className="w-3 h-3 text-act-spring-green" />
+                    <h5 className="text-sm font-semibold text-text-primary font-act-title">
+                      {location.name}
+                    </h5>
+                  </div>
+                  <ul className="list-disc list-inside space-y-1 text-xs text-text-secondary ml-2 font-act-body">
+                    {location.points.map((point, pointIdx) => (
+                      <li key={pointIdx} className="leading-relaxed">{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </BentoCard>
+
+        {/* BEng - Namibia University of Science and Technology */}
+        <BentoCard 
+          span={{ col: 2, row: 1 }} 
+          variant="default" 
+          hover
+          className="md:col-span-2 lg:col-span-2"
+        >
+          <div className="flex flex-col h-full">
+            <div className="flex flex-col items-center text-center mb-4 pb-4 border-b border-border-light">
+              {education.beng.logo && (
+                <div className="flex items-center justify-center mb-3 h-[80px]">
+                  <Image
+                    src={education.beng.logo}
+                    alt={`${education.beng.school} Logo`}
+                    width={80}
+                    height={80}
+                    className="object-contain max-h-full"
+                    style={{ width: 'auto', height: 'auto', maxWidth: '80px', maxHeight: '80px' }}
+                  />
+                </div>
+              )}
+              <div className="flex items-center gap-2 mb-1">
+                <GraduationCap className="w-4 h-4 text-act-spring-green" />
+                <h3 className="text-lg font-bold text-text-primary font-act-title">{education.beng.degree}</h3>
+              </div>
+              <p className="text-sm text-text-secondary mb-1 font-act-body">
+                {education.beng.school}
+              </p>
+              <p className="text-xs text-text-tertiary mb-2 font-act-body">{education.beng.date}</p>
+            </div>
+
+            {/* Capstone Project */}
+            {education.beng.capstone && (
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Award className="w-4 h-4 text-act-spring-green" />
+                  <h4 className="text-sm font-bold text-text-primary font-act-title">Capstone Project:</h4>
+                </div>
+                <p className="text-xs text-text-secondary leading-relaxed font-act-body">
+                  {education.beng.capstone}
+                </p>
+              </div>
+            )}
+
+            {/* Additional Information */}
+            {education.beng.extra && education.beng.extra.length > 0 && (
+              <div className="mt-auto pt-4 border-t border-border-light">
+                <div className="flex items-center gap-2 mb-2">
+                  <Star className="w-4 h-4 text-act-spring-green" />
+                  <h4 className="text-sm font-bold text-text-primary font-act-title">Additional:</h4>
+                </div>
+                <ul className="list-disc list-inside space-y-1 text-xs text-text-secondary font-act-body">
+                  {education.beng.extra.map((item, idx) => (
+                    <li key={idx} className="leading-relaxed">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </BentoCard>
+      </BentoGrid>
+    </div>
+  )
+}
