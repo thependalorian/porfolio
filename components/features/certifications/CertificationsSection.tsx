@@ -74,7 +74,7 @@ export function CertificationsSection() {
                     <div className="relative w-full mb-3 rounded-lg overflow-hidden bg-bg-secondary border border-border-light group cursor-pointer">
                       {/* For landscape certificates (like MBA), use aspect ratio container */}
                       {isFeatured ? (
-                        <div className="relative w-full" style={{ aspectRatio: '16/10', maxHeight: '400px' }}>
+                        <div className="relative w-full aspect-[16/10] max-h-[400px]">
                           <Image
                             src={cert.image}
                             alt={cert.title}
