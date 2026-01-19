@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Vercel
 
 on:
   push:
@@ -8,16 +8,10 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
-  build:
-    name: Build and Verify Domain
+  build-and-deploy:
+    name: Build, Verify Domain, and Deploy to Vercel
     runs-on: ubuntu-latest
     
     steps:
@@ -51,56 +45,36 @@ jobs:
         env:
           NODE_ENV: production
           # Dummy DATABASE_URL for build time (not used during build, only at runtime)
-          # Real DATABASE_URL should be set in GitHub Pages environment or Vercel
           DATABASE_URL: postgresql://dummy:dummy@dummy:5432/dummy
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
 
-      - name: Prepare static export
-        run: |
-          # Next.js outputs to .next/standalone or .next/out depending on config
-          # For GitHub Pages, we need static files
-          # Check if static export was used (output: 'export' in next.config.js)
-          if [ -d ".next/out" ]; then
-            echo "✓ Found .next/out (static export)"
-            DEPLOY_PATH=".next/out"
-          elif [ -d ".next/standalone" ]; then
-            echo "⚠️  Found .next/standalone (not suitable for GitHub Pages)"
-            echo "⚠️  Consider using Vercel or configuring static export"
-            exit 1
-          else
-            echo "⚠️  No static output found. Next.js App Router requires static export for GitHub Pages."
-            echo "⚠️  Add 'output: \"export\"' to next.config.js or use Vercel for deployment."
-            exit 1
-          fi
-          
-          # Ensure CNAME is in the output directory
-          cp public/CNAME "$DEPLOY_PATH/CNAME"
-          echo "✓ CNAME file copied to $DEPLOY_PATH: $(cat $DEPLOY_PATH/CNAME)"
-          echo "DEPLOY_PATH=$DEPLOY_PATH" >> $GITHUB_ENV
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{ env.DEPLOY_PATH || '.next/out' }}
-          retention-days: 1
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-  deploy:
-    name: Deploy to GitHub Pages
-    environment:
-      name: github-pages
-      url: https://georgenekwaya.com
-    runs-on: ubuntu-latest
-    needs: build
-    
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
       - name: Verify deployment
         run: |
           echo "✓ Deployment completed"
           echo "Domain: georgenekwaya.com"
           echo "URL: https://georgenekwaya.com"
+          echo ""
+          echo "Note: Ensure your domain is configured in Vercel dashboard:"
+          echo "1. Go to Vercel Dashboard → Your Project → Settings → Domains"
+          echo "2. Add georgenekwaya.com"
+          echo "3. Update your DNS records as instructed by Vercel"
