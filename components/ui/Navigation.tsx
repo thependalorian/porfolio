@@ -32,7 +32,7 @@ const Navigation = () => {
     <nav className={`act-nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="act-nav-container">
         <Link href="/" className="flex items-center">
-          <span className="font-title text-2xl font-medium text-act-white tracking-act-title">GN</span>
+          <span className="font-title text-2xl font-medium text-act-white tracking-act-title">George</span>
         </Link>
 
         <div className={`act-nav-links ${isOpen ? 'open' : ''}`}>

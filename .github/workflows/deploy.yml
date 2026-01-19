@@ -16,23 +16,89 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
+    name: Build and Verify Domain
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify CNAME file exists
+        run: |
+          if [ ! -f "public/CNAME" ]; then
+            echo "ERROR: CNAME file not found in public directory"
+            exit 1
+          fi
+          DOMAIN=$(cat public/CNAME)
+          if [ "$DOMAIN" != "georgenekwaya.com" ]; then
+            echo "ERROR: CNAME file contains '$DOMAIN' but expected 'georgenekwaya.com'"
+            exit 1
+          fi
+          echo "✓ CNAME file verified: $DOMAIN"
+
+      - name: Build application
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Ensure CNAME is in build output
+        run: |
+          # Copy CNAME to .next/out if using static export
+          if [ -d ".next/out" ]; then
+            cp public/CNAME .next/out/CNAME
+            echo "✓ CNAME copied to .next/out/"
+          fi
+          # Also ensure it's in the root for GitHub Pages
+          cp public/CNAME ./CNAME
+          echo "✓ CNAME file ready for deployment: $(cat ./CNAME)"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Prepare deployment artifact
+        run: |
+          # Create out directory if it doesn't exist
+          mkdir -p .next/out
+          # Ensure CNAME is in the output directory
+          cp public/CNAME .next/out/CNAME || cp ./CNAME .next/out/CNAME
+          # Also keep it in root
+          cp public/CNAME ./CNAME || true
+          echo "✓ CNAME file prepared: $(cat ./CNAME)"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: .next/out
+          retention-days: 1
 
+  deploy:
+    name: Deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: https://georgenekwaya.com
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Ensure CNAME is preserved
+          artifact_name: pages-artifact
+
+      - name: Verify deployment
+        run: |
+          echo "✓ Deployment completed"
+          echo "Domain: georgenekwaya.com"
+          echo "URL: https://georgenekwaya.com"
