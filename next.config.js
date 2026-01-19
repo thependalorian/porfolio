@@ -29,6 +29,8 @@ const nextConfig = {
   },
   // Security headers
   async headers() {
+    const isDev = process.env.NODE_ENV === 'development';
+    
     return [
       {
         source: '/:path*',
@@ -44,6 +46,38 @@ const nextConfig = {
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: isDev
+              ? [
+                  // More permissive CSP for development
+                  "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:",
+                  "script-src 'self' 'unsafe-eval' 'unsafe-inline' http://localhost:* https://localhost:*",
+                  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+                  "font-src 'self' https://fonts.gstatic.com data:",
+                  "img-src 'self' data: blob: https://api.accredible.com https://images.credential.net https://*.accredible.com",
+                  "connect-src 'self' https://api.accredible.com https://fonts.googleapis.com ws://localhost:* wss://localhost:* http://localhost:* https://localhost:*",
+                  "frame-src 'self'",
+                  "object-src 'none'",
+                  "base-uri 'self'",
+                  "form-action 'self'",
+                ].join('; ')
+              : [
+                  // Stricter CSP for production
+                  "default-src 'self'",
+                  "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+                  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+                  "font-src 'self' https://fonts.gstatic.com data:",
+                  "img-src 'self' data: blob: https://api.accredible.com https://images.credential.net https://*.accredible.com",
+                  "connect-src 'self' https://api.accredible.com https://fonts.googleapis.com",
+                  "frame-src 'self'",
+                  "object-src 'none'",
+                  "base-uri 'self'",
+                  "form-action 'self'",
+                  "frame-ancestors 'self'",
+                  "upgrade-insecure-requests",
+                ].join('; '),
           },
         ],
       },
