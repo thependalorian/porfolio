@@ -8,13 +8,11 @@
  */
 
 import Link from 'next/link'
-import { ProjectsSection } from '@/components/features/projects'
 import { BuffrSection } from '@/components/features/buffr/BuffrSection'
 import { ExperienceSection } from '@/components/features/experience/ExperienceSection'
 import { EducationSection } from '@/components/features/education/EducationSection'
 import { AwardsSection } from '@/components/features/awards/AwardsSection'
 import { SkillsSection } from '@/components/features/skills/SkillsSection'
-import { CertificationsSection } from '@/components/features/certifications/CertificationsSection'
 import { BentoGrid, BentoCard } from '@/components/ui/BentoGrid'
 import HeroSection from '@/components/features/hero/HeroSection'
 
@@ -63,9 +61,6 @@ export default function Home() {
       {/* Experience Section (Standalone) */}
       <ExperienceSection />
 
-      {/* Projects Section (Standalone) */}
-      <ProjectsSection />
-
       {/* Skills Section (Standalone) */}
       <SkillsSection />
 
@@ -80,9 +75,6 @@ export default function Home() {
           </BentoCard>
           <BentoCard span={{ col: 2, row: 1 }} className="md:col-span-2" variant="default">
             <AwardsSection />
-          </BentoCard>
-          <BentoCard span={{ col: 2, row: 1 }} className="md:col-span-2" variant="default">
-            <CertificationsSection />
           </BentoCard>
         </BentoGrid>
       </div>

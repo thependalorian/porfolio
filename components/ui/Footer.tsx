@@ -25,6 +25,8 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/" className="act-footer-link">Home</Link></li>
+              <li><Link href="/projects" className="act-footer-link">Projects</Link></li>
+              <li><Link href="/certifications" className="act-footer-link">Certifications</Link></li>
               <li><Link href="/resume/japanese" className="act-footer-link">Japanese Resumes</Link></li>
             </ul>
           </div>
