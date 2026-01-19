@@ -33,12 +33,12 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
       {(resume.jobTitle || resume.companyName) && (
         <div className="mb-6 p-4 bg-bg-secondary border border-border-light rounded-lg">
           {resume.jobTitle && (
-            <p className="text-sm text-text-primary">
+            <p className="text-sm text-black">
               <span className="font-semibold">Target Position:</span> {resume.jobTitle}
             </p>
           )}
           {resume.companyName && (
-            <p className="text-sm text-text-primary">
+            <p className="text-sm text-black">
               <span className="font-semibold">Target Company:</span> {resume.companyName}
             </p>
           )}
@@ -50,10 +50,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
         <div className="space-y-6">
           {sections['職務要約'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 職務要約 (Job Summary)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['職務要約'] === 'string' 
                   ? sections['職務要約']
                   : typeof sections['職務要約'] === 'object'
@@ -65,17 +65,17 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['活用できる経験・知識・スキル'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 活用できる経験・知識・スキル (Experience, Knowledge, Skills)
               </h3>
               <ul className="list-disc list-inside space-y-2">
                 {Array.isArray(sections['活用できる経験・知識・スキル'])
                   ? sections['活用できる経験・知識・スキル'].map((item: any, idx: number) => (
-                      <li key={idx} className="text-base text-text-primary">
+                      <li key={idx} className="text-base text-black">
                         {typeof item === 'string' ? item : typeof item === 'object' ? JSON.stringify(item, null, 2) : String(item)}
                       </li>
                     ))
-                  : <li className="text-base text-text-primary">
+                    : <li className="text-base text-black">
                       {typeof sections['活用できる経験・知識・スキル'] === 'string'
                         ? sections['活用できる経験・知識・スキル']
                         : typeof sections['活用できる経験・知識・スキル'] === 'object'
@@ -88,10 +88,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['職務経歴'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 職務経歴 (Work History)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['職務経歴'] === 'string'
                   ? sections['職務経歴']
                   : typeof sections['職務経歴'] === 'object'
@@ -103,10 +103,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['技術スキル'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 技術スキル (Technical Skills)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['技術スキル'] === 'string'
                   ? sections['技術スキル']
                   : typeof sections['技術スキル'] === 'object'
@@ -118,10 +118,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['資格'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 資格 (Qualifications)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['資格'] === 'string'
                   ? sections['資格']
                   : typeof sections['資格'] === 'object'
@@ -133,10 +133,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['自己PR'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 自己PR (Self-PR)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['自己PR'] === 'string'
                   ? sections['自己PR']
                   : typeof sections['自己PR'] === 'object'
@@ -148,10 +148,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['語学力'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 語学力 (Language Skills)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['語学力'] === 'string'
                   ? sections['語学力']
                   : typeof sections['語学力'] === 'object'
@@ -163,10 +163,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['志望動機'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 志望動機 (Motivation)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['志望動機'] === 'string'
                   ? sections['志望動機']
                   : typeof sections['志望動機'] === 'object'
@@ -183,10 +183,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
         <div className="space-y-6">
           {sections['経歴要約'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 経歴要約 (Personal History Summary)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['経歴要約'] === 'string'
                   ? sections['経歴要約']
                   : typeof sections['経歴要約'] === 'object'
@@ -198,10 +198,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['職務内容'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 職務内容 (Work History)
               </h3>
-              <div className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <div className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['職務内容'] === 'string'
                   ? <p>{sections['職務内容']}</p>
                   : typeof sections['職務内容'] === 'object'
@@ -213,10 +213,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['活用できる経験・知識・スキル'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 活用できる経験・知識・スキル (Qualifications, Knowledge, Skills)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['活用できる経験・知識・スキル'] === 'string'
                   ? sections['活用できる経験・知識・スキル']
                   : typeof sections['活用できる経験・知識・スキル'] === 'object'
@@ -228,10 +228,10 @@ export function JapaneseResumeViewer({ resume, documentType }: JapaneseResumeVie
 
           {sections['自己PR'] && (
             <section>
-              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-text-primary font-act-title">
+              <h3 className="text-xl font-bold mb-2 border-b-2 border-spring-green pb-2 text-black font-act-title">
                 自己PR (Self-PR)
               </h3>
-              <p className="text-base leading-relaxed whitespace-pre-wrap text-text-primary">
+              <p className="text-base leading-relaxed whitespace-pre-wrap text-black">
                 {typeof sections['自己PR'] === 'string'
                   ? sections['自己PR']
                   : typeof sections['自己PR'] === 'object'

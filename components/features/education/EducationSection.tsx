@@ -99,7 +99,7 @@ export const EducationSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 + index * 0.1 }}
-                className={`bento-item ${edu.featured ? "border-primary/30" : ""}`}
+                className={`bento-item ${edu.featured ? "border-2 border-primary" : ""}`}
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-primary/10 text-primary flex-shrink-0">
