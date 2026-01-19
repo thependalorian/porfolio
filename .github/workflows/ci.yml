@@ -52,6 +52,8 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          # Dummy DATABASE_URL for build time (not used during build, only at runtime)
+          DATABASE_URL: postgresql://dummy:dummy@dummy:5432/dummy
 
       - name: Verify CNAME file exists
         run: |

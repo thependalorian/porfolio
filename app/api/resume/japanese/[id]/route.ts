@@ -27,7 +27,16 @@ export async function GET(
         created_at
       FROM japanese_resume_generations
       WHERE id = ${params.id}::uuid AND is_active = true
-    `
+    ` as Array<{
+      id: string
+      resume_type: string
+      job_title: string | null
+      company_name: string | null
+      job_description: string | null
+      generated_sections: any
+      is_default: boolean
+      created_at: Date
+    }>
 
     if (resumes.length === 0) {
       return NextResponse.json(

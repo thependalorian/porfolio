@@ -50,6 +50,9 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          # Dummy DATABASE_URL for build time (not used during build, only at runtime)
+          # Real DATABASE_URL should be set in GitHub Pages environment or Vercel
+          DATABASE_URL: postgresql://dummy:dummy@dummy:5432/dummy
 
       - name: Ensure CNAME is in build output
         run: |

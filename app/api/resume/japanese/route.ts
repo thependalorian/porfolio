@@ -15,7 +15,17 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const defaultOnly = searchParams.get('default') === 'true'
 
-    let resumes
+    type ResumeRow = {
+      id: string
+      resume_type: string
+      job_title: string | null
+      company_name: string | null
+      generated_sections: any
+      is_default: boolean
+      created_at: Date
+    }
+
+    let resumes: ResumeRow[]
     if (defaultOnly) {
       // Get only default resumes
       resumes = await sql`
@@ -30,7 +40,7 @@ export async function GET(request: NextRequest) {
         FROM japanese_resume_generations
         WHERE is_default = true AND is_active = true
         ORDER BY resume_type, created_at DESC
-      `
+      ` as ResumeRow[]
     } else {
       // Get all active resumes
       resumes = await sql`
@@ -45,7 +55,7 @@ export async function GET(request: NextRequest) {
         FROM japanese_resume_generations
         WHERE is_active = true
         ORDER BY is_default DESC, created_at DESC
-      `
+      ` as ResumeRow[]
     }
 
     return NextResponse.json({

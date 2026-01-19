@@ -60,7 +60,7 @@ async function runMigration() {
       FROM information_schema.columns
       WHERE table_name = 'japanese_resume_generations'
         AND column_name = 'resume_data_hash'
-    `
+    ` as Array<{ column_name: string; data_type: string; character_maximum_length: number | null; is_nullable: string }>
     
     if (verification.length > 0) {
       console.log('✅ Migration successful!')

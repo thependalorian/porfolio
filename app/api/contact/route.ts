@@ -70,9 +70,9 @@ export async function POST(request: NextRequest) {
         INSERT INTO contact_submissions (name, email, subject, message, ip_address, user_agent, status)
         VALUES (${validatedData.name}, ${validatedData.email}, ${validatedData.subject || null}, ${validatedData.message}, ${ip}, ${userAgent}, 'pending')
         RETURNING id
-      `
+      ` as Array<{ id: number }>
 
-      const submissionId = result[0].id
+      const submissionId = result[0]?.id
 
       // Log email notification (optional - emails stored in database, view in admin dashboard)
       // If you set up Namecheap email forwarding, you can receive email notifications

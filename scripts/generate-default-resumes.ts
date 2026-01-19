@@ -40,7 +40,7 @@ async function hasResumeDataChanged(resumeType: string, currentHash: string): Pr
     FROM japanese_resume_generations
     WHERE resume_type = ${resumeType} AND is_default = true AND is_active = true
     LIMIT 1
-  `
+  ` as Array<{ resume_data_hash: string | null; updated_at: Date }>
   
   if (existing.length === 0) {
     return true // No existing resume, needs generation
@@ -97,7 +97,7 @@ async function generateDefaultResumes() {
       const existingRirekisho = await sql`
         SELECT id FROM japanese_resume_generations
         WHERE resume_type = 'rirekisho' AND is_default = true AND is_active = true
-      `
+      ` as Array<{ id: string }>
 
       const aiProvider = process.env.GROQ_API_KEY ? 'groq' : process.env.ANTHROPIC_API_KEY ? 'anthropic' : 'openai'
 
@@ -149,7 +149,7 @@ async function generateDefaultResumes() {
       const existingShokumu = await sql`
         SELECT id FROM japanese_resume_generations
         WHERE resume_type = 'shokumu-keirekisho' AND is_default = true AND is_active = true
-      `
+      ` as Array<{ id: string }>
 
       const aiProvider = process.env.GROQ_API_KEY ? 'groq' : process.env.ANTHROPIC_API_KEY ? 'anthropic' : 'openai'
 
