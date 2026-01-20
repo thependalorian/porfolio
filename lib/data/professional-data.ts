@@ -68,6 +68,24 @@ export const professionalExperience: ProfessionalExperience[] = [
     ],
   },
   {
+    role: 'Brand Identity & Web Development Consultant',
+    company: 'AnchorBridge Support House LLC',
+    location: 'Marion County, Indiana',
+    period: 'November 2024 – January 2025',
+    description: 'Complete brand identity creation, website development, and business strategy for affordable independent housing provider',
+    logo: null,
+    points: [
+      {
+        title: null,
+        items: [
+          'Created complete brand identity including logo design, color palette, and brand guidelines',
+          'Built production-ready website with Next.js 14, TypeScript, and Tailwind CSS',
+          'Developed comprehensive business plan and marketing materials',
+        ],
+      },
+    ],
+  },
+  {
     role: 'Project Manager, DEIJ & Workforce Development',
     company: 'The Alliance for Climate Transition (ACT)',
     location: 'Massachusetts, USA',
@@ -106,24 +124,6 @@ export const professionalExperience: ProfessionalExperience[] = [
           'Designed initial architecture for Aquasaic Aqua Intel Platform',
           'Conducted commercial and technical research on cutting-edge water treatment technologies',
           'Developed pitch decks tailored for funding opportunities (municipal, industrial, residential sectors)',
-        ],
-      },
-    ],
-  },
-  {
-    role: 'Brand Identity & Web Development Consultant',
-    company: 'AnchorBridge Support House LLC',
-    location: 'Marion County, Indiana',
-    period: 'November 2025 – January 2026',
-    description: 'Complete brand identity creation, website development, and business strategy for affordable independent housing provider',
-    logo: null,
-    points: [
-      {
-        title: null,
-        items: [
-          'Created complete brand identity including logo design, color palette, and brand guidelines',
-          'Built production-ready website with Next.js 14, TypeScript, and Tailwind CSS',
-          'Developed comprehensive business plan and marketing materials',
         ],
       },
     ],

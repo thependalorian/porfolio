@@ -108,7 +108,7 @@ Namibia University of Science & Technology, Windhoek, Namibia | 2013-2017
 
 ## Brand Identity & Web Development Consultant
 
-**AnchorBridge Support House LLC** | Marion County, Indiana | November 2025 – January 2026
+**AnchorBridge Support House LLC** | Marion County, Indiana | November 2024 – January 2025
 
 - Created complete brand identity from scratch including logo design, color palette (navy blue, gold, teal), and comprehensive brand guidelines for affordable independent housing provider
 - Built production-ready website with Next.js 14, TypeScript, and Tailwind CSS, implementing full responsive design optimized for all screen sizes with mobile-first approach
