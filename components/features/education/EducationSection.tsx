@@ -20,18 +20,19 @@ import Image from 'next/image';
 import { GraduationCap, MapPin, Calendar, Award } from "lucide-react";
 import { education, awards, hassenfeldFellowship } from "@/lib/data/professional-data";
 
-// Transform education data to match format
+// Transform education data to match format - consistent structure for all entries
 const educationArray = [
   {
     institution: education.mba.school,
     degree: education.mba.degree,
     period: education.mba.date,
     location: education.mba.location,
-    featured: true,
+    featured: true, // Keep featured for visual emphasis but use consistent structure
+    logo: education.mba.logo,
     details: [
-      // GPA
+      // GPA - consistent format
       ...(education.mba.gpa ? [`GPA: ${education.mba.gpa}`] : []),
-      // Concentrations
+      // Concentrations - consistent format
       ...(education.mba.concentrations || []),
       // All Brandeis Awards (excluding Hassenfeld Fellowship - will be split into Israel and India)
       ...awards
@@ -55,10 +56,11 @@ const educationArray = [
     period: education.beng.date,
     location: education.beng.location,
     featured: false,
+    logo: education.beng.logo,
     details: [
-      // Capstone
+      // Capstone - consistent format
       ...(education.beng.capstone ? [`Capstone: ${education.beng.capstone}`] : []),
-      // Extra information
+      // Extra information - consistent format
       ...(education.beng.extra || []),
     ],
   },
@@ -68,6 +70,7 @@ const educationArray = [
     period: '2008',
     location: 'Oshigambo, Namibia',
     featured: false,
+    logo: null,
     details: [
       'Founded Chess Club',
       'Founded Science Club',
@@ -103,10 +106,10 @@ export const EducationSection = () => {
                 className={`bento-item ${edu.featured ? "border-2 border-primary" : ""}`}
               >
                 <div className="flex items-start gap-4">
-                  {edu.featured && education.mba.logo ? (
+                  {edu.logo ? (
                     <div className="flex items-center justify-center flex-shrink-0 w-24 h-16">
                       <Image
-                        src={education.mba.logo}
+                        src={edu.logo}
                         alt={`${edu.institution} Logo`}
                         width={96}
                         height={64}
