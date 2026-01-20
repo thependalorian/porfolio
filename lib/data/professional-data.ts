@@ -114,35 +114,16 @@ export const professionalExperience: ProfessionalExperience[] = [
     role: 'Brand Identity & Web Development Consultant',
     company: 'AnchorBridge Support House LLC',
     location: 'Marion County, Indiana',
-    period: 'January 2026',
+    period: 'November 2025 – January 2026',
     description: 'Complete brand identity creation, website development, and business strategy for affordable independent housing provider',
     logo: null,
     points: [
       {
-        title: 'Brand Identity & Design',
+        title: null,
         items: [
-          'Created complete brand identity from scratch including logo design, color palette (navy blue, gold, teal), and typography system',
-          'Developed comprehensive brand guidelines and visual identity system',
-          'Designed marketing materials and brand assets',
-        ],
-      },
-      {
-        title: 'Website Development',
-        items: [
+          'Created complete brand identity including logo design, color palette, and brand guidelines',
           'Built production-ready website with Next.js 14, TypeScript, and Tailwind CSS',
-          'Implemented full responsive design optimized for all screen sizes (mobile-first approach)',
-          'Achieved WCAG 2.1 Level AA accessibility compliance',
-          'Ensured Indiana legal compliance (ICDPA privacy regulations, housing service terms)',
-          'Created multi-step application forms with validation and email integration',
-          'Implemented contact forms, referral form PDF, and comprehensive resource pages',
-        ],
-      },
-      {
-        title: 'Business Strategy',
-        items: [
-          'Developed comprehensive business plan for affordable independent housing model',
-          'Created marketing strategy and materials for senior housing market',
-          'Established brand positioning and messaging framework',
+          'Developed comprehensive business plan and marketing materials',
         ],
       },
     ],
