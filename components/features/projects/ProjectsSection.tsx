@@ -52,8 +52,8 @@ const projects = [
   },
   {
     title: 'Buffr Host',
-    description: 'Hospitality Management Platform with complete PMS and Sofia AI Concierge.',
-    tech: ['Next.js 16', 'Neon PostgreSQL', 'Prisma ORM', 'Deepseek AI'],
+    description: 'Hospitality Management Platform with complete PMS and Sofia AI Concierge - an intelligent email agent that monitors inboxes, automatically responds to guest inquiries, sends quotations and confirmations, and maintains conversation context across email and chat channels.',
+    tech: ['Next.js 16', 'Neon PostgreSQL', 'Prisma ORM', 'Deepseek AI', 'Email Automation', 'AI Agent'],
     link: 'https://host.buffr.ai',
     featured: false,
   },
