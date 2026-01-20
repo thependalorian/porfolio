@@ -6,35 +6,30 @@
  * 
  * Uses @neondatabase/serverless for Vercel-compatible serverless connections
  * 
- * Lazy initialization: Only connects when actually used, not during build time
+ * IMPORTANT: This module should ONLY be imported in API routes (/app/api/*),
+ * never in page components or client components to avoid SSR issues.
  */
 
 import { neon } from '@neondatabase/serverless'
 
-let sqlInstance: ReturnType<typeof neon> | null = null
+// Get DATABASE_URL from environment
+const DATABASE_URL = process.env.DATABASE_URL
 
-function getSql() {
-  // During build time, return a dummy instance if DATABASE_URL is not set
-  if (!process.env.DATABASE_URL) {
-    if (process.env.NODE_ENV === 'production' && !process.env.VERCEL) {
-      // Only throw in production if not on Vercel (where env vars are set)
-      throw new Error('DATABASE_URL environment variable is not set')
-    }
-    // For build time, return a dummy that will fail gracefully at runtime
-    return neon('postgresql://dummy:dummy@dummy:5432/dummy')
+// Initialize connection - this is safe because this module should only
+// be imported in API routes where DATABASE_URL is always available
+if (!DATABASE_URL) {
+  // In development, warn but don't throw (allows build to succeed)
+  if (process.env.NODE_ENV === 'development') {
+    console.warn('[lib/db/neon.ts] DATABASE_URL not set - database operations will fail')
   }
-  
-  if (!sqlInstance) {
-    sqlInstance = neon(process.env.DATABASE_URL)
+  // In production (non-Vercel), throw error
+  if (process.env.NODE_ENV === 'production' && !process.env.VERCEL) {
+    throw new Error('DATABASE_URL environment variable is not set')
   }
-  
-  return sqlInstance
 }
 
-export const sql = new Proxy({} as ReturnType<typeof neon>, {
-  get(_target, prop) {
-    const instance = getSql()
-    const value = (instance as any)[prop]
-    return typeof value === 'function' ? value.bind(instance) : value
-  }
-})
+// Create connection instance
+// This will only be used in API routes, so DATABASE_URL should always be set
+export const sql = DATABASE_URL 
+  ? neon(DATABASE_URL)
+  : neon('postgresql://dummy:dummy@dummy:5432/dummy') // Fallback for build time only
