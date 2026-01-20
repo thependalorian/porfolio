@@ -50,7 +50,7 @@ Use proper business Japanese format (敬語).
 Please provide the following sections in Japanese business format (敬語):
 1. 職務要約 (Job Summary) - 200-300 words describing work experience, strengths, and how you can contribute
 2. 活用できる経験・知識・スキル (Experience, knowledge, and skills) - 3 bullet points
-3. 職務経歴 (Work History) - Succinct summary of each job
+3. 職務経歴 (Work History) - List ALL positions from the resume in chronological order (most recent first). Include company name, job title, and period for EACH position. Do NOT use "など" (etc.) or summarize - list every position explicitly.
 4. 技術スキル (Technical Skills) - Computer skills, software, programming languages
 5. 資格 (Qualifications) - Certifications and licenses
 6. 自己PR (Self-PR) - Specific examples demonstrating skills, motivation, and enthusiasm
