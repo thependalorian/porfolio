@@ -33,9 +33,9 @@ export function BentoGrid({
   className = '',
 }: BentoGridProps) {
   const gapClasses = {
-    sm: 'gap-4',
-    md: 'gap-6',
-    lg: 'gap-8',
+    sm: 'gap-4 sm:gap-4 md:gap-6',
+    md: 'gap-4 sm:gap-4 md:gap-6',
+    lg: 'gap-4 sm:gap-4 md:gap-6 lg:gap-8',
   }
 
   // Map column numbers to Tailwind classes
@@ -119,8 +119,14 @@ export function BentoCard({
     4: 'row-span-4',
   }
 
-  const spanColClass = span?.col ? spanColMap[span.col] || '' : ''
-  const spanRowClass = span?.row ? spanRowMap[span.row] || '' : ''
+  // Make span classes responsive - only apply on md+ screens
+  // On mobile (sm), always use col-span-1 to prevent overlapping
+  const spanColClass = span?.col 
+    ? `col-span-1 md:${spanColMap[span.col] || 'col-span-1'}` 
+    : ''
+  const spanRowClass = span?.row 
+    ? `md:${spanRowMap[span.row] || 'row-span-1'}` 
+    : ''
   const spanClasses = `${spanColClass} ${spanRowClass}`.trim()
 
   const cardClasses = cn(

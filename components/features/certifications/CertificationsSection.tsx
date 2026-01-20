@@ -46,7 +46,7 @@ export function CertificationsSection() {
                 span={isFeatured ? { col: 2, row: 2 } : undefined}
                 variant={isFeatured ? 'elevated' : 'default'}
                 hover
-                className={isFeatured ? 'md:col-span-2 md:row-span-2 bg-gradient-to-br from-act-spring-green/10 to-act-mint/10 border-2 border-act-spring-green/30 shadow-xl' : ''}
+                className={isFeatured ? 'bg-gradient-to-br from-act-spring-green/10 to-act-mint/10 border-2 border-act-spring-green/30 shadow-xl' : ''}
               >
                 <div className="flex flex-col h-full">
                   {/* Accredible certificates: Use only accredibleImageUrl, never local images */}
