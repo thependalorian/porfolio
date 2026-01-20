@@ -106,6 +106,17 @@ Namibia University of Science & Technology, Windhoek, Namibia | 2013-2017
 - Developed ACT Climate Economy Careers Platform—career platform with AI-powered resume analysis, skill gap identification, and real-time chat interface
 - **Skills**: Project management, Workforce development, DEIJ strategy, Clean energy, Strategic planning
 
+## Brand Identity & Web Development Consultant
+
+**AnchorBridge Support House LLC** | Marion County, Indiana | November 2025 – January 2026
+
+- Created complete brand identity from scratch including logo design, color palette (navy blue, gold, teal), and comprehensive brand guidelines for affordable independent housing provider
+- Built production-ready website with Next.js 14, TypeScript, and Tailwind CSS, implementing full responsive design optimized for all screen sizes with mobile-first approach
+- Achieved WCAG 2.1 Level AA accessibility compliance and ensured Indiana legal compliance (ICDPA privacy regulations, housing service terms)
+- Developed comprehensive business plan and marketing strategy for senior housing market, establishing brand positioning and messaging framework
+- Created multi-step application forms with validation and email integration, contact forms, referral form PDF, and comprehensive resource pages
+- **Skills**: Brand identity design, Web development, Business strategy, Marketing materials, UI/UX design, Accessibility compliance
+
 ## Business Development Consultant
 
 **Aquasaic Corporation** (Remote) | Oct 2024 - Mar 2025
